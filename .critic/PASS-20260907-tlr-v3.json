@@ -1,0 +1,19 @@
+{
+  "target": "https://skynetjoe-listening-room-demo.vercel.app/v3",
+  "score": 90.9,
+  "bar": 85,
+  "judges": ["combined r2 90.9"],
+  "round": 2,
+  "findings_resolved": [
+    "B1 wordmark/nav wrapping — .logo b measures 27.7px at 1280 and 1440 against a 27.744px line-height (exactly 1 line), white-space:nowrap computed; header height 81px at 375/1280/1440 (was ~100 at 375)",
+    "M1 tap targets under 44px — 0 tel:/sms:/nav interactive elements below 44px at 375 and 1440; crisis links 94px, hero call pill 80.8px, header call 48px, footer number 44px, mobile bar 58px; only sub-44 items are the four 36px variant-switcher pills (accepted demo chrome)",
+    "M2 tall mobile header eating the fold — single-line 81px header at 375, wordmark hidden below 600px",
+    "Minor hero ear pill colliding with the bottom-right switcher at 1440 — ear pill [148,802,440,883] with margin-right:260px vs switcher [1089,840,1424,884], 649px clearance, '0116 479 3584' fully legible, zero overlap"
+  ],
+  "scorecard_sha": "360b49cbcaa6976fe49f9145b4bc5880b8d9ad7e92da1803667f3c64deef9c00",
+  "artifact_shas": {
+    "v3.html": "4c171d8db64304306064472903b5082e29579c3ddd81e304f3d2eed69fc9486d"
+  },
+  "commit": "125dce1",
+  "verified_at": "2026-09-07T11:06:02Z"
+}

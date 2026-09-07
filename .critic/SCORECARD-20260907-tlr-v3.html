@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ship-gate scorecard — The Listening Room V3 (Round 2)</title>
+    <style>
+      :root {
+        --ink: #141614;
+        --mut: #5b6259;
+        --line: #e2e6e0;
+        --leaf: #1f7a3d;
+        --amber: #a76a12;
+        --paper: #fbfcfa;
+        --card: #fff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          15px/1.6 -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      .wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 24px 72px;
+      }
+      h1 {
+        font-size: 1.7rem;
+        margin: 0 0 6px;
+        letter-spacing: -0.02em;
+      }
+      h2 {
+        font-size: 1.05rem;
+        margin: 34px 0 12px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--mut);
+      }
+      .sub {
+        color: var(--mut);
+        margin: 0 0 22px;
+      }
+      .verdict {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #eaf6ee;
+        border: 1px solid #bfe0cb;
+        border-radius: 12px;
+        padding: 14px 20px;
+        margin: 6px 0 8px;
+      }
+      .verdict b {
+        font-size: 1.5rem;
+        color: var(--leaf);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        background: #f4f7f3;
+        font-size: 0.78rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--mut);
+      }
+      tr:last-child td {
+        border-bottom: 0;
+      }
+      td.n {
+        text-align: right;
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+      .tot td {
+        font-weight: 700;
+        background: #f4f7f3;
+      }
+      ul {
+        padding-left: 20px;
+        margin: 8px 0;
+      }
+      li {
+        margin: 7px 0;
+      }
+      code {
+        background: #f1f4f0;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-size: 0.86em;
+      }
+      .pill {
+        display: inline-block;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 99px;
+        margin-right: 8px;
+        vertical-align: 1px;
+      }
+      .maj {
+        background: #fdf1e0;
+        color: var(--amber);
+        border: 1px solid #ecd3a8;
+      }
+      .min {
+        background: #eef1ee;
+        color: var(--mut);
+        border: 1px solid var(--line);
+      }
+      .ok {
+        background: #eaf6ee;
+        color: var(--leaf);
+        border: 1px solid #bfe0cb;
+      }
+      .meta {
+        font-size: 0.85rem;
+        color: var(--mut);
+        margin-top: 34px;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>The Listening Room — Design V3</h1>
+      <p class="sub">
+        Combined judge (correctness + craft) · adversarial ship-gate · Round 2 ·
+        7 September 2026
+      </p>
+
+      <div class="verdict">
+        <b>PASS — 90.9 / 100</b><span>bar 85 · 0 blockers</span>
+      </div>
+      <p class="sub">
+        Artifact:
+        <code>https://skynetjoe-listening-room-demo.vercel.app/v3</code> ·
+        commit <code>125dce1</code> · served MD5
+        <code>dca3f9798095d6d3b4949ad921ef8049</code> = source MD5 (verified
+        byte-identical)
+      </p>
+
+      <h2>Scorecard</h2>
+      <table>
+        <tr>
+          <th>Dimension</th>
+          <th>Weight</th>
+          <th class="n">Raw /10</th>
+          <th class="n">Weighted</th>
+        </tr>
+        <tr>
+          <td>Correctness &amp; robustness</td>
+          <td>25</td>
+          <td class="n">9.2</td>
+          <td class="n">23.0</td>
+        </tr>
+        <tr>
+          <td>Accessibility &amp; contrast</td>
+          <td>20</td>
+          <td class="n">8.5</td>
+          <td class="n">17.0</td>
+        </tr>
+        <tr>
+          <td>Safety / compliance copy</td>
+          <td>15</td>
+          <td class="n">9.8</td>
+          <td class="n">14.7</td>
+        </tr>
+        <tr>
+          <td>Distinctiveness</td>
+          <td>25</td>
+          <td class="n">9.2</td>
+          <td class="n">23.0</td>
+        </tr>
+        <tr>
+          <td>Craft</td>
+          <td>15</td>
+          <td class="n">8.8</td>
+          <td class="n">13.2</td>
+        </tr>
+        <tr class="tot">
+          <td>Total</td>
+          <td>100</td>
+          <td class="n"></td>
+          <td class="n">90.9</td>
+        </tr>
+      </table>
+
+      <h2>Round 1 findings — verified resolved</h2>
+      <ul>
+        <li>
+          <span class="pill ok">B1 fixed</span><b>Wordmark / nav wrapping.</b>
+          <code>.logo b</code> measures 27.7px tall at both 1280 and 1440
+          against a 27.744px line-height — exactly one line;
+          <code>white-space:nowrap</code> confirmed computed. Header height is
+          81px at 375, 1280 and 1440 (was ~100 at 375).
+        </li>
+        <li>
+          <span class="pill ok">M1 fixed</span><b>Tap targets.</b> Zero
+          <code>tel:</code>, <code>sms:</code> or nav elements below 44px at 375
+          or 1440. Crisis links 94px; hero call pill 80.8px (375); header call
+          block 48px; footer number 44px; mobile bar 58px. The only sub-44 items
+          are the four 36px variant-switcher pills — accepted demo chrome.
+        </li>
+        <li>
+          <span class="pill ok">M2 fixed</span
+          ><b>Mobile header fold.</b> Single-line 81px header at 375, wordmark
+          suppressed below 600px.
+        </li>
+        <li>
+          <span class="pill ok">Minor fixed</span
+          ><b>Hero pill vs switcher at 1440.</b> Hero ear pill occupies
+          [148,802,440,883] with <code>margin-right:260px</code>; switcher sits
+          at [1089,840,1424,884] — 649px of clearance. "0116 479 3584" fully
+          legible, zero overlap.
+        </li>
+      </ul>
+
+      <h2>Blockers</h2>
+      <p class="sub">None.</p>
+
+      <h2>Majors</h2>
+      <ul>
+        <li>
+          <span class="pill maj">MJ1</span
+          ><b>Form confirmation is silent to assistive tech.</b> On submit the
+          form is swapped for the <code>.ok</code> panel with no
+          <code>role="status"</code>, no <code>aria-live</code>, and no focus
+          move — the file contains zero <code>aria-live</code> /
+          <code>role="status"</code> / <code>role="alert"</code> occurrences,
+          and the sole <code>.focus()</code> call (line 2456) is the
+          validation-error path. A screen-reader user gets no signal that the
+          request went through. WCAG 2.2 AA 4.1.3 (Status Messages). Fix before
+          the client build: add <code>role="status"</code> to
+          <code>.ok</code> and move focus to its heading.
+        </li>
+      </ul>
+
+      <h2>Minors</h2>
+      <ul>
+        <li>
+          <span class="pill min">MN1</span>Inline SVGs carry no per-element
+          <code>aria-hidden</code> (10 <code>&lt;svg&gt;</code> in the file, 4
+          <code>aria-hidden</code> attributes and those sit on wrapper
+          elements). Low impact — each icon is inside a link or button that
+          already has visible text — but add <code>aria-hidden="true"</code> to
+          every decorative icon.
+        </li>
+        <li>
+          <span class="pill min">MN2</span>At 375 the fixed switcher clips the
+          primary hero CTA by a 93&times;2px sliver: CTA [20,621,308,684] vs
+          switcher [215,682,363,726] — 1% of the button area. Zero overlaps at
+          390, 768 and 1440. The switcher is deleted before launch, so this dies
+          with it.
+        </li>
+        <li>
+          <span class="pill min">MN3</span>At 375 the sticky mobile bar
+          [0,733,375,812] covers the bottom 27px (43%) of the secondary CTA "See
+          how we help" [20,697,207,760] at scroll 0, leaving 36px of effective
+          tap height. Self-resolving on the first scroll; the primary booking
+          path is unaffected.
+        </li>
+        <li>
+          <span class="pill min">MN4</span>No in-page navigation affordance
+          below 1240px — the nav is hidden with no menu replacement. Defensible
+          for a one-pager whose sections are reachable by scroll and whose
+          sticky bar carries both conversion actions, but worth a client note.
+        </li>
+        <li>
+          <span class="pill min">MN5</span>Record correction: the brief accepts
+          "FAQPage only" JSON-LD, but the served page actually ships an
+          <code>@graph</code> of <b>LocalBusiness + FAQPage</b>, both parsing as
+          valid JSON. Better than briefed, not a defect.
+        </li>
+      </ul>
+
+      <h2>Evidence — automated sweep</h2>
+      <ul>
+        <li>
+          <b>Served == source</b> — curl MD5 <code>dca3f97…</code> identical to
+          <code>v3.html</code>; ETag matches;
+          <code>X-Robots-Tag: noindex, nofollow</code> present alongside the
+          <code>&lt;meta name="robots"&gt;</code>.
+        </li>
+        <li>
+          <b>Console</b> — 0 errors, 0 page errors over a 4s settle at 1440.
+        </li>
+        <li>
+          <b>Horizontal overflow</b> —
+          <code>documentElement.scrollWidth === innerWidth</code> at 320, 375,
+          390, 768, 1440 (320/320, 375/375, 390/390, 768/768, 1440/1440).
+        </li>
+        <li>
+          <b>Structure</b> — exactly one <code>&lt;h1&gt;</code> ("You deserve
+          to be heard. Not managed."), 17 headings in clean order,
+          <code>lang="en-GB"</code>, skip link present, 0 unlabelled inputs, 0
+          unnamed buttons, 0 images without <code>alt</code>.
+        </li>
+        <li>
+          <b>Reduced motion</b> — headline renders in full, minimum opacity
+          across the H1 subtree is 1.0,
+          <code>document.getAnimations()</code> returns 0 running, and 0
+          elements carry a live CSS animation name.
+        </li>
+        <li>
+          <b>Contrast</b> — every text node under 24px (and under 18.66px bold)
+          swept against its resolved painted background at 1440 and 375, run
+          under reduced motion so nothing is masked by a pre-reveal opacity:
+          <b>0 offenders below 4.5:1</b>.
+        </li>
+        <li>
+          <b>Crisis block</b> — 4 routes (<code>tel:999</code>,
+          <code>tel:111</code>, <code>tel:116123</code>,
+          <code>sms:85258</code>), each 94px tall, section opacity 1, transform
+          none, <b>zero animation names</b>, inverted white-on-dark-page
+          treatment so it never depends on a scroll reveal.
+        </li>
+        <li>
+          <b>Demo form</b> — no <code>action</code>, no <code>method</code>;
+          submitting fires zero non-GET requests, causes no navigation, and
+          reveals "Demo only — nothing was sent."
+        </li>
+        <li>
+          <b>Reveals</b> — stepped scroll through all 10,223px at 390: zero
+          content-bearing sections left below 0.2 opacity.
+        </li>
+      </ul>
+
+      <h2>Copy safety</h2>
+      <ul>
+        <li>
+          All three testimonials carry an "Example" tag plus a standing note:
+          "Example quotes for layout only — replaced with real client words
+          (with consent) before launch."
+        </li>
+        <li>
+          Footer disclaimer states the service is private, non-statutory, "not a
+          clinical, therapeutic or emergency service", and does not replace
+          statutory IMHA / IMCA / Care Act advocacy.
+        </li>
+        <li>
+          Form disclaimer routes emergencies to 999 / NHS 111 option 2 and
+          limits data use to arranging the call.
+        </li>
+        <li>
+          FAQ answers the therapy question head-on: "No. The Listening Room is
+          an advocacy and listening service, not a clinical or therapeutic one."
+        </li>
+        <li>
+          No regulatory, CQC, charity-registration, outcome or guarantee claims
+          anywhere in the file.
+        </li>
+      </ul>
+
+      <h2>Why it earns distinctiveness</h2>
+      <p>
+        The ear motif is carried as a real system — header mark, hero call pill,
+        contact-panel medallion — rather than decorating one hero. The serif
+        italic accent on "Not managed." does the whole emotional argument in two
+        words. The crisis block inverts to white and refuses every animation on
+        the page, which reads as a deliberate tonal break rather than a stray
+        section. Green/black/white is held with enough restraint that the one
+        green the eye lands on is always the next action.
+      </p>
+
+      <p class="meta">
+        Judge: combined correctness + craft, adversarial, default-FAIL.
+        Verification: Playwright driving system Chrome (<code
+          >C:\Program Files\Google\Chrome\Application\chrome.exe</code
+        >) at 320/375/390/768/1280/1440, plus curl for transport headers.
+        Screenshots captured at 1440 hero / stage / crisis / contact /
+        form-success and 390 full-page. Judge is not the builder.
+      </p>
+    </div>
+  </body>
+</html>

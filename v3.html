@@ -2148,7 +2148,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
                   launch.</small
                 >
               </div>
-              <div class="ok">
+              <div class="ok" role="status" tabindex="-1">
                 <h3 class="serif">Thank you — we've got it.</h3>
                 <p>
                   Demo only — nothing was sent. On the live site you'll hear
@@ -2462,7 +2462,7 @@ footer a{display:inline-flex;align-items:center;min-height:44px}
               } catch (e) {}
             }
             f.querySelector(".fields").style.display = "none";
-            f.querySelector(".ok").style.display = "block";
+            var ok = f.querySelector(".ok"); ok.style.display = "block"; ok.focus();
           });
       })();
     </script>
