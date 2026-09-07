@@ -142,6 +142,7 @@
       }
       html {
         scroll-behavior: smooth;
+        overflow-x: hidden;
       }
       body {
         font-family: var(--sans);
@@ -150,7 +151,6 @@
         line-height: 1.7;
         font-size: 1.0625rem;
         -webkit-font-smoothing: antialiased;
-        overflow-x: clip;
       }
       img {
         max-width: 100%;
@@ -478,7 +478,10 @@
         top: 0;
         height: 100vh;
         overflow: hidden;
+      }
+      .walk-inner {
         display: flex;
+        height: 100%;
         will-change: transform;
       }
       .room {
@@ -997,7 +1000,12 @@
       html.stack .walk-track {
         position: static;
         height: auto;
+        overflow: visible;
+      }
+      html.no-js .walk-inner,
+      html.stack .walk-inner {
         display: block;
+        height: auto;
       }
       html.no-js .room,
       html.stack .room {
@@ -1311,639 +1319,651 @@
       <div class="walk" id="walk">
         <div class="walk-outer" id="walkOuter">
           <div class="walk-track" id="walkTrack">
-            <!-- ROOM 1: HERO -->
-            <section
-              class="room r-hero"
-              id="room-hero"
-              data-room="1"
-              aria-label="Welcome"
-            >
-              <div class="rphoto" data-speed="0.6">
-                <img
-                  src="/assets/hero-listening.jpg"
-                  alt="An advocate listening attentively to a client in a calm, light room"
-                  width="1400"
-                  height="788"
-                  fetchpriority="high"
-                />
-              </div>
-              <div class="rin wrap">
-                <div>
-                  <div class="logo2 rword">
-                    <img
-                      src="/assets/tlr-mark.png"
-                      alt="TLR monogram"
-                      width="60"
-                      height="30"
-                    />
-                    <b>The Listening Room</b>
-                  </div>
-                  <span class="eyebrow light rword"
-                    >Independent mental health advocacy · Leicester</span
-                  >
-                  <h1 class="rt rword">
-                    You deserve to be heard.
-                    <br /><span class="hl" style="color: var(--leaf)"
-                      >Not managed.</span
+            <div class="walk-inner" id="walkInner">
+              <!-- ROOM 1: HERO -->
+              <section
+                class="room r-hero"
+                id="room-hero"
+                data-room="1"
+                aria-label="Welcome"
+              >
+                <div class="rphoto" data-speed="0.6">
+                  <img
+                    src="/assets/hero-listening.jpg"
+                    alt="An advocate listening attentively to a client in a calm, light room"
+                    width="1400"
+                    height="788"
+                    fetchpriority="high"
+                  />
+                </div>
+                <div class="rin wrap">
+                  <div>
+                    <div class="logo2 rword">
+                      <img
+                        src="/assets/tlr-mark.png"
+                        alt="TLR monogram"
+                        width="60"
+                        height="30"
+                      />
+                      <b>The Listening Room</b>
+                    </div>
+                    <span class="eyebrow light rword"
+                      >Independent mental health advocacy · Leicester</span
                     >
-                  </h1>
+                    <h1 class="rt rword">
+                      You deserve to be heard.
+                      <br /><span class="hl" style="color: var(--leaf)"
+                        >Not managed.</span
+                      >
+                    </h1>
+                    <p class="rlead rword">
+                      The Listening Room is someone in your corner. A
+                      confidential, independent advocate who listens first, then
+                      helps you say what you need to say — to doctors, to
+                      services, to the people around you — and get the support
+                      you're entitled to.
+                    </p>
+                    <div class="cta rword">
+                      <a class="btn btn-g" href="#room-contact"
+                        >Book a free 20-minute call
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                      ></a>
+                      <a
+                        class="ear white"
+                        href="tel:+441164793584"
+                        aria-label="Call the office on 0116 479 3584"
+                        ><span class="ic"
+                          ><svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.9"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <path
+                              d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                            />
+                            <path
+                              d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+                            /></svg></span
+                        ><span
+                          ><small>Need to talk today?</small
+                          ><b>0116 479 3584</b></span
+                        ></a
+                      >
+                    </div>
+                  </div>
+                  <div class="door doorphoto rword">
+                    <img
+                      src="/assets/window-hope.jpg"
+                      alt="A young woman holding a mug, looking out of a window with a calm expression"
+                      width="1400"
+                      height="788"
+                      loading="lazy"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        filter: grayscale(0.15);
+                      "
+                    />
+                  </div>
+                </div>
+              </section>
+
+              <!-- ROOM 2: WHO IT'S FOR -->
+              <section
+                class="room r-who"
+                id="room-who"
+                data-room="2"
+                aria-label="Who it's for"
+              >
+                <div class="rphoto" data-speed="0.6">
+                  <img src="/assets/man-sofa-talk.jpg" alt="" loading="lazy" />
+                </div>
+                <div class="rin wrap">
+                  <span class="eyebrow light rword">Who it's for</span>
+                  <h2 class="rt rword">
+                    For anyone who feels
+                    <span class="hl" style="color: var(--leaf)">unheard</span>
+                    by the system.
+                  </h2>
                   <p class="rlead rword">
-                    The Listening Room is someone in your corner. A
-                    confidential, independent advocate who listens first, then
-                    helps you say what you need to say — to doctors, to
-                    services, to the people around you — and get the support
-                    you're entitled to.
+                    You don't need a diagnosis, a referral or the right words.
+                    You just need someone on your side.
                   </p>
-                  <div class="cta rword">
-                    <a class="btn btn-g" href="#room-contact"
-                      >Book a free 20-minute call
+                  <div class="doors rword">
+                    <div class="d">
+                      <span class="n">01</span>
+                      <b
+                        >Living with anxiety, depression or long-term mental
+                        ill-health</b
+                      >
+                      <p>and tired of explaining yourself over and over.</p>
+                    </div>
+                    <div class="d">
+                      <span class="n">02</span>
+                      <b
+                        >In hospital, recently discharged, or under a community
+                        team</b
+                      >
+                      <p>and unsure what your care plan actually says.</p>
+                    </div>
+                    <div class="d">
+                      <span class="n">03</span>
+                      <b>Waiting on the NHS</b>
+                      <p>and needing someone to talk to in the meantime.</p>
+                    </div>
+                    <div class="d">
+                      <span class="n">04</span>
+                      <b>A parent, partner or carer</b>
+                      <p>
+                        trying to hold everything together and get answers for
+                        someone you love.
+                      </p>
+                    </div>
+                    <div class="d">
+                      <span class="n">05</span>
+                      <b>Facing forms, letters or appeals</b>
+                      <p>
+                        PIP, Universal Credit, complaints — and don't know where
+                        to start.
+                      </p>
+                    </div>
+                  </div>
+                  <p class="quote rword">
+                    "Someone finally asked what <em>I</em> wanted."
+                  </p>
+                </div>
+              </section>
+
+              <!-- ROOM 3: HOW WE HELP -->
+              <section
+                class="room r-svc"
+                id="room-services"
+                data-room="3"
+                aria-label="How we help"
+              >
+                <div class="rphoto" data-speed="0.6">
+                  <img src="/assets/hands-support.jpg" alt="" loading="lazy" />
+                </div>
+                <div class="rin wrap">
+                  <span class="eyebrow light rword">How we help</span>
+                  <h2 class="rt rword">
+                    Practical advocacy,
+                    <span class="hl" style="color: var(--leaf)">human</span>
+                    pace.
+                  </h2>
+                  <p class="rlead rword">
+                    Not therapy. Not a crisis line. The bit in between that
+                    nobody else does: listening properly, then walking beside
+                    you through the practical stuff.
+                  </p>
+                  <div class="doors2 rword">
+                    <div class="d" tabindex="0">
+                      <div class="ph">
+                        <img
+                          src="/assets/hero-listening.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="body">
+                        <span class="n">01</span>
+                        <h3>Listening sessions</h3>
+                        <p>
+                          A regular, confidential hour with someone who isn't
+                          rushing you. Say it out loud, untangle it, decide what
+                          matters.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d" tabindex="0">
+                      <div class="ph">
+                        <img
+                          src="/assets/man-sofa-talk.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="body">
+                        <span class="n">02</span>
+                        <h3>Beside you at appointments</h3>
+                        <p>
+                          GP, psychiatrist, care coordinator, ward round, care
+                          plan review. We prepare together, come with you, and
+                          make sure your points land.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d" tabindex="0">
+                      <div class="ph">
+                        <img
+                          src="/assets/hands-support.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="body">
+                        <span class="n">03</span>
+                        <h3>Letters, forms &amp; appeals</h3>
+                        <p>
+                          PIP, Universal Credit, housing, complaints. We help
+                          you put your situation into words that get taken
+                          seriously.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d" tabindex="0">
+                      <div class="ph">
+                        <img
+                          src="/assets/window-hope.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="body">
+                        <span class="n">04</span>
+                        <h3>Care plan &amp; rights check</h3>
+                        <p>
+                          Plain-English walk-through of your care plan,
+                          medication list or discharge plan, and what you're
+                          entitled to ask for.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d" tabindex="0">
+                      <div class="ph">
+                        <img
+                          src="/assets/friends-park.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="body">
+                        <span class="n">05</span>
+                        <h3>Signposting, done properly</h3>
+                        <p>
+                          Free statutory advocacy (IMHA), crisis teams,
+                          community groups, talking therapies. The right door,
+                          not just "a" door.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d" tabindex="0">
+                      <div class="ph">
+                        <img
+                          src="/assets/mug-window.jpg"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="body">
+                        <span class="n">06</span>
+                        <h3>Family &amp; carer support</h3>
+                        <p>
+                          Carers need a listening room too. Understand what's
+                          happening, what you can ask for, and how to look after
+                          yourself in it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ROOM 4: HOW IT WORKS -->
+              <section
+                class="room r-how"
+                id="room-how"
+                data-room="4"
+                aria-label="How it works"
+              >
+                <div class="rphoto" data-speed="0.6">
+                  <img src="/assets/friends-park.jpg" alt="" loading="lazy" />
+                </div>
+                <div class="rin wrap">
+                  <div>
+                    <span class="eyebrow light rword">How it works</span>
+                    <h2 class="rt rword">
+                      Three steps.
+                      <span class="hl" style="color: var(--leaf)"
+                        >No pressure</span
+                      >
+                      at any of them.
+                    </h2>
+                    <div class="big rword" aria-hidden="true">01 02 03</div>
+                  </div>
+                  <div class="steps3 rword">
+                    <div class="s">
+                      <span class="k">Step one</span>
+                      <h3>Book a free 20-minute call</h3>
+                      <p>
+                        Phone or video, whenever suits you. You talk, we listen.
+                        We'll tell you honestly whether we're the right help —
+                        and if we're not, who is.
+                      </p>
+                    </div>
+                    <div class="s">
+                      <span class="k">Step two</span>
+                      <h3>Make a simple plan together</h3>
+                      <p>
+                        One page. What you want to change, who needs to hear it,
+                        and what we'll do first. You stay in charge of every
+                        decision.
+                      </p>
+                    </div>
+                    <div class="s">
+                      <span class="k">Step three</span>
+                      <h3>We walk alongside you</h3>
+                      <p>
+                        Sessions, appointments, letters, follow-ups. As much or
+                        as little as you need, for as long as it's useful.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ROOM 5: ABOUT -->
+              <section
+                class="room r-about"
+                id="room-about"
+                data-room="5"
+                aria-label="About"
+              >
+                <div class="rphoto" data-speed="0.6">
+                  <img src="/assets/mug-window.jpg" alt="" loading="lazy" />
+                </div>
+                <div class="rin wrap">
+                  <div class="door pic rword">
+                    <img
+                      src="/assets/mug-window.jpg"
+                      alt="A person holding a mug, looking out at autumn trees through a window"
+                      width="933"
+                      height="1400"
+                      loading="lazy"
+                      style="
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        filter: grayscale(0.15);
+                      "
+                    />
+                  </div>
+                  <div class="rword">
+                    <span class="eyebrow light">About The Listening Room</span>
+                    <h2 class="rt">
+                      Started by someone who knows what it's like to
+                      <span class="hl" style="color: var(--leaf)"
+                        >not be heard.</span
+                      >
+                    </h2>
+                    <p class="pull">
+                      "Too many people in Leicester sit in appointments, wards
+                      and waiting rooms feeling like a case number."
+                    </p>
+                    <p class="body">
+                      The Listening Room began with a simple frustration: too
+                      many people leave with a leaflet and no idea what happens
+                      next.
+                    </p>
+                    <p class="body">
+                      I set this up to be the person I wished had been in the
+                      room. Independent — so I answer to you, not a service.
+                      Practical — so listening turns into letters written,
+                      meetings attended and questions answered. And patient —
+                      because being heard properly takes longer than ten
+                      minutes.
+                    </p>
+                    <p class="body">
+                      This is not therapy, and it isn't a crisis service. It's
+                      advocacy: your voice, made louder.
+                    </p>
+                    <div class="sig">— Stephen Forde, Founder</div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ROOM 6: IN THEIR WORDS -->
+              <section
+                class="room r-testi"
+                id="room-testi"
+                data-room="6"
+                aria-label="In their words"
+              >
+                <div class="rphoto" data-speed="0.6">
+                  <img src="/assets/hero-listening.jpg" alt="" loading="lazy" />
+                </div>
+                <div class="rin wrap">
+                  <span class="eyebrow light rword">In their words</span>
+                  <h2 class="rt rword">
+                    What being heard
+                    <span class="hl" style="color: var(--leaf)"
+                      >feels like.</span
+                    >
+                  </h2>
+                  <div class="quotes3 rword">
+                    <div class="q">
+                      <p>
+                        He came to my care plan review and for the first time
+                        the psychiatrist actually wrote down what I said. I
+                        didn't have to fight for it.
+                      </p>
+                      <footer>
+                        <span class="tag">Example</span><b>Client, Leicester</b>
+                        · Care plan review
+                      </footer>
+                    </div>
+                    <div class="q">
+                      <p>
+                        I'd been putting off the PIP form for months. We did it
+                        together in two sittings and it was accepted first time.
+                      </p>
+                      <footer>
+                        <span class="tag">Example</span><b>Client, Wigston</b> ·
+                        Benefits support
+                      </footer>
+                    </div>
+                    <div class="q">
+                      <p>
+                        As Mum's carer I was drowning. One call and I finally
+                        understood who was responsible for what — and that I was
+                        allowed to ask.
+                      </p>
+                      <footer>
+                        <span class="tag">Example</span><b>Carer, Oadby</b> ·
+                        Family support
+                      </footer>
+                    </div>
+                  </div>
+                  <p class="note rword">
+                    Example quotes for layout only — replaced with real client
+                    words (with consent) before launch.
+                  </p>
+                </div>
+              </section>
+
+              <!-- ROOM 7: CRISIS (no motion, always visible) -->
+              <section
+                class="room r-crisis"
+                id="room-crisis"
+                data-room="7"
+                aria-label="Urgent help"
+              >
+                <div class="rin wrap">
+                  <div class="rword">
+                    <h2 class="rt" style="font-size: 2.2rem">
+                      In crisis right now?
+                    </h2>
+                    <p class="rlead">
+                      The Listening Room is not an emergency service. If you or
+                      someone else is in immediate danger, please use one of
+                      these — they're free and open 24/7.
+                    </p>
+                  </div>
+                  <ul class="rword">
+                    <li>
+                      <a href="tel:999"
+                        ><b>999</b
+                        ><span>Emergency — immediate danger to life</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="tel:111"
+                        ><b>NHS 111, option 2</b
+                        ><span>Urgent mental health support, 24/7</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="tel:116123"
+                        ><b>Samaritans · 116 123</b
+                        ><span>Free to call, any time, any reason</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="sms:85258"
+                        ><b>Shout · text 85258</b
+                        ><span>Free, confidential crisis text line</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </section>
+
+              <!-- ROOM 8: CONTACT -->
+              <section
+                class="room r-contact"
+                id="room-contact"
+                data-room="8"
+                aria-label="Contact"
+              >
+                <div class="rin">
+                  <div class="left">
+                    <div class="inner">
+                      <span class="eyebrow rword">Start here</span>
+                      <h2
+                        class="rt rword"
+                        style="
+                          font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+                          margin-top: 0.6rem;
+                        "
+                      >
+                        Book your free
+                        <span class="hl">20-minute</span> listening call.
+                      </h2>
+                      <p
+                        class="rword"
+                        style="color: var(--ink-2); margin-top: 0.9rem"
+                      >
+                        Tell us a little about what's going on. We'll reply
+                        within one working day to arrange a time that suits you
+                        — phone or video, your choice.
+                      </p>
+                      <form class="form rword" id="lead" novalidate>
+                        <div class="fields">
+                          <label for="name">Your name</label>
+                          <input
+                            id="name"
+                            name="name"
+                            required
+                            autocomplete="name"
+                            placeholder="First name is fine"
+                          />
+                          <label for="contact-method"
+                            >Best way to reach you</label
+                          >
+                          <input
+                            id="contact-method"
+                            name="contact"
+                            required
+                            placeholder="Mobile number or email"
+                          />
+                          <label for="for">Who is this for?</label>
+                          <select id="for" name="for">
+                            <option>Myself</option>
+                            <option>Someone I care for</option>
+                            <option>
+                              A client / patient (I'm a professional)
+                            </option>
+                          </select>
+                          <label for="msg"
+                            >What's going on? (as much or as little as you
+                            like)</label
+                          >
+                          <textarea
+                            id="msg"
+                            name="message"
+                            placeholder="e.g. I've got a care plan review next month and I never feel listened to."
+                          ></textarea>
+                          <button class="btn btn-g" type="submit">
+                            Request my free call
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                            >
+                              <path d="M5 12h14M13 6l6 6-6 6" />
+                            </svg>
+                          </button>
+                          <small
+                            >Not for emergencies. If you're in danger now, call
+                            999 or NHS 111 (option 2). Your details are used
+                            only to arrange your call and are never shared —
+                            full privacy notice at launch.</small
+                          >
+                        </div>
+                        <div class="ok">
+                          <h3 class="serif">Thank you — we've got it.</h3>
+                          <p style="color: var(--ink-2)">
+                            Demo only — nothing was sent. On the live site
+                            you'll hear back within one working day.
+                          </p>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="right rword">
+                    <div class="earbig" aria-hidden="true">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       >
-                        <path d="M5 12h14M13 6l6 6-6 6" /></svg
-                    ></a>
-                    <a
-                      class="ear white"
-                      href="tel:+441164793584"
-                      aria-label="Call the office on 0116 479 3584"
-                      ><span class="ic"
-                        ><svg
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="1.9"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        >
-                          <path
-                            d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
-                          />
-                          <path
-                            d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
-                          /></svg></span
-                      ><span
-                        ><small>Need to talk today?</small
-                        ><b>0116 479 3584</b></span
-                      ></a
-                    >
-                  </div>
-                </div>
-                <div class="door doorphoto rword">
-                  <img
-                    src="/assets/window-hope.jpg"
-                    alt="A young woman holding a mug, looking out of a window with a calm expression"
-                    width="1400"
-                    height="788"
-                    loading="lazy"
-                    style="
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                      filter: grayscale(0.15);
-                    "
-                  />
-                </div>
-              </div>
-            </section>
-
-            <!-- ROOM 2: WHO IT'S FOR -->
-            <section
-              class="room r-who"
-              id="room-who"
-              data-room="2"
-              aria-label="Who it's for"
-            >
-              <div class="rphoto" data-speed="0.6">
-                <img src="/assets/man-sofa-talk.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="rin wrap">
-                <span class="eyebrow light rword">Who it's for</span>
-                <h2 class="rt rword">
-                  For anyone who feels
-                  <span class="hl" style="color: var(--leaf)">unheard</span>
-                  by the system.
-                </h2>
-                <p class="rlead rword">
-                  You don't need a diagnosis, a referral or the right words. You
-                  just need someone on your side.
-                </p>
-                <div class="doors rword">
-                  <div class="d">
-                    <span class="n">01</span>
-                    <b
-                      >Living with anxiety, depression or long-term mental
-                      ill-health</b
-                    >
-                    <p>and tired of explaining yourself over and over.</p>
-                  </div>
-                  <div class="d">
-                    <span class="n">02</span>
-                    <b
-                      >In hospital, recently discharged, or under a community
-                      team</b
-                    >
-                    <p>and unsure what your care plan actually says.</p>
-                  </div>
-                  <div class="d">
-                    <span class="n">03</span>
-                    <b>Waiting on the NHS</b>
-                    <p>and needing someone to talk to in the meantime.</p>
-                  </div>
-                  <div class="d">
-                    <span class="n">04</span>
-                    <b>A parent, partner or carer</b>
-                    <p>
-                      trying to hold everything together and get answers for
-                      someone you love.
-                    </p>
-                  </div>
-                  <div class="d">
-                    <span class="n">05</span>
-                    <b>Facing forms, letters or appeals</b>
-                    <p>
-                      PIP, Universal Credit, complaints — and don't know where
-                      to start.
-                    </p>
-                  </div>
-                </div>
-                <p class="quote rword">
-                  "Someone finally asked what <em>I</em> wanted."
-                </p>
-              </div>
-            </section>
-
-            <!-- ROOM 3: HOW WE HELP -->
-            <section
-              class="room r-svc"
-              id="room-services"
-              data-room="3"
-              aria-label="How we help"
-            >
-              <div class="rphoto" data-speed="0.6">
-                <img src="/assets/hands-support.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="rin wrap">
-                <span class="eyebrow light rword">How we help</span>
-                <h2 class="rt rword">
-                  Practical advocacy,
-                  <span class="hl" style="color: var(--leaf)">human</span>
-                  pace.
-                </h2>
-                <p class="rlead rword">
-                  Not therapy. Not a crisis line. The bit in between that nobody
-                  else does: listening properly, then walking beside you through
-                  the practical stuff.
-                </p>
-                <div class="doors2 rword">
-                  <div class="d" tabindex="0">
-                    <div class="ph">
-                      <img
-                        src="/assets/hero-listening.jpg"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="body">
-                      <span class="n">01</span>
-                      <h3>Listening sessions</h3>
-                      <p>
-                        A regular, confidential hour with someone who isn't
-                        rushing you. Say it out loud, untangle it, decide what
-                        matters.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="d" tabindex="0">
-                    <div class="ph">
-                      <img
-                        src="/assets/man-sofa-talk.jpg"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="body">
-                      <span class="n">02</span>
-                      <h3>Beside you at appointments</h3>
-                      <p>
-                        GP, psychiatrist, care coordinator, ward round, care
-                        plan review. We prepare together, come with you, and
-                        make sure your points land.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="d" tabindex="0">
-                    <div class="ph">
-                      <img
-                        src="/assets/hands-support.jpg"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="body">
-                      <span class="n">03</span>
-                      <h3>Letters, forms &amp; appeals</h3>
-                      <p>
-                        PIP, Universal Credit, housing, complaints. We help you
-                        put your situation into words that get taken seriously.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="d" tabindex="0">
-                    <div class="ph">
-                      <img
-                        src="/assets/window-hope.jpg"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="body">
-                      <span class="n">04</span>
-                      <h3>Care plan &amp; rights check</h3>
-                      <p>
-                        Plain-English walk-through of your care plan, medication
-                        list or discharge plan, and what you're entitled to ask
-                        for.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="d" tabindex="0">
-                    <div class="ph">
-                      <img
-                        src="/assets/friends-park.jpg"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="body">
-                      <span class="n">05</span>
-                      <h3>Signposting, done properly</h3>
-                      <p>
-                        Free statutory advocacy (IMHA), crisis teams, community
-                        groups, talking therapies. The right door, not just "a"
-                        door.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="d" tabindex="0">
-                    <div class="ph">
-                      <img src="/assets/mug-window.jpg" alt="" loading="lazy" />
-                    </div>
-                    <div class="body">
-                      <span class="n">06</span>
-                      <h3>Family &amp; carer support</h3>
-                      <p>
-                        Carers need a listening room too. Understand what's
-                        happening, what you can ask for, and how to look after
-                        yourself in it.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ROOM 4: HOW IT WORKS -->
-            <section
-              class="room r-how"
-              id="room-how"
-              data-room="4"
-              aria-label="How it works"
-            >
-              <div class="rphoto" data-speed="0.6">
-                <img src="/assets/friends-park.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="rin wrap">
-                <div>
-                  <span class="eyebrow light rword">How it works</span>
-                  <h2 class="rt rword">
-                    Three steps.
-                    <span class="hl" style="color: var(--leaf)"
-                      >No pressure</span
-                    >
-                    at any of them.
-                  </h2>
-                  <div class="big rword" aria-hidden="true">01 02 03</div>
-                </div>
-                <div class="steps3 rword">
-                  <div class="s">
-                    <span class="k">Step one</span>
-                    <h3>Book a free 20-minute call</h3>
-                    <p>
-                      Phone or video, whenever suits you. You talk, we listen.
-                      We'll tell you honestly whether we're the right help — and
-                      if we're not, who is.
-                    </p>
-                  </div>
-                  <div class="s">
-                    <span class="k">Step two</span>
-                    <h3>Make a simple plan together</h3>
-                    <p>
-                      One page. What you want to change, who needs to hear it,
-                      and what we'll do first. You stay in charge of every
-                      decision.
-                    </p>
-                  </div>
-                  <div class="s">
-                    <span class="k">Step three</span>
-                    <h3>We walk alongside you</h3>
-                    <p>
-                      Sessions, appointments, letters, follow-ups. As much or as
-                      little as you need, for as long as it's useful.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ROOM 5: ABOUT -->
-            <section
-              class="room r-about"
-              id="room-about"
-              data-room="5"
-              aria-label="About"
-            >
-              <div class="rphoto" data-speed="0.6">
-                <img src="/assets/mug-window.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="rin wrap">
-                <div class="door pic rword">
-                  <img
-                    src="/assets/mug-window.jpg"
-                    alt="A person holding a mug, looking out at autumn trees through a window"
-                    width="933"
-                    height="1400"
-                    loading="lazy"
-                    style="
-                      width: 100%;
-                      height: 100%;
-                      object-fit: cover;
-                      filter: grayscale(0.15);
-                    "
-                  />
-                </div>
-                <div class="rword">
-                  <span class="eyebrow light">About The Listening Room</span>
-                  <h2 class="rt">
-                    Started by someone who knows what it's like to
-                    <span class="hl" style="color: var(--leaf)"
-                      >not be heard.</span
-                    >
-                  </h2>
-                  <p class="pull">
-                    "Too many people in Leicester sit in appointments, wards and
-                    waiting rooms feeling like a case number."
-                  </p>
-                  <p class="body">
-                    The Listening Room began with a simple frustration: too many
-                    people leave with a leaflet and no idea what happens next.
-                  </p>
-                  <p class="body">
-                    I set this up to be the person I wished had been in the
-                    room. Independent — so I answer to you, not a service.
-                    Practical — so listening turns into letters written,
-                    meetings attended and questions answered. And patient —
-                    because being heard properly takes longer than ten minutes.
-                  </p>
-                  <p class="body">
-                    This is not therapy, and it isn't a crisis service. It's
-                    advocacy: your voice, made louder.
-                  </p>
-                  <div class="sig">— Stephen Forde, Founder</div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ROOM 6: IN THEIR WORDS -->
-            <section
-              class="room r-testi"
-              id="room-testi"
-              data-room="6"
-              aria-label="In their words"
-            >
-              <div class="rphoto" data-speed="0.6">
-                <img src="/assets/hero-listening.jpg" alt="" loading="lazy" />
-              </div>
-              <div class="rin wrap">
-                <span class="eyebrow light rword">In their words</span>
-                <h2 class="rt rword">
-                  What being heard
-                  <span class="hl" style="color: var(--leaf)">feels like.</span>
-                </h2>
-                <div class="quotes3 rword">
-                  <div class="q">
-                    <p>
-                      He came to my care plan review and for the first time the
-                      psychiatrist actually wrote down what I said. I didn't
-                      have to fight for it.
-                    </p>
-                    <footer>
-                      <span class="tag">Example</span><b>Client, Leicester</b>
-                      · Care plan review
-                    </footer>
-                  </div>
-                  <div class="q">
-                    <p>
-                      I'd been putting off the PIP form for months. We did it
-                      together in two sittings and it was accepted first time.
-                    </p>
-                    <footer>
-                      <span class="tag">Example</span><b>Client, Wigston</b> ·
-                      Benefits support
-                    </footer>
-                  </div>
-                  <div class="q">
-                    <p>
-                      As Mum's carer I was drowning. One call and I finally
-                      understood who was responsible for what — and that I was
-                      allowed to ask.
-                    </p>
-                    <footer>
-                      <span class="tag">Example</span><b>Carer, Oadby</b> ·
-                      Family support
-                    </footer>
-                  </div>
-                </div>
-                <p class="note rword">
-                  Example quotes for layout only — replaced with real client
-                  words (with consent) before launch.
-                </p>
-              </div>
-            </section>
-
-            <!-- ROOM 7: CRISIS (no motion, always visible) -->
-            <section
-              class="room r-crisis"
-              id="room-crisis"
-              data-room="7"
-              aria-label="Urgent help"
-            >
-              <div class="rin wrap">
-                <div class="rword">
-                  <h2 class="rt" style="font-size: 2.2rem">
-                    In crisis right now?
-                  </h2>
-                  <p class="rlead">
-                    The Listening Room is not an emergency service. If you or
-                    someone else is in immediate danger, please use one of these
-                    — they're free and open 24/7.
-                  </p>
-                </div>
-                <ul class="rword">
-                  <li>
-                    <a href="tel:999"
-                      ><b>999</b
-                      ><span>Emergency — immediate danger to life</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="tel:111"
-                      ><b>NHS 111, option 2</b
-                      ><span>Urgent mental health support, 24/7</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="tel:116123"
-                      ><b>Samaritans · 116 123</b
-                      ><span>Free to call, any time, any reason</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="sms:85258"
-                      ><b>Shout · text 85258</b
-                      ><span>Free, confidential crisis text line</span></a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            <!-- ROOM 8: CONTACT -->
-            <section
-              class="room r-contact"
-              id="room-contact"
-              data-room="8"
-              aria-label="Contact"
-            >
-              <div class="rin">
-                <div class="left">
-                  <div class="inner">
-                    <span class="eyebrow rword">Start here</span>
-                    <h2
-                      class="rt rword"
-                      style="
-                        font-size: clamp(1.9rem, 3.4vw, 2.8rem);
-                        margin-top: 0.6rem;
-                      "
-                    >
-                      Book your free
-                      <span class="hl">20-minute</span> listening call.
-                    </h2>
-                    <p
-                      class="rword"
-                      style="color: var(--ink-2); margin-top: 0.9rem"
-                    >
-                      Tell us a little about what's going on. We'll reply within
-                      one working day to arrange a time that suits you — phone
-                      or video, your choice.
-                    </p>
-                    <form class="form rword" id="lead" novalidate>
-                      <div class="fields">
-                        <label for="name">Your name</label>
-                        <input
-                          id="name"
-                          name="name"
-                          required
-                          autocomplete="name"
-                          placeholder="First name is fine"
+                        <path
+                          d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
                         />
-                        <label for="contact-method"
-                          >Best way to reach you</label
-                        >
-                        <input
-                          id="contact-method"
-                          name="contact"
-                          required
-                          placeholder="Mobile number or email"
+                        <path
+                          d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
                         />
-                        <label for="for">Who is this for?</label>
-                        <select id="for" name="for">
-                          <option>Myself</option>
-                          <option>Someone I care for</option>
-                          <option>
-                            A client / patient (I'm a professional)
-                          </option>
-                        </select>
-                        <label for="msg"
-                          >What's going on? (as much or as little as you
-                          like)</label
-                        >
-                        <textarea
-                          id="msg"
-                          name="message"
-                          placeholder="e.g. I've got a care plan review next month and I never feel listened to."
-                        ></textarea>
-                        <button class="btn btn-g" type="submit">
-                          Request my free call
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                          >
-                            <path d="M5 12h14M13 6l6 6-6 6" />
-                          </svg>
-                        </button>
-                        <small
-                          >Not for emergencies. If you're in danger now, call
-                          999 or NHS 111 (option 2). Your details are used only
-                          to arrange your call and are never shared — full
-                          privacy notice at launch.</small
-                        >
-                      </div>
-                      <div class="ok">
-                        <h3 class="serif">Thank you — we've got it.</h3>
-                        <p style="color: var(--ink-2)">
-                          Demo only — nothing was sent. On the live site you'll
-                          hear back within one working day.
-                        </p>
-                      </div>
-                    </form>
+                      </svg>
+                    </div>
+                    <small>Prefer to talk? Office line</small>
+                    <a class="num" href="tel:+441164793584">0116 479 3584</a>
+                    <p>
+                      Working hours. If it goes to voicemail, leave your first
+                      name and a number — we call back the same day where we
+                      can.
+                    </p>
+                    <div class="promise">
+                      Twenty minutes. No forms. No pressure. Just someone
+                      listening.
+                    </div>
                   </div>
                 </div>
-                <div class="right rword">
-                  <div class="earbig" aria-hidden="true">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
-                      />
-                      <path
-                        d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
-                      />
-                    </svg>
-                  </div>
-                  <small>Prefer to talk? Office line</small>
-                  <a class="num" href="tel:+441164793584">0116 479 3584</a>
-                  <p>
-                    Working hours. If it goes to voicemail, leave your first
-                    name and a number — we call back the same day where we can.
-                  </p>
-                  <div class="promise">
-                    Twenty minutes. No forms. No pressure. Just someone
-                    listening.
-                  </div>
-                </div>
-              </div>
-            </section>
+              </section>
+            </div>
           </div>
         </div>
       </div>
@@ -2093,6 +2113,7 @@
         var walk = document.getElementById("walk");
         var walkOuter = document.getElementById("walkOuter");
         var walkTrack = document.getElementById("walkTrack");
+        var walkInner = document.getElementById("walkInner");
         var rooms = [].slice.call(document.querySelectorAll(".room"));
         var totalRooms = rooms.length;
 
@@ -2120,10 +2141,10 @@
             outerHeight = innerHeight * totalRooms;
             walkOuter.style.height = outerHeight + "px";
             roomCtr.classList.add("show");
-            walkTrack.style.transform = "translate3d(0,0,0)";
+            walkInner.style.transform = "translate3d(0,0,0)";
           } else {
             walkOuter.style.height = "";
-            walkTrack.style.transform = "";
+            walkInner.style.transform = "";
             roomCtr.classList.remove("show");
             rooms.forEach(function (r) {
               r.classList.add("vis");
@@ -2144,7 +2165,7 @@
             maxScroll > 0 ? Math.min(1, Math.max(0, scrolled / maxScroll)) : 0;
 
           var travel = (totalRooms - 1) * innerWidth;
-          walkTrack.style.transform =
+          walkInner.style.transform =
             "translate3d(" + -(progress * travel) + "px,0,0)";
 
           threadFill.style.width = progress * 100 + "%";
@@ -2175,6 +2196,9 @@
                 "scale(1.15) translateX(" + localOffset * 0.15 + "px)";
             }
           });
+
+          var insideWalk = rect.top <= 0 && rect.bottom > innerHeight;
+          roomCtr.classList.toggle("show", insideWalk);
 
           if (progress > 0.01 && !hasScrolledOnce) {
             hasScrolledOnce = true;
