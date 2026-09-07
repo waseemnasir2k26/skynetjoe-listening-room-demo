@@ -2440,7 +2440,7 @@ footer.site .leaf{overflow:visible;margin-left:0}
                     launch.</small
                   >
                 </div>
-                <div class="ok">
+                <div class="ok" role="status" tabindex="-1">
                   <h3 class="serif">Thank you — we've got it.</h3>
                   <p style="color: var(--ink-2)">
                     Demo only — nothing was sent. On the live site you'll hear
@@ -2720,7 +2720,7 @@ footer.site .leaf{overflow:visible;margin-left:0}
               } catch (e) {}
             }
             f.querySelector(".fields").style.display = "none";
-            f.querySelector(".ok").style.display = "block";
+            var ok=f.querySelector(".ok");ok.style.display="block";ok.focus();
           });
       })();
     </script>
