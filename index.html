@@ -1,0 +1,2117 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      The Listening Room — Independent Mental Health Advocacy, Leicester
+    </title>
+    <meta
+      name="description"
+      content="The Listening Room is an independent, confidential mental health advocacy service in Leicester. Someone in your corner: listening sessions, support at appointments, help with letters, forms and next steps. Book a free 20-minute call."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="canonical"
+      href="https://skynetjoe-listening-room-demo.vercel.app/"
+    />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="The Listening Room — Someone in your corner"
+    />
+    <meta
+      property="og:description"
+      content="Independent, confidential mental health advocacy in Leicester. Book a free 20-minute listening call."
+    />
+    <meta
+      property="og:image"
+      content="https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/hero-listening.jpg"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "name": "The Listening Room",
+            "alternateName": "TLR",
+            "description": "Independent, confidential mental health advocacy and listening support in Leicester and Leicestershire.",
+            "url": "https://skynetjoe-listening-room-demo.vercel.app/",
+            "image": "https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg",
+            "areaServed": ["Leicester", "Leicestershire"],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Leicester",
+              "addressRegion": "Leicestershire",
+              "addressCountry": "GB"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is this therapy or counselling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The Listening Room is an advocacy and listening service, not a clinical or therapeutic one. We help you be heard, understand your options and take practical next steps. If therapy is what you need, we will help you find it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it confidential?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. What you tell us stays between us, with the usual safeguarding exception: if we believe you or someone else is at serious risk we may need to involve emergency or safeguarding services, and we will always tell you first where we can."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a referral?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. You can contact us directly, or a family member, carer or professional can get in touch on your behalf with your permission."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this the same as an IMHA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. If you are detained or liable to be detained under the Mental Health Act you have a legal right to a free Independent Mental Health Advocate (IMHA) commissioned by the local authority. The Listening Room is a private, non-statutory service and we will always signpost you to statutory advocacy where you are entitled to it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens on the free call?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Twenty minutes, no forms, no pressure. You tell us what is going on, we tell you honestly whether we can help and what that would look like."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I bring someone with me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Always. A friend, partner, parent or carer is welcome at any session or appointment we attend together."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        --ivory: #f6f4ee;
+        --paper: #fffdf8;
+        --ink: #12241a;
+        --ink-2: #3f5247;
+        --mute: #6e7f74;
+        --em: #0f7a3e;
+        --em-deep: #0b5a2e;
+        --em-dark: #073e20;
+        --leaf: #5fbf47;
+        --mint: #dcefe3;
+        --mint-2: #eef6f0;
+        --line: #dfe6e0;
+        --shadow: 0 20px 60px -20px rgba(7, 62, 32, 0.25);
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+        --r: 22px;
+        --max: 1180px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--ivory);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: clip;
+      }
+      img{max-width:100%;display:block;height:auto}
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: var(--serif);
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        line-height: 1.08;
+      }
+      h2 {
+        font-size: clamp(2rem, 4.2vw, 3.3rem);
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 clamp(18px, 4vw, 40px);
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--em);
+      }
+      .eyebrow::before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--leaf);
+        border-radius: 2px;
+      }
+      .lead {
+        font-size: 1.15rem;
+        color: var(--ink-2);
+        max-width: 60ch;
+      }
+      .hl {
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+      }
+      .hl::after {
+        content: "";
+        position: absolute;
+        left: -0.1em;
+        right: -0.1em;
+        bottom: 0.08em;
+        height: 0.42em;
+        background: var(--mint);
+        z-index: -1;
+        transform: skew(-3deg);
+        border-radius: 4px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1rem 1.6rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        min-height: 52px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          background 0.25s;
+        cursor: pointer;
+        border: 0;
+        font-family: var(--sans);
+      }
+      .btn-p {
+        background: var(--em);
+        color: #fff;
+        box-shadow: 0 10px 30px -10px rgba(15, 122, 62, 0.6);
+      }
+      .btn-p:hover {
+        background: var(--em-deep);
+        transform: translateY(-2px);
+        box-shadow: 0 16px 36px -12px rgba(15, 122, 62, 0.7);
+      }
+      .btn-s {
+        background: transparent;
+        color: var(--ink);
+        border: 1.5px solid var(--line);
+      }
+      .btn-s:hover {
+        border-color: var(--em);
+        color: var(--em);
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      section {
+        padding: clamp(72px, 9vw, 120px) 0;
+        position: relative;
+      }
+      .num {
+        position: absolute;
+        right: 2vw;
+        top: 20px;
+        font-family: var(--serif);
+        font-size: clamp(9rem, 22vw, 20rem);
+        line-height: 1;
+        color: var(--em);
+        opacity: 0.045;
+        pointer-events: none;
+        user-select: none;
+        font-style: italic;
+      }
+
+      /* reveal */
+      .rv {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+          transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .rv.d1 {
+        transition-delay: 0.12s;
+      }
+      .rv.d2 {
+        transition-delay: 0.24s;
+      }
+      .rv.d3 {
+        transition-delay: 0.36s;
+      }
+      .rv.d4 {
+        transition-delay: 0.48s;
+      }
+      .rv.d5 {
+        transition-delay: 0.6s;
+      }
+
+      /* header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        transition:
+          background 0.35s,
+          box-shadow 0.35s,
+          padding 0.35s;
+        padding: 16px 0;
+      }
+      header.on {
+        background: rgba(246, 244, 238, 0.88);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 1px 0 var(--line);
+        padding: 8px 0;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      .logo img {
+        height: 46px;
+        width: auto;
+        border-radius: 8px;
+      }
+      .logo b {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.05rem;
+        letter-spacing: 0.02em;
+      }
+      .nav ul {
+        display: flex;
+        gap: 1.6rem;
+        list-style: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+      .nav ul a {
+        opacity: 0.8;
+      }
+      .nav ul a:hover {
+        opacity: 1;
+        color: var(--em);
+      }
+      .nav .btn {
+        padding: 0.7rem 1.2rem;
+        min-height: 44px;
+        font-size: 0.92rem;
+      }
+      @media (max-width: 860px) {
+        .nav ul {
+          display: none;
+        }
+      }
+
+      /* hero */
+      .hero {
+        min-height: 100svh;
+        display: grid;
+        align-items: center;
+        padding: 140px 0 80px;
+        overflow: hidden;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+      }
+      .hero h1 {
+        font-size: clamp(2.7rem, 6vw, 5.2rem);
+        font-weight: 500;
+        margin: 1.2rem 0 1.4rem;
+      }
+      .hero h1 em {
+        font-style: italic;
+        font-weight: 300;
+        color: var(--em-deep);
+      }
+      .hero .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 2rem;
+      }
+      .hero .micro {
+        margin-top: 1.4rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        font-size: 0.86rem;
+        color: var(--mute);
+      }
+      .hero .micro span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .hero .micro svg {
+        width: 16px;
+        height: 16px;
+        color: var(--em);
+      }
+      .hero-media {
+        position: relative;
+      }
+      .hero-media .ph {
+        border-radius: 28px;
+        overflow: hidden;
+        aspect-ratio: 4/4.6;
+        box-shadow: var(--shadow);
+        position: relative;
+        isolation: isolate;
+      }
+      .hero-media .ph img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: 60% 40%;
+        animation: kb 24s ease-in-out infinite alternate;
+      }
+      @keyframes kb {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.09);
+        }
+      }
+      .hero-media .ph::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 55%,
+          rgba(7, 62, 32, 0.45)
+        );
+        z-index: 1;
+      }
+      .card-float {
+        position: absolute;
+        background: var(--paper);
+        border-radius: 18px;
+        padding: 0.9rem 1.1rem;
+        box-shadow: 0 18px 50px -18px rgba(7, 62, 32, 0.35);
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        font-size: 0.9rem;
+        animation: float 6s ease-in-out infinite;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+      .card-float .ic {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: var(--mint);
+        display: grid;
+        place-items: center;
+        color: var(--em);
+        flex: none;
+      }
+      .card-float .ic svg {
+        width: 20px;
+        height: 20px;
+      }
+      .card-float b {
+        display: block;
+        font-weight: 600;
+        font-size: 0.92rem;
+      }
+      .card-float small {
+        color: var(--mute);
+      }
+      .cf1 {
+        left: -8%;
+        bottom: 14%;
+        animation-delay: -2s;
+      }
+      .cf2 {
+        right: -6%;
+        top: 10%;
+        animation-delay: -4s;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.5;
+        pointer-events: none;
+        z-index: -1;
+      }
+      .o1 {
+        width: 520px;
+        height: 520px;
+        background: var(--mint);
+        top: -120px;
+        right: -140px;
+        animation: drift 18s ease-in-out infinite alternate;
+      }
+      .o2 {
+        width: 380px;
+        height: 380px;
+        background: #e9f3d8;
+        bottom: -120px;
+        left: -120px;
+        animation: drift 22s ease-in-out infinite alternate-reverse;
+      }
+      @keyframes drift {
+        from {
+          transform: translate(0, 0);
+        }
+        to {
+          transform: translate(-40px, 50px);
+        }
+      }
+      @media (max-width: 900px) {
+        .hero {
+          padding: 120px 0 60px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-media {
+          margin-top: 1rem;
+        }
+        .hero-media .ph {
+          aspect-ratio: 4/3.4;
+        }
+        .cf1 {
+          left: 4%;
+          bottom: -18px;
+        }
+        .cf2 {
+          right: 4%;
+          top: -18px;
+        }
+      }
+
+      /* marquee */
+      .band {
+        background: var(--em-dark);
+        color: #dff3e6;
+        padding: 14px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.05rem;
+      }
+      .band .track {
+        display: inline-block;
+        animation: mq 38s linear infinite;
+      }
+      .band span {
+        margin: 0 1.4rem;
+      }
+      .band i {
+        color: var(--leaf);
+        font-style: normal;
+      }
+      @keyframes mq {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* trust */
+      .trust {
+        padding: 56px 0;
+      }
+      .trust-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .tcard {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 1.3rem 1.3rem;
+      }
+      .tcard .big {
+        font-family: var(--serif);
+        font-size: 2.4rem;
+        color: var(--em);
+        line-height: 1;
+      }
+      .tcard p {
+        font-size: 0.88rem;
+        color: var(--ink-2);
+        margin-top: 0.4rem;
+      }
+      .tcard small {
+        display: block;
+        color: var(--mute);
+        font-size: 0.72rem;
+        margin-top: 0.5rem;
+      }
+      @media (max-width: 900px) {
+        .trust-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* who */
+      .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+        gap: clamp(32px, 6vw, 80px);
+        align-items: center;
+      }
+      .who ul {
+        list-style: none;
+        margin-top: 1.6rem;
+        display: grid;
+        gap: 0.7rem;
+      }
+      .who li {
+        display: flex;
+        gap: 0.8rem;
+        align-items: flex-start;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+        transition:
+          transform 0.3s,
+          border-color 0.3s;
+      }
+      .who li:hover {
+        transform: translateX(6px);
+        border-color: var(--leaf);
+      }
+      .who li svg {
+        width: 22px;
+        height: 22px;
+        color: var(--em);
+        flex: none;
+        margin-top: 2px;
+      }
+      .stack {
+        position: relative;
+        padding-bottom: 110px;
+      }
+      .stack img {
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+      .stack .i1 {
+        width: 78%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+      .stack .i2 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 52%;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        border: 8px solid var(--ivory);
+      }
+      .quote-tag {
+        position: absolute;
+        left: 0;
+        bottom: 30px;
+        background: var(--em);
+        color: #fff;
+        padding: 1rem 1.2rem;
+        border-radius: 16px;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.05rem;
+        max-width: 280px;
+        box-shadow: var(--shadow);
+      }
+      @media (max-width: 900px) {
+        .split {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* services */
+      .services {
+        background: var(--mint-2);
+      }
+      .sgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin-top: 3rem;
+      }
+      .sc {
+        background: var(--paper);
+        border-radius: var(--r);
+        padding: 1.8rem;
+        border: 1px solid var(--line);
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.35s,
+          box-shadow 0.35s;
+      }
+      .sc::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 100% 0,
+          var(--mint),
+          transparent 55%
+        );
+        opacity: 0;
+        transition: opacity 0.35s;
+      }
+      .sc:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow);
+      }
+      .sc:hover::before {
+        opacity: 1;
+      }
+      .sc .ic {
+        width: 52px;
+        height: 52px;
+        border-radius: 16px;
+        background: var(--mint);
+        display: grid;
+        place-items: center;
+        color: var(--em);
+        margin-bottom: 1.2rem;
+        position: relative;
+      }
+      .sc .ic svg {
+        width: 26px;
+        height: 26px;
+      }
+      .sc h3 {
+        margin-bottom: 0.5rem;
+        position: relative;
+      }
+      .sc p {
+        color: var(--ink-2);
+        font-size: 0.95rem;
+        position: relative;
+      }
+      .sc a {
+        display: inline-flex;
+        gap: 0.4rem;
+        align-items: center;
+        margin-top: 1rem;
+        color: var(--em);
+        font-weight: 600;
+        font-size: 0.9rem;
+        position: relative;
+      }
+      @media (max-width: 900px) {
+        .sgrid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .sgrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* how */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.4rem;
+        margin-top: 3rem;
+        counter-reset: s;
+      }
+      .step {
+        position: relative;
+        padding: 2rem 1.6rem 1.8rem;
+        background: var(--paper);
+        border-radius: var(--r);
+        border: 1px solid var(--line);
+      }
+      .step::before {
+        counter-increment: s;
+        content: "0" counter(s);
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 3rem;
+        color: var(--em);
+        line-height: 1;
+        display: block;
+        margin-bottom: 1rem;
+      }
+      .step h3 {
+        margin-bottom: 0.5rem;
+      }
+      .step p {
+        color: var(--ink-2);
+        font-size: 0.95rem;
+      }
+      .step .line {
+        position: absolute;
+        top: 50px;
+        right: -1.4rem;
+        width: 1.4rem;
+        height: 2px;
+        background: var(--leaf);
+      }
+      .step:last-child .line {
+        display: none;
+      }
+      @media (max-width: 900px) {
+        .steps {
+          grid-template-columns: 1fr;
+        }
+        .step .line {
+          display: none;
+        }
+      }
+
+      /* about */
+      .about {
+        background: var(--paper);
+      }
+      .about .drop::first-letter {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 4.4em;
+        float: left;
+        line-height: 0.8;
+        margin: 0.08em 0.12em 0 0;
+        color: var(--em);
+      }
+      .about p {
+        color: var(--ink-2);
+        margin-bottom: 1rem;
+      }
+      .about .sig {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.4rem;
+        color: var(--em-deep);
+        margin-top: 1.4rem;
+      }
+      .about .pic {
+        border-radius: 28px;
+        overflow: hidden;
+        aspect-ratio: 4/5;
+        box-shadow: var(--shadow);
+      }
+      .about .pic img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+      }
+      .values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .values div {
+        border-top: 2px solid var(--leaf);
+        padding-top: 0.8rem;
+        font-size: 0.9rem;
+      }
+      .values b {
+        display: block;
+        font-family: var(--serif);
+        font-size: 1.15rem;
+        margin-bottom: 0.2rem;
+      }
+
+      /* testimonials */
+      .tcar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.2rem;
+        margin-top: 3rem;
+      }
+      .tq {
+        background: var(--paper);
+        border-radius: var(--r);
+        padding: 1.8rem;
+        border: 1px solid var(--line);
+        position: relative;
+      }
+      .tq::before {
+        content: "“";
+        font-family: var(--serif);
+        font-size: 5rem;
+        color: var(--mint);
+        position: absolute;
+        top: -0.2rem;
+        left: 1rem;
+        line-height: 1;
+      }
+      .tq p {
+        font-family: var(--serif);
+        font-size: 1.15rem;
+        line-height: 1.4;
+        position: relative;
+        font-style: italic;
+        font-weight: 300;
+      }
+      .tq footer {
+        margin-top: 1.2rem;
+        font-size: 0.85rem;
+        color: var(--mute);
+      }
+      .tq footer b {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .tq .tag {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 0.66rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: var(--mint);
+        color: var(--em-deep);
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+      }
+      @media (max-width: 900px) {
+        .tcar {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* crisis */
+      .crisis {
+        background: var(--ink);
+        color: #eef6f0;
+        padding: 56px 0;
+      }
+      .crisis .row {
+        display: grid;
+        grid-template-columns: 1.2fr 2fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      .crisis h2 {
+        font-size: 1.9rem;
+        color: #fff;
+      }
+      .crisis p {
+        color: #b9ccc0;
+        font-size: 0.95rem;
+        margin-top: 0.5rem;
+      }
+      .crisis ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+      }
+      .crisis li {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 0.9rem 1rem;
+      }
+      .crisis li b {
+        display: block;
+        font-size: 1.25rem;
+        font-family: var(--serif);
+        color: var(--leaf);
+      }
+      .crisis li span {
+        font-size: 0.85rem;
+        color: #c8d8ce;
+      }
+      @media (max-width: 900px) {
+        .crisis .row {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .crisis ul {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* faq */
+      .faq details {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 0 1.4rem;
+        margin-bottom: 0.8rem;
+        transition: border-color 0.3s;
+      }
+      .faq details[open] {
+        border-color: var(--leaf);
+      }
+      .faq summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 1.2rem 0;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "+";
+        font-family: var(--serif);
+        font-size: 1.6rem;
+        color: var(--em);
+        transition: transform 0.3s;
+      }
+      .faq details[open] summary::after {
+        transform: rotate(45deg);
+      }
+      .faq details p {
+        padding: 0 0 1.3rem;
+        color: var(--ink-2);
+        font-size: 0.95rem;
+      }
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: clamp(32px, 5vw, 72px);
+        margin-top: 1rem;
+      }
+      @media (max-width: 900px) {
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* contact */
+      .contact {
+        background: linear-gradient(180deg, var(--mint-2), var(--ivory));
+      }
+      .cgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(32px, 5vw, 72px);
+        align-items: start;
+      }
+      .form {
+        background: var(--paper);
+        border-radius: var(--r);
+        padding: 2rem;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+      }
+      .form label {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin: 0.9rem 0 0.35rem;
+      }
+      .form input,
+      .form select,
+      .form textarea {
+        width: 100%;
+        padding: 0.9rem 1rem;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        font: inherit;
+        font-size: 1rem;
+        background: #fff;
+        min-height: 48px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+      .form input:focus,
+      .form select:focus,
+      .form textarea:focus {
+        outline: 0;
+        border-color: var(--em);
+        box-shadow: 0 0 0 4px rgba(15, 122, 62, 0.12);
+      }
+      .form textarea {
+        min-height: 110px;
+        resize: vertical;
+      }
+      .form .btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1.4rem;
+      }
+      .form small {
+        display: block;
+        color: var(--mute);
+        font-size: 0.78rem;
+        margin-top: 0.8rem;
+        text-align: center;
+      }
+      .form .ok {
+        display: none;
+        text-align: center;
+        padding: 2rem 0;
+      }
+      .form .ok h3 {
+        margin-bottom: 0.5rem;
+      }
+      .contact .side h2 {
+        margin: 1rem 0;
+      }
+      .contact .side p {
+        color: var(--ink-2);
+      }
+      .contact .pic {
+        border-radius: 22px;
+        overflow: hidden;
+        aspect-ratio: 16/10;
+        margin-top: 1.6rem;
+        box-shadow: var(--shadow);
+      }
+      .contact .pic img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1.2rem;
+      }
+      .chips span {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.82rem;
+      }
+      @media (max-width: 900px) {
+        .cgrid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* footer */
+      footer.site {
+        padding: 48px 0 110px;
+        border-top: 1px solid var(--line);
+        font-size: 0.88rem;
+        color: var(--mute);
+      }
+      footer.site .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.2rem;
+        align-items: center;
+      }
+      footer.site .row img {
+        height: 40px;
+      }
+      footer.site .disc {
+        margin-top: 1.4rem;
+        max-width: 80ch;
+        font-size: 0.8rem;
+      }
+      footer.site a {
+        color: var(--em);
+        font-weight: 500;
+      }
+
+      /* mobile sticky + demo badge */
+      .mbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 60;
+        display: none;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255, 253, 248, 0.92);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid var(--line);
+      }
+      .mbar .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      @media (max-width: 860px) {
+        .mbar {
+          display: block;
+        }
+      }
+      .demo {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 55;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.74rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        opacity: 0.85;
+      }
+      .demo:hover {
+        opacity: 1;
+      }
+      @media (max-width: 860px) {
+        .demo {
+          bottom: 86px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    @media(max-width:520px){.values{grid-template-columns:1fr 1fr}}
+</style>
+  </head>
+  <body>
+    <header id="hdr">
+      <div class="wrap nav">
+        <a class="logo" href="#top" aria-label="The Listening Room home"
+          ><img
+            src="/assets/tlr-mark.png"
+            alt="TLR monogram"
+            width="92"
+            height="46"
+          /><b>The Listening Room</b></a
+        >
+        <ul>
+          <li><a href="#who">Who it's for</a></li>
+          <li><a href="#services">How we help</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn-p" href="#contact">Book a free call</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="orb o1"></div>
+        <div class="orb o2"></div>
+        <div class="wrap hero-grid">
+          <div>
+            <span class="eyebrow rv"
+              >Independent mental health advocacy · Leicester</span
+            >
+            <h1 class="rv d1">
+              You deserve to be <span class="hl">heard.</span><br /><em
+                >Not managed.</em
+              >
+            </h1>
+            <p class="lead rv d2">
+              The Listening Room is someone in your corner. A confidential,
+              independent advocate who listens first, then helps you say what
+              you need to say — to doctors, to services, to the people around
+              you — and get the support you're entitled to.
+            </p>
+            <div class="cta rv d3">
+              <a class="btn btn-p" href="#contact"
+                >Book a free 20-minute call
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg
+              ></a>
+              <a class="btn btn-s" href="#services">See how we help</a>
+            </div>
+            <div class="micro rv d4">
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >Confidential</span
+              >
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >No referral needed</span
+              >
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >In person, phone or video</span
+              >
+            </div>
+          </div>
+          <div class="hero-media rv d2">
+            <div class="ph">
+              <img
+                src="/assets/hero-listening.jpg"
+                alt="An advocate listening attentively to a client in a calm, light room"
+                width="1400"
+                height="788"
+                fetchpriority="high"
+              />
+            </div>
+            <div class="card-float cf1">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 22a10 10 0 1 0-8.7-5l-1.3 5 5-1.3A10 10 0 0 0 12 22Z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <b>Listen first</b><small>No forms. No judgement.</small>
+              </div>
+            </div>
+            <div class="card-float cf2">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"
+                  />
+                </svg>
+              </div>
+              <div>
+                <b>Beside you</b><small>At appointments &amp; meetings</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="band" aria-hidden="true">
+        <div class="track">
+          <span>Listening sessions</span><i>✦</i
+          ><span>Support at appointments</span><i>✦</i
+          ><span>Help with letters &amp; forms</span><i>✦</i
+          ><span>Care plan reviews</span><i>✦</i
+          ><span>Family &amp; carer support</span><i>✦</i
+          ><span>Signposting to the right help</span><i>✦</i>
+          <span>Listening sessions</span><i>✦</i
+          ><span>Support at appointments</span><i>✦</i
+          ><span>Help with letters &amp; forms</span><i>✦</i
+          ><span>Care plan reviews</span><i>✦</i
+          ><span>Family &amp; carer support</span><i>✦</i
+          ><span>Signposting to the right help</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- TRUST -->
+      <section class="trust">
+        <div class="wrap trust-grid">
+          <div class="tcard rv">
+            <div class="big">1 in 4</div>
+            <p>
+              adults in England experience a mental health problem each year.
+            </p>
+            <small>Source: Mind</small>
+          </div>
+          <div class="tcard rv d1">
+            <div class="big" data-count="37" data-suffix=" days">37 days</div>
+            <p>median wait for a second NHS Talking Therapies appointment.</p>
+            <small>Source: NHS England, quarter to May 2026</small>
+          </div>
+          <div class="tcard rv d2">
+            <div class="big">100%</div>
+            <p>
+              independent. We work for you — not for a hospital, council or
+              provider.
+            </p>
+            <small>Private, non-statutory service</small>
+          </div>
+          <div class="tcard rv d3">
+            <div class="big" data-count="20" data-suffix=" min">20 min</div>
+            <p>
+              free first call. Tell us what's going on, we tell you honestly if
+              we can help.
+            </p>
+            <small>No forms. No pressure.</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO -->
+      <section class="who" id="who">
+        <div class="num">01</div>
+        <div class="wrap split">
+          <div>
+            <span class="eyebrow rv">Who it's for</span>
+            <h2 class="rv d1">
+              For anyone who feels <span class="hl">unheard</span> by the
+              system.
+            </h2>
+            <p class="lead rv d2" style="margin-top: 1rem">
+              You don't need a diagnosis, a referral or the right words. You
+              just need someone on your side.
+            </p>
+            <ul>
+              <li class="rv d1">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  ><b
+                    >Living with anxiety, depression or long-term mental
+                    ill-health</b
+                  >
+                  and tired of explaining yourself over and over.</span
+                >
+              </li>
+              <li class="rv d2">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  ><b
+                    >In hospital, recently discharged, or under a community
+                    team</b
+                  >
+                  and unsure what your care plan actually says.</span
+                >
+              </li>
+              <li class="rv d3">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  ><b>Waiting on the NHS</b> and needing someone to talk to in
+                  the meantime.</span
+                >
+              </li>
+              <li class="rv d4">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  ><b>A parent, partner or carer</b> trying to hold everything
+                  together and get answers for someone you love.</span
+                >
+              </li>
+              <li class="rv d5">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                ><span
+                  ><b>Facing forms, letters or appeals</b> — PIP, Universal
+                  Credit, complaints — and don't know where to start.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="stack rv d2">
+            <img
+              class="i1"
+              src="/assets/window-hope.jpg"
+              alt="A young woman holding a mug, looking out of a window with a calm expression"
+              width="1400"
+              height="788"
+              loading="lazy"
+            />
+            <img
+              class="i2"
+              src="/assets/hands-support.jpg"
+              alt="Two people's hands held together across a table in support"
+              width="933"
+              height="1400"
+              loading="lazy"
+            />
+            <div class="quote-tag">
+              "Someone finally asked what <em>I</em> wanted."
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services" id="services">
+        <div class="num">02</div>
+        <div class="wrap">
+          <span class="eyebrow rv">How we help</span>
+          <h2 class="rv d1">
+            Practical advocacy, <span class="hl">human</span> pace.
+          </h2>
+          <p class="lead rv d2" style="margin-top: 1rem">
+            Not therapy. Not a crisis line. The bit in between that nobody else
+            does: listening properly, then walking beside you through the
+            practical stuff.
+          </p>
+          <div class="sgrid">
+            <div class="sc rv">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M12 22a10 10 0 1 0-8.7-5l-1.3 5 5-1.3A10 10 0 0 0 12 22Z"
+                  />
+                  <path d="M8 12h8M8 9h5" />
+                </svg>
+              </div>
+              <h3>Listening sessions</h3>
+              <p>
+                A regular, confidential hour with someone who isn't rushing you.
+                Say it out loud, untangle it, decide what matters.
+              </p>
+              <a href="#contact">Book a session →</a>
+            </div>
+            <div class="sc rv d1">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"
+                  />
+                </svg>
+              </div>
+              <h3>Beside you at appointments</h3>
+              <p>
+                GP, psychiatrist, care coordinator, ward round, care plan
+                review. We prepare together, come with you, and make sure your
+                points land.
+              </p>
+              <a href="#contact">Ask about this →</a>
+            </div>
+            <div class="sc rv d2">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"
+                  />
+                  <path d="M14 2v6h6M8 13h8M8 17h8" />
+                </svg>
+              </div>
+              <h3>Letters, forms &amp; appeals</h3>
+              <p>
+                PIP, Universal Credit, housing, complaints. We help you put your
+                situation into words that get taken seriously.
+              </p>
+              <a href="#contact">Get help with a form →</a>
+            </div>
+            <div class="sc rv d3">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
+              <h3>Care plan &amp; rights check</h3>
+              <p>
+                Plain-English walk-through of your care plan, medication review
+                or discharge plan, and what you're entitled to ask for.
+              </p>
+              <a href="#contact">Book a review →</a>
+            </div>
+            <div class="sc rv d4">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path d="M3 11l19-9-9 19-2-8-8-2Z" />
+                </svg>
+              </div>
+              <h3>Signposting, done properly</h3>
+              <p>
+                Free statutory advocacy (IMHA), crisis teams, community groups,
+                talking therapies. The right door, not just "a" door.
+              </p>
+              <a href="#contact">Find the right help →</a>
+            </div>
+            <div class="sc rv d5">
+              <div class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                >
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"
+                  />
+                </svg>
+              </div>
+              <h3>Family &amp; carer support</h3>
+              <p>
+                Carers need a listening room too. Understand what's happening,
+                what you can ask for, and how to look after yourself in it.
+              </p>
+              <a href="#contact">Talk to us →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW -->
+      <section class="how" id="how">
+        <div class="num">03</div>
+        <div class="wrap">
+          <span class="eyebrow rv">How it works</span>
+          <h2 class="rv d1">
+            Three steps. <span class="hl">No pressure</span> at any of them.
+          </h2>
+          <div class="steps">
+            <div class="step rv d1">
+              <div class="line"></div>
+              <h3>Book a free 20-minute call</h3>
+              <p>
+                Phone or video, whenever suits you. You talk, we listen. We'll
+                tell you honestly whether we're the right help — and if we're
+                not, who is.
+              </p>
+            </div>
+            <div class="step rv d2">
+              <div class="line"></div>
+              <h3>Make a simple plan together</h3>
+              <p>
+                One page. What you want to change, who needs to hear it, and
+                what we'll do first. You stay in charge of every decision.
+              </p>
+            </div>
+            <div class="step rv d3">
+              <div class="line"></div>
+              <h3>We walk alongside you</h3>
+              <p>
+                Sessions, appointments, letters, follow-ups. As much or as
+                little as you need, for as long as it's useful.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="num">04</div>
+        <div class="wrap split">
+          <div class="pic rv">
+            <img
+              src="/assets/man-sofa-talk.jpg"
+              alt="A man talking openly on a sofa while an advocate takes notes"
+              width="1400"
+              height="788"
+              loading="lazy"
+              style="object-position: 70% 50%"
+            />
+          </div>
+          <div>
+            <span class="eyebrow rv">About The Listening Room</span>
+            <h2 class="rv d1">
+              Started by someone who knows what it's like to
+              <span class="hl">not be heard.</span>
+            </h2>
+            <p class="drop rv d2" style="margin-top: 1.4rem">
+              The Listening Room began with a simple frustration: too many
+              people in Leicester sit in appointments, wards and waiting rooms
+              feeling like a case number. They leave with a leaflet and no idea
+              what happens next.
+            </p>
+            <p class="rv d3">
+              I set this up to be the person I wished had been in the room.
+              Independent — so I answer to you, not a service. Practical — so
+              listening turns into letters written, meetings attended and
+              questions answered. And patient — because being heard properly
+              takes longer than ten minutes.
+            </p>
+            <p class="rv d3">
+              This is not therapy, and it isn't a crisis service. It's advocacy:
+              your voice, made louder.
+            </p>
+            <div class="sig rv d4">— Stephen Forde, Founder</div>
+            <div class="values rv d4">
+              <div><b>Independent</b>We work for you only.</div>
+              <div><b>Confidential</b>Your story stays yours.</div>
+              <div><b>Non-judgemental</b>Whatever you bring.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testi">
+        <div class="num">05</div>
+        <div class="wrap">
+          <span class="eyebrow rv">In their words</span>
+          <h2 class="rv d1">
+            What being heard <span class="hl">feels like.</span>
+          </h2>
+          <div class="tcar">
+            <div class="tq rv d1">
+              <span class="tag">Example</span>
+              <p>
+                He came to my care plan review and for the first time the
+                psychiatrist actually wrote down what I said. I didn't have to
+                fight for it.
+              </p>
+              <footer><b>Client, Leicester</b> · Care plan review</footer>
+            </div>
+            <div class="tq rv d2">
+              <span class="tag">Example</span>
+              <p>
+                I'd been putting off the PIP form for months. We did it together
+                in two sittings and it was accepted first time.
+              </p>
+              <footer><b>Client, Wigston</b> · Benefits support</footer>
+            </div>
+            <div class="tq rv d3">
+              <span class="tag">Example</span>
+              <p>
+                As Mum's carer I was drowning. One call and I finally understood
+                who was responsible for what — and that I was allowed to ask.
+              </p>
+              <footer><b>Carer, Oadby</b> · Family support</footer>
+            </div>
+          </div>
+          <p
+            style="
+              text-align: center;
+              color: var(--mute);
+              font-size: 0.8rem;
+              margin-top: 1.4rem;
+            "
+            class="rv"
+          >
+            Example quotes for layout only — replaced with real client words
+            (with consent) before launch.
+          </p>
+        </div>
+      </section>
+
+      <!-- CRISIS -->
+      <section class="crisis" aria-label="Urgent help">
+        <div class="wrap row">
+          <div>
+            <h2>In crisis right now?</h2>
+            <p>
+              The Listening Room is not an emergency service. If you or someone
+              else is in immediate danger, please use one of these — they're
+              free and open 24/7.
+            </p>
+          </div>
+          <ul>
+            <li><b>999</b><span>Emergency — immediate danger to life</span></li>
+            <li>
+              <b>NHS 111, option 2</b
+              ><span>Urgent mental health support, 24/7</span>
+            </li>
+            <li>
+              <b>Samaritans · 116 123</b
+              ><span>Free to call, any time, any reason</span>
+            </li>
+            <li>
+              <b>Shout · text 85258</b
+              ><span>Free, confidential crisis text line</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="num">06</div>
+        <div class="wrap faq-grid">
+          <div>
+            <span class="eyebrow rv">Questions</span>
+            <h2 class="rv d1">
+              Things people ask <span class="hl">before</span> they call.
+            </h2>
+            <p class="lead rv d2" style="margin-top: 1rem">
+              Anything else? Just ask on the free call. There's no such thing as
+              a silly question here.
+            </p>
+          </div>
+          <div class="rv d2">
+            <details open>
+              <summary>Is this therapy or counselling?</summary>
+              <p>
+                No. The Listening Room is an advocacy and listening service, not
+                a clinical or therapeutic one. We help you be heard, understand
+                your options and take practical next steps. If therapy is what
+                you need, we'll help you find it.
+              </p>
+            </details>
+            <details>
+              <summary>Is it confidential?</summary>
+              <p>
+                Yes. What you tell us stays between us, with the usual
+                safeguarding exception: if we believe you or someone else is at
+                serious risk we may need to involve emergency or safeguarding
+                services, and we'll always tell you first where we can.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need a referral?</summary>
+              <p>
+                No. Contact us directly, or a family member, carer or
+                professional can get in touch on your behalf with your
+                permission.
+              </p>
+            </details>
+            <details>
+              <summary>Is this the same as an IMHA?</summary>
+              <p>
+                No. If you're detained or liable to be detained under the Mental
+                Health Act you have a legal right to a free Independent Mental
+                Health Advocate (IMHA) commissioned by the local authority. The
+                Listening Room is a private, non-statutory service and we'll
+                always point you to statutory advocacy where you're entitled to
+                it.
+              </p>
+            </details>
+            <details>
+              <summary>What happens on the free call?</summary>
+              <p>
+                Twenty minutes, no forms, no pressure. You tell us what's going
+                on, we tell you honestly whether we can help and what that would
+                look like.
+              </p>
+            </details>
+            <details>
+              <summary>Can I bring someone with me?</summary>
+              <p>
+                Always. A friend, partner, parent or carer is welcome at any
+                session or appointment we attend together.
+              </p>
+            </details>
+            <details>
+              <summary>Where do you work?</summary>
+              <p>
+                Leicester and Leicestershire in person, and anywhere in the UK
+                by phone or video.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="wrap cgrid">
+          <div class="side">
+            <span class="eyebrow rv">Start here</span>
+            <h2 class="rv d1">
+              Book your free <span class="hl">20-minute</span> listening call.
+            </h2>
+            <p class="rv d2">
+              Tell us a little about what's going on. We'll reply within one
+              working day to arrange a time that suits you — phone or video,
+              your choice.
+            </p>
+            <div class="chips rv d3">
+              <span>Reply within 1 working day</span><span>No obligation</span
+              ><span>Confidential</span>
+            </div>
+            <div class="pic rv d3">
+              <img
+                src="/assets/friends-park.jpg"
+                alt="Friends walking together in a park, laughing"
+                width="1400"
+                height="788"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <form class="form rv d2" id="lead" novalidate>
+            <div class="fields">
+              <label for="name">Your name</label>
+              <input
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                placeholder="First name is fine"
+              />
+              <label for="contact">Best way to reach you</label>
+              <input
+                id="contact"
+                name="contact"
+                required
+                placeholder="Mobile number or email"
+              />
+              <label for="for">Who is this for?</label>
+              <select id="for" name="for">
+                <option>Myself</option>
+                <option>Someone I care for</option>
+                <option>A client / patient (I'm a professional)</option>
+              </select>
+              <label for="msg"
+                >What's going on? (as much or as little as you like)</label
+              >
+              <textarea
+                id="msg"
+                name="message"
+                placeholder="e.g. I've got a care plan review next month and I never feel listened to."
+              ></textarea>
+              <button class="btn btn-p" type="submit">
+                Request my free call
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </button>
+              <small
+                >Not for emergencies. If you're in danger now, call 999 or NHS
+                111 (option 2).</small
+              >
+            </div>
+            <div class="ok">
+              <h3 class="serif">Thank you — we've got it.</h3>
+              <p style="color: var(--ink-2)">
+                You'll hear from us within one working day. Until then, be kind
+                to yourself.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div class="row">
+          <img
+            src="/assets/tlr-mark.png"
+            alt="The Listening Room"
+            width="80"
+            height="40"
+          />
+          <div>
+            © <span id="yr"></span> The Listening Room · Leicester, UK ·
+            Independent mental health advocacy
+          </div>
+        </div>
+        <p class="disc">
+          The Listening Room is a private, non-statutory advocacy and listening
+          service. It is not a clinical, therapeutic or emergency service and
+          does not replace your right to free statutory advocacy (IMHA / IMCA /
+          Care Act) where you are entitled to it. Demo site by
+          <a href="https://skynetjoe.com" rel="noopener"
+            >SkynetLabs · skynetjoe.com</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <div class="mbar">
+      <a class="btn btn-p" href="#contact">Book a free 20-minute call</a>
+    </div>
+    <a class="demo" href="https://skynetjoe.com" target="_blank" rel="noopener"
+      >Built by SkynetLabs ↗</a
+    >
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+      const hdr = document.getElementById("hdr");
+      addEventListener(
+        "scroll",
+        () => hdr.classList.toggle("on", scrollY > 40),
+        { passive: true },
+      );
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+      );
+      document.querySelectorAll(".rv").forEach((el) => io.observe(el));
+      // counters
+      const co = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target,
+              end = +el.dataset.count,
+              pre = el.dataset.prefix || "",
+              suf = el.dataset.suffix || "";
+            let t0 = null;
+            const dur = 1200;
+            const step = (ts) => {
+              if (!t0) t0 = ts;
+              const p = Math.min(1, (ts - t0) / dur),
+                v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+              el.textContent = pre + v + suf;
+              if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+            co.unobserve(el);
+          }),
+        { threshold: 0.5 },
+      );
+      document.querySelectorAll("[data-count]").forEach((el) => co.observe(el));
+      // form (demo: wire FORM_ENDPOINT to Web3Forms / Formspree at launch)
+      const FORM_ENDPOINT = "";
+      document.getElementById("lead").addEventListener("submit", async (ev) => {
+        ev.preventDefault();
+        const f = ev.target;
+        if (!f.name.value.trim() || !f.contact.value.trim()) {
+          f.querySelector(":invalid,[required]").focus();
+          return;
+        }
+        if (FORM_ENDPOINT) {
+          try {
+            await fetch(FORM_ENDPOINT, {
+              method: "POST",
+              body: new FormData(f),
+            });
+          } catch (e) {}
+        }
+        f.querySelector(".fields").style.display = "none";
+        f.querySelector(".ok").style.display = "block";
+      });
+    </script>
+  </body>
+</html>
