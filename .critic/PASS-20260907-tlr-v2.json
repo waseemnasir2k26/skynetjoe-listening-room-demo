@@ -2,16 +2,21 @@
   "target": "The Listening Room, Leicester — V2 (https://skynetjoe-listening-room-demo.vercel.app/v2)",
   "score": 87.5,
   "bar": 85,
-  "judges": ["combined r4 87.5"],
+  "judges": [
+    "combined r4 87.5"
+  ],
   "round": 4,
   "findings_resolved": [
     "r1 B1 — contrast",
     "r1 M1-M3",
     "r2 B2 — anchors corrupt the sticky track",
-    "r3 B3 — keyboard focus (Tab) scrolled walkTrack.scrollLeft, counter froze at Room 01 while viewport showed Room 08, next wheel yanked the user back"
+    "r3 B3 — keyboard focus (Tab) scrolled walkTrack.scrollLeft, counter froze at Room 01 while viewport showed Room 08, next wheel yanked the user back",
+    "r4 MAJOR A11Y-1 form status announced — .ok role=status tabindex=-1, focus moves to it after submit (verified live, commit 52c3342)"
   ],
-  "scorecard_sha": "1a019f5ea1e8805b27bc928e312b71d8203407525bb005b821e26c690fe382ac",
-  "artifact_shas": { "v2.html": "308d89f2c6c1f47d8cea345c7efe95f137b8d0a1499770285e0756593d269e19" },
-  "commit": "f23c106",
-  "verified_at": "2026-09-07T19:40:00+08:00"
+  "scorecard_sha": "282f76235527f1ca2db8be179613758c125c3a647ac02bd33b34e97277cb8e30",
+  "artifact_shas": {
+    "v2.html": "24bbc5b9f71b73b962bc63d110cd6d804910dc8c96ab1a530efe8ff993539a53"
+  },
+  "commit": "52c3342",
+  "verified_at": "2026-09-07T19:20:00+08:00"
 }

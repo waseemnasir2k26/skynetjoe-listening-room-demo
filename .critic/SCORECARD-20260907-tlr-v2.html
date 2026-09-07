@@ -42,4 +42,10 @@ li{margin-bottom:7px}code{background:#efefea;padding:1px 5px;border-radius:4px;f
 <li>Reduced motion → <code>.stack</code>, 0 running animations, walk height cleared.</li>
 <li>Crisis: 4 static routes — <code>tel:999</code>, <code>tel:111</code>, <code>tel:116123</code>, <code>sms:85258</code>. H1 count 1. JSON-LD parses. <code>noindex, nofollow</code>. <code>lang="en-GB"</code>. All 4 form controls labelled. 0 images missing alt.</li>
 <li>Copy safety: every clinical term is a negation ("Not therapy", "not a crisis service", "not an emergency service", "not a clinical or therapeutic one"). Testimonials marked "Example". Form success says "Demo only — nothing was sent".</li></ul>
+<h2>Re-verification — VerificationUnit, 2026-09-07T19:20:00+08:00</h2><ul>
+<li>Builder applied the r4 MAJOR <span class="maj">A11Y-1</span> after the PASS (commit <code>52c3342</code>). Independently re-verified live at 1440x900: <code>.ok</code> has <code>role="status" tabindex="-1"</code>; after filling <code>#name</code> + <code>#contact-method</code> and submitting, <code>document.activeElement</code> === <code>DIV.ok</code>, 0 non-GET requests, text contains "Demo only". A11Y-1 CLOSED.</li>
+<li>served == source re-checked: md5 <code>da61187706405724b0fb7902f81985f4</code> for both <code>curl .../v2</code> and <code>v2.html</code>.</li>
+<li>Invariants re-run on the new bytes: <code>scrollWidth === innerWidth</code> at 375 / 390 / 768 / 1024 / 1440 after a full scroll; 0 console and 0 page errors at every width; 26 x Tab @1440 with <code>walkTrack.scrollLeft === 0</code> at every step (0 mismatches); <code>tel:999</code>, <code>tel:111</code>, <code>tel:116123</code>, <code>sms:85258</code> all present in the served HTML; H1 count 1; reduced motion → <code>html.stack</code> with 0 running animations.</li>
+<li><code>gitleaks detect --source . --no-banner</code> → exit 0, 20 commits / 353 KB scanned, no leaks.</li>
+<li>Score unchanged at <b>87.5</b> (bar 85). No regressions found; the marker's <code>artifact_shas</code> were refreshed to the current bytes.</li></ul>
 </div></html>
