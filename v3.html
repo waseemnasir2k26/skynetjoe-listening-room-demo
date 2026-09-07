@@ -1513,14 +1513,16 @@
   <body>
     <!-- variant switcher (demo only — delete after client picks) -->
 <style>
-.vsw{position:fixed;bottom:20px;left:20px;z-index:99;display:flex;gap:4px;padding:4px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif}
+.vsw{position:fixed;bottom:16px;right:16px;z-index:99;display:flex;gap:4px;padding:4px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif}
 .vsw a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:36px;padding:0 12px;border-radius:999px;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.04em;opacity:.7;transition:opacity .2s,background .2s}
 .vsw a:hover{opacity:1}
 .vsw a.on{background:#0f7a3e;opacity:1}
-.vsw .lbl{display:inline-flex;align-items:center;padding:0 10px 0 12px;color:#bfe3cb;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
-@media(max-width:960px){.vsw{bottom:86px;left:12px}.vsw .lbl{display:none}}
+.vsw .lbl{display:inline-flex;align-items:center;padding:0 10px 0 12px;color:#bfe3cb;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:1;min-width:0;height:36px;border-radius:999px}
+.vsw .lbl:hover{background:rgba(255,255,255,.12)}
+.demo{display:none!important}
+@media(max-width:960px){.vsw{bottom:86px;right:12px}.vsw .lbl{display:none}}
 </style>
-<nav class="vsw" aria-label="Design variants"><span class="lbl">Design</span><a href="/" data-v="v1">V1</a><a href="/v2" data-v="v2">V2</a><a href="/v3" data-v="v3">V3</a></nav>
+<nav class="vsw" aria-label="Design variants"><a class="lbl" href="https://skynetjoe.com" target="_blank" rel="noopener">SkynetLabs ↗ · Design</a><a href="/" data-v="v1">V1</a><a href="/v2" data-v="v2">V2</a><a href="/v3" data-v="v3">V3</a></nav>
 <script>(function(){var p=location.pathname.replace(/\/+$/,'')||'/';var k=p==='/'||p==='/index.html'||p==='/index'?'v1':p.replace('/','').replace('.html','');document.querySelectorAll('.vsw a').forEach(function(a){if(a.dataset.v===k)a.classList.add('on')})})();</script>
 
     <div class="grain" aria-hidden="true">

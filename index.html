@@ -1690,20 +1690,26 @@ footer.site .leaf{overflow:visible;margin-left:0}
 .contact .left{display:flex;align-items:center}
 header .ear .ic::before,header .ear .ic::after{animation-name:ripple-sm}
 @keyframes ripple-sm{0%{transform:scale(.85);opacity:.6}100%{transform:scale(1.35);opacity:0}}
+
+@media(max-width:960px){.hero-img{height:50vw;min-height:220px}.hero .wrap{padding-top:20px;padding-bottom:28px}.hero h1{margin:.6rem 0 1rem}.hero-copy .lead{font-size:1.15rem}.hero .cta{margin-top:1.3rem}}
+.testi .q{transition:opacity .35s var(--ease),transform .6s var(--ease)}
+.testi .q.on{transition:opacity .7s var(--ease) .3s,transform .7s var(--ease) .3s}
 </style>
   <noscript><style>.rv,.who .row .l,.who .row .r,.hero h1 .w{opacity:1!important;transform:none!important}.thread path{stroke-dashoffset:0!important}.testi .stage{display:block}.testi .q{opacity:1;margin-bottom:2rem}</style></noscript>
 </head>
   <body>
 <!-- variant switcher (demo only — delete after client picks) -->
 <style>
-.vsw{position:fixed;bottom:20px;left:20px;z-index:99;display:flex;gap:4px;padding:4px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif}
+.vsw{position:fixed;bottom:16px;right:16px;z-index:99;display:flex;gap:4px;padding:4px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif}
 .vsw a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:36px;padding:0 12px;border-radius:999px;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.04em;opacity:.7;transition:opacity .2s,background .2s}
 .vsw a:hover{opacity:1}
 .vsw a.on{background:#0f7a3e;opacity:1}
-.vsw .lbl{display:inline-flex;align-items:center;padding:0 10px 0 12px;color:#bfe3cb;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
-@media(max-width:960px){.vsw{bottom:86px;left:12px}.vsw .lbl{display:none}}
+.vsw .lbl{display:inline-flex;align-items:center;padding:0 10px 0 12px;color:#bfe3cb;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:1;min-width:0;height:36px;border-radius:999px}
+.vsw .lbl:hover{background:rgba(255,255,255,.12)}
+.demo{display:none!important}
+@media(max-width:960px){.vsw{bottom:86px;right:12px}.vsw .lbl{display:none}}
 </style>
-<nav class="vsw" aria-label="Design variants"><span class="lbl">Design</span><a href="/" data-v="v1">V1</a><a href="/v2" data-v="v2">V2</a><a href="/v3" data-v="v3">V3</a></nav>
+<nav class="vsw" aria-label="Design variants"><a class="lbl" href="https://skynetjoe.com" target="_blank" rel="noopener">SkynetLabs ↗ · Design</a><a href="/" data-v="v1">V1</a><a href="/v2" data-v="v2">V2</a><a href="/v3" data-v="v3">V3</a></nav>
 <script>(function(){var p=location.pathname.replace(/\/+$/,'')||'/';var k=p==='/'||p==='/index.html'||p==='/index'?'v1':p.replace('/','').replace('.html','');document.querySelectorAll('.vsw a').forEach(function(a){if(a.dataset.v===k)a.classList.add('on')})})();</script>
 
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
