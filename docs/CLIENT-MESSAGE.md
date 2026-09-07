@@ -31,3 +31,16 @@ Domain: TLR.co.uk is already owned by someone else, I checked the UK registry. O
 3. tlrleicester.co.uk
 4. thelisteningroomuk.co.uk
 Which one? I'll register it in your name like fordesafe.co.uk, then set up the inbox and put the site live.
+
+## Round 3 — three designs (Fiverr-safe)
+
+Stephen — I went further and built you THREE different designs so you can pick by feel, not by description. Same words, same green/black/white, same ear + office number on each. Open on your phone AND a laptop — they behave differently on each:
+
+skynetjoe-listening-room-demo.vercel.app
+(the little "Design V1 V2 V3" switch bottom-left flips between them)
+
+V1 — "The Thread": light, editorial. One green line runs the whole page — it starts as a shaky pulse under the word "heard", calms down section by section, becomes the ear next to your office number, and ends as a leaf.
+V2 — "The Rooms": on a laptop you scroll DOWN and the page walks you SIDEWAYS through eight rooms, one idea per room, ending at the crisis numbers and the booking form. On phones it stacks normally.
+V3 — "The Conversation": black, cinematic. The headline types itself out, then a two-column section shows what people say on the left and how you answer on the right.
+
+Tell me which one feels like you (or "V1 with V3's hero", mixing is fine). Then I lock it, remove the switch, and we go live on the domain you pick.
