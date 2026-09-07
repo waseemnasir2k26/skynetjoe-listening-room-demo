@@ -55,7 +55,6 @@
             "image": "https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg",
             "telephone": "+44 116 479 3584",
             "areaServed": ["Leicester", "Leicestershire"],
-            
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Leicester",
@@ -121,23 +120,20 @@
     </script>
     <style>
       :root {
-        --ivory: #ffffff;
-        --paper: #ffffff;
+        --white: #ffffff;
         --ink: #0a0a0a;
         --ink-2: #2b2b2b;
         --mute: #5c5c5c;
         --em: #0f7a3e;
         --em-deep: #0b5a2e;
-        --em-dark: #0a0a0a;
         --leaf: #5fbf47;
         --mint: #e3f3e8;
         --mint-2: #f3f7f4;
         --line: #e6e6e6;
-        --shadow: 0 20px 60px -20px rgba(0,0,0,0.22);
         --serif: "Fraunces", Georgia, serif;
-        --sans: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
-        --r: 22px;
-        --max: 1180px;
+        --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --max: 1240px;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
       }
       * {
         box-sizing: border-box;
@@ -150,12 +146,17 @@
       body {
         font-family: var(--sans);
         color: var(--ink);
-        background: var(--ivory);
-        line-height: 1.6;
+        background: var(--white);
+        line-height: 1.7;
+        font-size: 1.0625rem;
         -webkit-font-smoothing: antialiased;
         overflow-x: clip;
       }
-      img{max-width:100%;display:block;height:auto}
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+      }
       a {
         color: inherit;
         text-decoration: none;
@@ -166,143 +167,161 @@
       .serif {
         font-family: var(--serif);
         font-weight: 500;
-        letter-spacing: -0.01em;
-        line-height: 1.08;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+      h1 {
+        font-size: clamp(3rem, 6.2vw, 5rem);
+        font-variation-settings: "opsz" 96;
+        line-height: 0.96;
       }
       h2 {
-        font-size: clamp(2rem, 4.2vw, 3.3rem);
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-variation-settings: "opsz" 48;
+        line-height: 1.02;
       }
       h3 {
-        font-size: 1.3rem;
+        font-size: 1.45rem;
+        line-height: 1.15;
       }
       .wrap {
         max-width: var(--max);
         margin: 0 auto;
-        padding: 0 clamp(18px, 4vw, 40px);
+        padding: 0 clamp(20px, 4vw, 48px);
       }
       .eyebrow {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.6rem;
         font-size: 0.78rem;
         font-weight: 600;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.16em;
         text-transform: uppercase;
         color: var(--em);
       }
       .eyebrow::before {
         content: "";
-        width: 22px;
+        width: 26px;
         height: 2px;
-        background: var(--leaf);
-        border-radius: 2px;
+        background: var(--em);
       }
       .lead {
-        font-size: 1.15rem;
+        font-size: 1.25rem;
+        line-height: 1.65;
         color: var(--ink-2);
-        max-width: 60ch;
+        max-width: 62ch;
       }
       .hl {
-        position: relative;
-        display: inline-block;
-        white-space: nowrap;
-      }
-      .hl::after {
-        content: "";
-        position: absolute;
-        left: -0.1em;
-        right: -0.1em;
-        bottom: 0.08em;
-        height: 0.42em;
-        background: var(--mint);
-        z-index: -1;
-        transform: skew(-3deg);
-        border-radius: 4px;
+        color: var(--em);
+        font-style: italic;
+        font-weight: 300;
       }
       .btn {
         display: inline-flex;
         align-items: center;
         gap: 0.6rem;
-        padding: 1rem 1.6rem;
+        padding: 1.05rem 1.7rem;
         border-radius: 999px;
         font-weight: 600;
         font-size: 1rem;
         min-height: 52px;
         transition:
-          transform 0.25s,
-          box-shadow 0.25s,
-          background 0.25s;
+          transform 0.3s var(--ease),
+          background 0.3s,
+          color 0.3s;
         cursor: pointer;
-        border: 0;
+        border: 1.5px solid transparent;
         font-family: var(--sans);
       }
       .btn-p {
-        background: var(--em);
+        background: var(--ink);
         color: #fff;
-        box-shadow: 0 10px 30px -10px rgba(15, 122, 62, 0.6);
       }
       .btn-p:hover {
+        background: var(--em);
+        transform: translateY(-2px);
+      }
+      .btn-g {
+        background: var(--em);
+        color: #fff;
+      }
+      .btn-g:hover {
         background: var(--em-deep);
         transform: translateY(-2px);
-        box-shadow: 0 16px 36px -12px rgba(15, 122, 62, 0.7);
       }
       .btn-s {
         background: transparent;
         color: var(--ink);
-        border: 1.5px solid var(--line);
+        border-color: var(--ink);
       }
       .btn-s:hover {
-        border-color: var(--em);
-        color: var(--em);
+        background: var(--ink);
+        color: #fff;
       }
       .btn svg {
         width: 18px;
         height: 18px;
       }
       section {
-        padding: clamp(72px, 9vw, 120px) 0;
         position: relative;
-      }
-      .num {
-        position: absolute;
-        right: 2vw;
-        top: 20px;
-        font-family: var(--serif);
-        font-size: clamp(9rem, 22vw, 20rem);
-        line-height: 1;
-        color: var(--em);
-        opacity: 0.045;
-        pointer-events: none;
-        user-select: none;
-        font-style: italic;
+        padding: clamp(80px, 10vw, 140px) 0;
       }
 
       /* reveal */
       .rv {
         opacity: 0;
-        transform: translateY(28px);
+        transform: translateY(26px);
         transition:
-          opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
-          transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
       }
       .rv.in {
         opacity: 1;
         transform: none;
       }
       .rv.d1 {
-        transition-delay: 0.12s;
+        transition-delay: 0.1s;
       }
       .rv.d2 {
-        transition-delay: 0.24s;
+        transition-delay: 0.2s;
       }
       .rv.d3 {
-        transition-delay: 0.36s;
+        transition-delay: 0.3s;
       }
       .rv.d4 {
-        transition-delay: 0.48s;
+        transition-delay: 0.4s;
       }
-      .rv.d5 {
-        transition-delay: 0.6s;
+
+      /* grain */
+      .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1000;
+        opacity: 0.045;
+        mix-blend-mode: multiply;
+      }
+      .grain svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* thread */
+      .thread {
+        position: absolute;
+        pointer-events: none;
+        overflow: visible;
+      }
+      .thread path {
+        fill: none;
+        stroke: var(--em);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+      }
+      .thread.drawn path {
+        stroke-dashoffset: 0;
       }
 
       /* header */
@@ -312,49 +331,48 @@
         left: 0;
         right: 0;
         z-index: 50;
+        padding: 18px 0;
         transition:
           background 0.35s,
           box-shadow 0.35s,
           padding 0.35s;
-        padding: 16px 0;
       }
       header.on {
-        background: rgba(255,255,255,0.9);
+        background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(14px);
         box-shadow: 0 1px 0 var(--line);
-        padding: 8px 0;
+        padding: 10px 0;
       }
       .nav {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         gap: 1rem;
       }
       .logo {
         display: flex;
         align-items: center;
         gap: 0.7rem;
+        margin-right: auto;
       }
       .logo img {
-        height: 46px;
+        height: 44px;
         width: auto;
-        border-radius: 8px;
       }
       .logo b {
         font-family: var(--serif);
         font-weight: 500;
         font-size: 1.05rem;
-        letter-spacing: 0.02em;
       }
       .nav ul {
         display: flex;
-        gap: 1.6rem;
+        gap: 1.5rem;
         list-style: none;
         font-size: 0.95rem;
         font-weight: 500;
+        margin-right: 1rem;
       }
       .nav ul a {
-        opacity: 0.8;
+        opacity: 0.75;
       }
       .nav ul a:hover {
         opacity: 1;
@@ -365,44 +383,181 @@
         min-height: 44px;
         font-size: 0.92rem;
       }
-      @media (max-width: 860px) {
+      @media (max-width: 960px) {
         .nav ul {
           display: none;
+        }
+      }
+
+      /* ear */
+      .ear {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-weight: 600;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .ear .ic {
+        position: relative;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--em);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .ear .ic svg {
+        width: 24px;
+        height: 24px;
+      }
+      .ear .ic::before,
+      .ear .ic::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1.5px solid var(--em);
+        opacity: 0;
+        animation: ripple 3.2s var(--ease) infinite;
+      }
+      .ear .ic::after {
+        animation-delay: 1.6s;
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.9);
+          opacity: 0;
+        }
+      }
+      .ear small {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--mute);
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+      }
+      .ear b {
+        display: block;
+        font-size: 0.98rem;
+        line-height: 1.15;
+      }
+      @media (max-width: 960px) {
+        .nav .ear b,
+        .nav .ear small {
+          display: none;
+        }
+        .nav .ear .ic {
+          width: 42px;
+          height: 42px;
         }
       }
 
       /* hero */
       .hero {
         min-height: 100svh;
+        padding: 0;
         display: grid;
         align-items: center;
-        padding: 140px 0 80px;
         overflow: hidden;
       }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.05fr 0.95fr;
-        gap: clamp(32px, 5vw, 72px);
-        align-items: center;
+      .hero-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 56vw;
+        clip-path: url(#heroClip);
+        isolation: isolate;
+      }
+      .hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 62% 40%;
+        filter: grayscale(0.3) contrast(1.05);
+        transform: scale(1.04);
+        animation: kb 26s ease-in-out infinite alternate;
+      }
+      .hero-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--em-deep);
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+      }
+      .hero-img::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #fff 0, rgba(255, 255, 255, 0) 22%);
+        z-index: 2;
+      }
+      @keyframes kb {
+        from {
+          transform: scale(1.04);
+        }
+        to {
+          transform: scale(1.12);
+        }
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 3;
+        padding-top: 140px;
+        padding-bottom: 110px;
+        width: 100%;
+      }
+      .hero-copy {
+        max-width: 600px;
       }
       .hero h1 {
-        font-size: clamp(2.7rem, 6vw, 5.2rem);
-        font-weight: 500;
-        margin: 1.2rem 0 1.4rem;
+        margin: 1.2rem 0 1.6rem;
+        position: relative;
       }
-      .hero h1 em {
-        font-style: italic;
-        font-weight: 300;
-        color: var(--em-deep);
+      .hero h1 .w {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.6s var(--ease),
+          transform 0.6s var(--ease);
+      }
+      .hero h1.go .w {
+        opacity: 1;
+        transform: none;
+      }
+      .hero h1 .heard {
+        position: relative;
+        display: inline-block;
+      }
+      .hero h1 .heard .thread {
+        left: -4%;
+        right: -4%;
+        bottom: -0.28em;
+        height: 0.5em;
+        width: 108%;
+      }
+      .hero h1 .heard .thread path {
+        stroke-width: 5;
+        transition: stroke-dashoffset 1.1s var(--ease) 0.9s;
       }
       .hero .cta {
         display: flex;
         flex-wrap: wrap;
         gap: 0.8rem;
-        margin-top: 2rem;
+        margin-top: 2.2rem;
       }
       .hero .micro {
-        margin-top: 1.4rem;
+        margin-top: 1.6rem;
         display: flex;
         flex-wrap: wrap;
         gap: 1.2rem;
@@ -419,173 +574,96 @@
         height: 16px;
         color: var(--em);
       }
-      .hero-media {
-        position: relative;
-      }
-      .hero-media .ph {
-        border-radius: 28px;
-        overflow: hidden;
-        aspect-ratio: 4/4.6;
-        box-shadow: var(--shadow);
-        position: relative;
-        isolation: isolate;
-      }
-      .hero-media .ph img {
-        width: 100%;
-        height: 100% !important;
-        object-fit: cover;
-        object-position: 60% 40%;
-        animation: kb 24s ease-in-out infinite alternate;
-      }
-      @keyframes kb {
-        from {
-          transform: scale(1);
-        }
-        to {
-          transform: scale(1.09);
-        }
-      }
-      .hero-media .ph::after {
-        content: "";
+      .ear-hero {
         position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          transparent 55%,
-          rgba(7, 62, 32, 0.45)
-        );
-        z-index: 1;
+        z-index: 4;
+        right: clamp(20px, 4vw, 48px);
+        bottom: clamp(40px, 8vh, 90px);
+        background: #fff;
+        padding: 1rem 1.3rem 1rem 1rem;
+        border-radius: 999px;
+        box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.35);
+        gap: 0.9rem;
       }
-      .card-float {
-        position: absolute;
-        background: var(--paper);
-        border-radius: 18px;
-        padding: 0.9rem 1.1rem;
-        box-shadow: 0 18px 50px -18px rgba(7, 62, 32, 0.35);
-        display: flex;
-        gap: 0.8rem;
-        align-items: center;
-        font-size: 0.9rem;
-        animation: float 6s ease-in-out infinite;
-        border: 1px solid rgba(255, 255, 255, 0.7);
+      .ear-hero .ic {
+        width: 54px;
+        height: 54px;
       }
-      .card-float .ic {
-        width: 38px;
-        height: 38px;
-        border-radius: 12px;
-        background: var(--mint);
-        display: grid;
-        place-items: center;
-        color: var(--em);
-        flex: none;
+      .ear-hero .ic svg {
+        width: 28px;
+        height: 28px;
       }
-      .card-float .ic svg {
-        width: 20px;
-        height: 20px;
+      .ear-hero b {
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        font-weight: 500;
       }
-      .card-float b {
-        display: block;
-        font-weight: 600;
-        font-size: 0.92rem;
-      }
-      .card-float small {
-        color: var(--mute);
-      }
-      .cf1 {
-        left: -8%;
-        bottom: 14%;
-        animation-delay: -2s;
-      }
-      .cf2 {
-        right: -6%;
-        top: 10%;
-        animation-delay: -4s;
-      }
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-12px);
-        }
-      }
-      .orb {
-        position: absolute;
-        border-radius: 50%;
-        filter: blur(70px);
-        opacity: 0.5;
-        pointer-events: none;
-        z-index: -1;
-      }
-      .o1 {
-        width: 520px;
-        height: 520px;
-        background: var(--mint);
-        top: -120px;
-        right: -140px;
-        animation: drift 18s ease-in-out infinite alternate;
-      }
-      .o2 {
-        width: 380px;
-        height: 380px;
-        background: #e9f3d8;
-        bottom: -120px;
-        left: -120px;
-        animation: drift 22s ease-in-out infinite alternate-reverse;
-      }
-      @keyframes drift {
-        from {
-          transform: translate(0, 0);
-        }
-        to {
-          transform: translate(-40px, 50px);
-        }
-      }
-      @media (max-width: 900px) {
+      @media (max-width: 960px) {
         .hero {
-          padding: 120px 0 60px;
+          min-height: auto;
         }
-        .hero-grid {
-          grid-template-columns: 1fr;
+        .hero-img {
+          position: relative;
+          width: 100%;
+          height: 58vw;
+          min-height: 300px;
+          clip-path: url(#heroClipM);
         }
-        .hero-media {
-          margin-top: 1rem;
+        .hero-img::before {
+          display: none;
         }
-        .hero-media .ph {
-          aspect-ratio: 4/3.4;
+        .hero .wrap {
+          padding-top: 120px;
+          padding-bottom: 40px;
         }
-        .cf1 {
-          left: 4%;
-          bottom: -18px;
-        }
-        .cf2 {
-          right: 4%;
-          top: -18px;
+        .ear-hero {
+          position: static;
+          margin-top: 1.6rem;
+          display: inline-flex;
+          box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.3);
+          border: 1px solid var(--line);
         }
       }
 
       /* marquee */
       .band {
-        background: var(--em-dark);
-        color: #dff3e6;
-        padding: 14px 0;
+        background: var(--ink);
+        color: #fff;
+        padding: 20px 0;
         overflow: hidden;
         white-space: nowrap;
         font-family: var(--serif);
         font-style: italic;
-        font-size: 1.05rem;
+        font-size: 1.15rem;
+        position: relative;
       }
       .band .track {
         display: inline-block;
-        animation: mq 38s linear infinite;
+        animation: mq 60s linear infinite;
+      }
+      .band:hover .track {
+        animation-play-state: paused;
       }
       .band span {
-        margin: 0 1.4rem;
+        margin: 0 1.6rem;
       }
       .band i {
         color: var(--leaf);
         font-style: normal;
+      }
+      .band .thread {
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 2px;
+        width: 100%;
+        transform: translateY(-1px);
+      }
+      .band .thread path {
+        stroke: var(--em);
+        stroke-width: 2;
+        opacity: 0.9;
+        transition: stroke-dashoffset 2.4s linear;
       }
       @keyframes mq {
         from {
@@ -596,402 +674,631 @@
         }
       }
 
-      /* trust */
-      .trust {
-        padding: 56px 0;
+      /* stat */
+      .stat {
+        text-align: center;
+        padding: clamp(70px, 9vw, 120px) 0 clamp(50px, 6vw, 80px);
       }
-      .trust-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-      }
-      .tcard {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 1.3rem 1.3rem;
-      }
-      .tcard .big {
+      .stat .big {
         font-family: var(--serif);
-        font-size: 2.4rem;
+        font-size: clamp(5rem, 16vw, 12rem);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+        position: relative;
+        display: inline-block;
+      }
+      .stat .big .thread {
+        left: 0;
+        right: 0;
+        bottom: -0.08em;
+        height: 0.18em;
+        width: 100%;
+      }
+      .stat .big .thread path {
+        stroke-width: 4;
+        transition: stroke-dashoffset 1.4s var(--ease);
+      }
+      .stat .big em {
+        font-style: italic;
+        font-weight: 300;
         color: var(--em);
-        line-height: 1;
       }
-      .tcard p {
-        font-size: 0.88rem;
+      .stat p {
+        max-width: 44ch;
+        margin: 1.6rem auto 0;
         color: var(--ink-2);
-        margin-top: 0.4rem;
+        font-size: 1.15rem;
       }
-      .tcard small {
+      .stat small {
         display: block;
         color: var(--mute);
-        font-size: 0.72rem;
-        margin-top: 0.5rem;
+        font-size: 0.78rem;
+        margin-top: 0.6rem;
       }
-      @media (max-width: 900px) {
-        .trust-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
+      .stat .row {
+        display: flex;
+        justify-content: center;
+        gap: clamp(1.5rem, 5vw, 4rem);
+        flex-wrap: wrap;
+        margin-top: 2.8rem;
+        font-size: 0.95rem;
+        color: var(--ink-2);
+      }
+      .stat .row b {
+        font-family: var(--serif);
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--ink);
+        display: block;
+        line-height: 1;
+      }
+      .stat .row div {
+        text-align: center;
+        max-width: 260px;
       }
 
       /* who */
-      .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-        gap: clamp(32px, 6vw, 80px);
-        align-items: center;
-      }
-      .who ul {
-        list-style: none;
-        margin-top: 1.6rem;
+      .who .rows {
+        margin-top: 3rem;
         display: grid;
-        gap: 0.7rem;
+        gap: 0.4rem;
       }
-      .who li {
-        display: flex;
-        gap: 0.8rem;
-        align-items: flex-start;
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        padding: 0.9rem 1rem;
-        transition:
-          transform 0.3s,
-          border-color 0.3s;
+      .who .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(1.5rem, 4vw, 4rem);
+        align-items: center;
+        padding: 1.8rem 0;
+        border-top: 1px solid var(--line);
       }
-      .who li:hover {
-        transform: translateX(6px);
-        border-color: var(--leaf);
+      .who .row:last-child {
+        border-bottom: 1px solid var(--line);
       }
-      .who li svg {
-        width: 22px;
-        height: 22px;
-        color: var(--em);
-        flex: none;
-        margin-top: 2px;
+      .who .row:nth-child(even) .txt {
+        order: 2;
       }
-      .stack {
-        position: relative;
-        padding-bottom: 110px;
-      }
-      .stack img {
-        border-radius: 22px;
-        box-shadow: var(--shadow);
-      }
-      .stack .i1 {
-        width: 78%;
-        aspect-ratio: 4/3;
-        object-fit: cover;
-      }
-      .stack .i2 {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        width: 52%;
-        aspect-ratio: 3/4;
-        object-fit: cover;
-        border: 8px solid var(--ivory);
-      }
-      .quote-tag {
-        position: absolute;
-        left: 0;
-        bottom: 30px;
-        background: var(--em);
-        color: #fff;
-        padding: 1rem 1.2rem;
-        border-radius: 16px;
+      .who .row .n {
         font-family: var(--serif);
         font-style: italic;
-        font-size: 1.05rem;
-        max-width: 280px;
-        box-shadow: var(--shadow);
+        font-size: 1.1rem;
+        color: var(--em);
+        display: block;
+        margin-bottom: 0.4rem;
       }
-      @media (max-width: 900px) {
-        .split {
+      .who .row .txt b {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.5rem;
+        display: block;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+      }
+      .who .row .txt p {
+        color: var(--ink-2);
+      }
+      .who .row .l {
+        opacity: 0;
+        transform: translateX(-24px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .who .row .r {
+        opacity: 0;
+        transform: translateX(24px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .who .row.in .l,
+      .who .row.in .r {
+        opacity: 1;
+        transform: none;
+      }
+      .who .pic {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+      .who .pic img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        filter: grayscale(0.15);
+      }
+      .who .pic.tall {
+        aspect-ratio: 4/3;
+      }
+      .who .row.q {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .who .row.q .quote {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+        font-weight: 300;
+        color: var(--ink);
+        max-width: 24ch;
+        margin: 0 auto;
+      }
+      .who .row.q .quote em {
+        color: var(--em);
+        font-style: italic;
+      }
+      @media (max-width: 760px) {
+        .who .row {
           grid-template-columns: 1fr;
+        }
+        .who .row:nth-child(even) .txt {
+          order: 0;
+        }
+        .who .row .l,
+        .who .row .r {
+          transform: translateY(16px);
         }
       }
 
       /* services */
-      .services{background:#0a0a0a;color:#fff}
-.services h2,.services .lead{color:#fff}
-.services .lead{color:#c9c9c9}
-.services .hl::after{background:var(--em)}
-.services .num{color:#fff}
-      .sgrid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
-        margin-top: 3rem;
+      .services {
+        background: var(--white);
       }
-      .sc {
-        background: var(--paper);
-        border-radius: var(--r);
-        padding: 1.8rem;
-        border: 1px solid var(--line);
+      .services .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: end;
+      }
+      .services .thread-top {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 60px;
+        width: 100%;
+      }
+      .services .thread-top path {
+        stroke-width: 2;
+        transition: stroke-dashoffset 1.8s var(--ease);
+      }
+      .svc {
+        list-style: none;
+        margin-top: 3.5rem;
+        border-top: 1px solid var(--ink);
+      }
+      .svc li {
+        border-bottom: 1px solid var(--line);
         position: relative;
         overflow: hidden;
-        transition:
-          transform 0.35s,
-          box-shadow 0.35s;
       }
-      .sc::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-          circle at 100% 0,
-          var(--mint),
-          transparent 55%
-        );
-        opacity: 0;
-        transition: opacity 0.35s;
-      }
-      .sc:hover {
-        transform: translateY(-6px);
-        box-shadow: var(--shadow);
-      }
-      .sc:hover::before {
-        opacity: 1;
-      }
-      .sc .ic {
-        width: 52px;
-        height: 52px;
-        border-radius: 16px;
-        background: var(--mint);
+      .svc a {
         display: grid;
-        place-items: center;
-        color: var(--em);
-        margin-bottom: 1.2rem;
-        position: relative;
-      }
-      .sc .ic svg {
-        width: 26px;
-        height: 26px;
-      }
-      .sc h3 {
-        margin-bottom: 0.5rem;
-        position: relative;
-      }
-      .sc p {
-        color: var(--ink-2);
-        font-size: 0.95rem;
-        position: relative;
-      }
-      .sc a {
-        display: inline-flex;
-        gap: 0.4rem;
+        grid-template-columns: 70px minmax(0, 1fr) minmax(0, 1fr) 200px;
+        gap: 2rem;
         align-items: center;
-        margin-top: 1rem;
-        color: var(--em);
-        font-weight: 600;
-        font-size: 0.9rem;
-        position: relative;
+        padding: 1.7rem 0;
+        min-height: 96px;
+        transition:
+          padding 0.45s var(--ease),
+          background 0.45s var(--ease);
       }
-      @media (max-width: 900px) {
-        .sgrid {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 600px) {
-        .sgrid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* how */
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.4rem;
-        margin-top: 3rem;
-        counter-reset: s;
-      }
-      .step {
-        position: relative;
-        padding: 2rem 1.6rem 1.8rem;
-        background: var(--paper);
-        border-radius: var(--r);
-        border: 1px solid var(--line);
-      }
-      .step::before {
-        counter-increment: s;
-        content: "0" counter(s);
+      .svc .n {
         font-family: var(--serif);
         font-style: italic;
-        font-size: 3rem;
+        font-size: 1.2rem;
         color: var(--em);
-        line-height: 1;
-        display: block;
-        margin-bottom: 1rem;
       }
-      .step h3 {
-        margin-bottom: 0.5rem;
+      .svc h3 {
+        transition: transform 0.45s var(--ease);
       }
-      .step p {
+      .svc p {
         color: var(--ink-2);
-        font-size: 0.95rem;
+        font-size: 0.98rem;
+        opacity: 0.55;
+        transform: translateY(8px);
+        transition:
+          opacity 0.45s var(--ease) 0.05s,
+          transform 0.45s var(--ease) 0.05s;
+        max-width: 40ch;
       }
-      .step .line {
-        position: absolute;
-        top: 50px;
-        right: -1.4rem;
-        width: 1.4rem;
-        height: 2px;
-        background: var(--leaf);
+      .svc .ph {
+        height: 120px;
+        border-radius: 4px;
+        overflow: hidden;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.55s var(--ease);
       }
-      .step:last-child .line {
-        display: none;
+      .svc .ph img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        filter: grayscale(0.2);
+      }
+      .svc li:hover a,
+      .svc li:focus-within a,
+      .svc li.open a {
+        padding: 2.2rem 0 2.2rem 1.4rem;
+        background: var(--mint);
+      }
+      .svc li:hover p,
+      .svc li:focus-within p,
+      .svc li.open p {
+        opacity: 1;
+        transform: none;
+      }
+      .svc li:hover .ph,
+      .svc li:focus-within .ph,
+      .svc li.open .ph {
+        clip-path: inset(0 0 0 0);
+      }
+      .svc li:hover h3,
+      .svc li:focus-within h3 {
+        transform: translateX(6px);
+      }
+      @media (hover: none) {
+        .svc a {
+          grid-template-columns: 50px minmax(0, 1fr);
+          padding: 1.5rem 0;
+        }
+        .svc p {
+          opacity: 1;
+          transform: none;
+          grid-column: 2;
+        }
+        .svc .ph {
+          display: none;
+        }
+        .svc li:hover a,
+        .svc li.open a {
+          padding: 1.5rem 0;
+          background: transparent;
+        }
       }
       @media (max-width: 900px) {
-        .steps {
+        .services .head {
           grid-template-columns: 1fr;
         }
-        .step .line {
+        .svc a {
+          grid-template-columns: 50px minmax(0, 1fr);
+          gap: 1rem;
+        }
+        .svc p {
+          grid-column: 2;
+        }
+        .svc .ph {
           display: none;
         }
       }
 
-      /* about */
-      .about {
-        background: var(--paper);
+      /* how */
+      .how {
+        background: var(--ink);
+        color: #fff;
       }
-      .about .drop::first-letter {
+      .how .eyebrow {
+        color: var(--leaf);
+      }
+      .how h2 {
+        color: #fff;
+      }
+      .how .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: clamp(2rem, 6vw, 7rem);
+        margin-top: 1rem;
+      }
+      .how .pin {
+        position: sticky;
+        top: 22vh;
+        align-self: start;
+      }
+      .how .pin .big {
         font-family: var(--serif);
         font-style: italic;
-        font-size: 4.4em;
-        float: left;
-        line-height: 0.8;
-        margin: 0.08em 0.12em 0 0;
+        font-size: clamp(6rem, 16vw, 15rem);
+        line-height: 0.85;
         color: var(--em);
+        letter-spacing: -0.04em;
+        position: relative;
+        height: 0.9em;
+        width: 2.2em;
+      }
+      .how .pin .big span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition:
+          opacity 0.5s var(--ease),
+          transform 0.5s var(--ease);
+        transform: translateY(12px);
+      }
+      .how .pin .big span.on {
+        opacity: 1;
+        transform: none;
+      }
+      .how .pin .track {
+        width: 2px;
+        height: 120px;
+        background: rgba(255, 255, 255, 0.15);
+        margin-top: 2rem;
+        position: relative;
+      }
+      .how .pin .track i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        background: var(--leaf);
+        height: 0;
+        transition: height 0.5s var(--ease);
+      }
+      .how .steps {
+        display: grid;
+        gap: clamp(4rem, 10vh, 9rem);
+        padding: 10vh 0;
+      }
+      .how .step {
+        max-width: 52ch;
+      }
+      .how .step h3 {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      .how .step p {
+        color: #c9c9c9;
+        font-size: 1.08rem;
+      }
+      .how .step .k {
+        display: block;
+        color: var(--leaf);
+        font-family: var(--serif);
+        font-style: italic;
+        margin-bottom: 0.6rem;
+      }
+      @media (max-width: 860px) {
+        .how .grid {
+          grid-template-columns: 1fr;
+        }
+        .how .pin {
+          position: static;
+        }
+        .how .pin .big {
+          display: none;
+        }
+        .how .pin .track {
+          display: none;
+        }
+        .how .steps {
+          padding: 2rem 0 0;
+          gap: 3rem;
+        }
+      }
+
+      /* about */
+      .about .grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: clamp(2rem, 6vw, 6rem);
+        align-items: start;
+      }
+      .about .pic {
+        position: relative;
+      }
+      .about .pic img {
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        width: 100%;
+        filter: grayscale(0.2);
+      }
+      .about .pic .cap {
+        position: absolute;
+        left: -1rem;
+        bottom: 2rem;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.9rem 1.2rem;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.05rem;
+        max-width: 260px;
+      }
+      .about .pull {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 300;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        line-height: 1.2;
+        margin: 1.8rem 0;
+        padding-left: 1.4rem;
+        border-left: 3px solid var(--em);
       }
       .about p {
         color: var(--ink-2);
-        margin-bottom: 1rem;
+        max-width: 62ch;
+        margin-bottom: 1.1rem;
       }
       .about .sig {
         font-family: var(--serif);
         font-style: italic;
-        font-size: 1.4rem;
-        color: var(--em-deep);
-        margin-top: 1.4rem;
+        font-size: 1.5rem;
+        margin-top: 1.6rem;
+        position: relative;
+        display: inline-block;
       }
-      .about .pic {
-        border-radius: 28px;
-        overflow: hidden;
-        aspect-ratio: 4/5;
-        box-shadow: var(--shadow);
-      }
-      .about .pic img {
+      .about .sig .thread {
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 14px;
         width: 100%;
-        height: 100% !important;
-        object-fit: cover;
       }
-      .values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-        gap: 1rem;
+      .about .sig .thread path {
+        stroke-width: 2.5;
+        transition: stroke-dashoffset 1.2s var(--ease) 0.2s;
+      }
+      .about .values {
+        display: flex;
+        gap: 2.4rem;
+        flex-wrap: wrap;
         margin-top: 2rem;
-      }
-      .values div {
-        border-top: 2px solid var(--leaf);
-        padding-top: 0.8rem;
         font-size: 0.9rem;
+        color: var(--mute);
       }
-      .values b {
+      .about .values b {
         display: block;
+        color: var(--ink);
         font-family: var(--serif);
         font-size: 1.15rem;
-        margin-bottom: 0.2rem;
+        font-weight: 500;
+      }
+      @media (max-width: 860px) {
+        .about .grid {
+          grid-template-columns: 1fr;
+        }
+        .about .pic {
+          max-width: 420px;
+          margin-left: 1rem;
+        }
       }
 
       /* testimonials */
-      .tcar {
+      .testi {
+        background: var(--mint-2);
+      }
+      .testi .stage {
+        position: relative;
+        margin-top: 2.5rem;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.2rem;
-        margin-top: 3rem;
       }
-      .tq {
-        background: var(--paper);
-        border-radius: var(--r);
-        padding: 1.8rem;
-        border: 1px solid var(--line);
-        position: relative;
+      .testi .q {
+        grid-area: 1/1;
+        opacity: 0;
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+        transform: translateY(10px);
+        pointer-events: none;
       }
-      .tq::before {
-        content: "“";
+      .testi .q.on {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+      .testi .q p {
         font-family: var(--serif);
-        font-size: 5rem;
-        color: var(--mint);
-        position: absolute;
-        top: -0.2rem;
-        left: 1rem;
-        line-height: 1;
-      }
-      .tq p {
-        font-family: var(--serif);
-        font-size: 1.15rem;
-        line-height: 1.4;
-        position: relative;
         font-style: italic;
         font-weight: 300;
+        font-size: clamp(1.7rem, 3.4vw, 3rem);
+        line-height: 1.2;
+        max-width: 26ch;
       }
-      .tq footer {
-        margin-top: 1.2rem;
-        font-size: 0.85rem;
+      .testi .q footer {
+        margin-top: 1.4rem;
+        font-size: 0.9rem;
         color: var(--mute);
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
       }
-      .tq footer b {
+      .testi .q footer b {
         color: var(--ink);
-        font-weight: 600;
       }
-      .tq .tag {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 0.66rem;
-        letter-spacing: 0.08em;
+      .testi .tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        background: var(--mint);
-        color: var(--em-deep);
-        padding: 0.25rem 0.5rem;
-        border-radius: 6px;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.3rem 0.55rem;
+        border-radius: 3px;
       }
-      @media (max-width: 900px) {
-        .tcar {
-          grid-template-columns: 1fr;
-        }
+      .testi .dots {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+      .testi .dots button {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+      }
+      .testi .dots button::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        top: 19px;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--line);
+        transition: background 0.3s;
+      }
+      .testi .dots button.on::after {
+        background: var(--em);
+      }
+      .testi .note {
+        color: var(--mute);
+        font-size: 0.8rem;
+        margin-top: 1rem;
       }
 
       /* crisis */
       .crisis {
         background: var(--ink);
-        color: #eef6f0;
-        padding: 56px 0;
+        color: #fff;
+        padding: 64px 0;
       }
-      .crisis .row {
+      .crisis .thread {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        width: 100%;
+      }
+      .crisis .thread path {
+        stroke: var(--em);
+        stroke-width: 2;
+        stroke-dashoffset: 0;
+      }
+      .crisis .grid {
         display: grid;
-        grid-template-columns: 1.2fr 2fr;
-        gap: 2rem;
+        grid-template-columns: 1.1fr 2fr;
+        gap: 2.5rem;
         align-items: center;
       }
       .crisis h2 {
-        font-size: 1.9rem;
+        font-size: 2rem;
         color: #fff;
       }
       .crisis p {
-        color: #b9ccc0;
+        color: #bdbdbd;
         font-size: 0.95rem;
-        margin-top: 0.5rem;
+        margin-top: 0.6rem;
       }
       .crisis ul {
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
       }
-      .crisis li {
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 14px;
+      .crisis li a {
+        display: block;
+        min-height: 64px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
         padding: 0.9rem 1rem;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .crisis li a:hover {
+        border-color: var(--leaf);
+        background: rgba(255, 255, 255, 0.04);
       }
       .crisis li b {
         display: block;
@@ -1001,10 +1308,10 @@
       }
       .crisis li span {
         font-size: 0.85rem;
-        color: #c8d8ce;
+        color: #cfcfcf;
       }
-      @media (max-width: 900px) {
-        .crisis .row {
+      @media (max-width: 860px) {
+        .crisis .grid {
           grid-template-columns: 1fr;
         }
       }
@@ -1015,22 +1322,23 @@
       }
 
       /* faq */
-      .faq details {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 0 1.4rem;
-        margin-bottom: 0.8rem;
-        transition: border-color 0.3s;
+      .faq .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: clamp(2rem, 5vw, 6rem);
       }
-      .faq details[open] {
-        border-color: var(--leaf);
+      .faq details {
+        border-bottom: 1px solid var(--line);
+      }
+      .faq details:first-of-type {
+        border-top: 1px solid var(--ink);
       }
       .faq summary {
         cursor: pointer;
         list-style: none;
-        padding: 1.2rem 0;
+        padding: 1.3rem 0;
         font-weight: 600;
+        font-size: 1.05rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1040,144 +1348,206 @@
         display: none;
       }
       .faq summary::after {
-        content: "+";
-        font-family: var(--serif);
-        font-size: 1.6rem;
-        color: var(--em);
-        transition: transform 0.3s;
+        content: "";
+        width: 14px;
+        height: 14px;
+        flex: none;
+        background:
+          linear-gradient(var(--em), var(--em)) center/14px 2px no-repeat,
+          linear-gradient(var(--em), var(--em)) center/2px 14px no-repeat;
+        transition: transform 0.3s var(--ease);
       }
       .faq details[open] summary::after {
-        transform: rotate(45deg);
+        transform: rotate(90deg);
+        background: linear-gradient(var(--em), var(--em)) center/14px 2px
+          no-repeat;
       }
       .faq details p {
-        padding: 0 0 1.3rem;
+        padding: 0 0 1.4rem;
         color: var(--ink-2);
-        font-size: 0.95rem;
+        max-width: 60ch;
       }
-      .faq-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.4fr;
-        gap: clamp(32px, 5vw, 72px);
-        margin-top: 1rem;
-      }
-      @media (max-width: 900px) {
-        .faq-grid {
+      @media (max-width: 860px) {
+        .faq .grid {
           grid-template-columns: 1fr;
         }
       }
 
       /* contact */
       .contact {
-        background: linear-gradient(180deg, var(--mint-2), var(--ivory));
+        padding: 0;
       }
-      .cgrid {
+      .contact .split {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: clamp(32px, 5vw, 72px);
-        align-items: start;
+        grid-template-columns: 1.1fr 0.9fr;
+        min-height: 80vh;
       }
-      .form {
-        background: var(--paper);
-        border-radius: var(--r);
-        padding: 2rem;
-        border: 1px solid var(--line);
-        box-shadow: var(--shadow);
+      .contact .left {
+        padding: clamp(70px, 9vw, 130px) clamp(20px, 5vw, 80px)
+          clamp(70px, 9vw, 130px) clamp(20px, 4vw, 48px);
+      }
+      .contact .left .inner {
+        max-width: 560px;
+        margin-left: auto;
+      }
+      .contact .right {
+        background: var(--em-deep);
+        color: #fff;
+        padding: clamp(70px, 9vw, 130px) clamp(24px, 5vw, 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .contact .right .thread {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .contact .right .thread path {
+        stroke: #fff;
+        stroke-width: 1.5;
+        opacity: 0.9;
+        transition: stroke-dashoffset 2.2s var(--ease);
+      }
+      .contact .right > * {
+        position: relative;
+      }
+      .contact .right .earbig {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--em-deep);
+        display: grid;
+        place-items: center;
+        margin-bottom: 2rem;
+      }
+      .contact .right .earbig svg {
+        width: 68px;
+        height: 68px;
+      }
+      .contact .right .earbig::before,
+      .contact .right .earbig::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1.5px solid #fff;
+        opacity: 0;
+        animation: ripple 3.6s var(--ease) infinite;
+      }
+      .contact .right .earbig::after {
+        animation-delay: 1.8s;
+      }
+      .contact .right small {
+        display: block;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.74rem;
+        font-weight: 600;
+        color: #bfe3cb;
+        margin-bottom: 0.4rem;
+      }
+      .contact .right .num {
+        font-family: var(--serif);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 500;
+        line-height: 1;
+        display: block;
+        color: #fff;
+      }
+      .contact .right .num:hover {
+        color: #bfe3cb;
+      }
+      .contact .right p {
+        color: #d6ecdc;
+        margin-top: 1.2rem;
+        max-width: 36ch;
+      }
+      .contact .right .promise {
+        margin-top: 2.6rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 1.4rem;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.25rem;
+        color: #fff;
       }
       .form label {
         display: block;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         font-weight: 600;
-        margin: 0.9rem 0 0.35rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 1.5rem 0 0.2rem;
+        color: var(--mute);
       }
       .form input,
       .form select,
       .form textarea {
         width: 100%;
-        padding: 0.9rem 1rem;
-        border: 1.5px solid var(--line);
-        border-radius: 12px;
+        padding: 0.8rem 0;
+        border: 0;
+        border-bottom: 1.5px solid var(--ink);
+        border-radius: 0;
         font: inherit;
-        font-size: 1rem;
-        background: #fff;
+        font-size: 1.05rem;
+        background: transparent;
         min-height: 48px;
-        transition:
-          border-color 0.2s,
-          box-shadow 0.2s;
+        transition: border-color 0.2s;
       }
       .form input:focus,
       .form select:focus,
       .form textarea:focus {
-        outline: 0;
+        outline: 2px solid var(--em);
+        outline-offset: 4px;
         border-color: var(--em);
-        box-shadow: 0 0 0 4px rgba(15, 122, 62, 0.12);
       }
       .form textarea {
-        min-height: 110px;
+        min-height: 100px;
         resize: vertical;
       }
       .form .btn {
+        margin-top: 2rem;
         width: 100%;
         justify-content: center;
-        margin-top: 1.4rem;
       }
       .form small {
         display: block;
         color: var(--mute);
         font-size: 0.78rem;
-        margin-top: 0.8rem;
-        text-align: center;
+        margin-top: 0.9rem;
+        line-height: 1.5;
       }
       .form .ok {
         display: none;
-        text-align: center;
         padding: 2rem 0;
       }
       .form .ok h3 {
         margin-bottom: 0.5rem;
       }
-      .contact .side h2 {
-        margin: 1rem 0;
-      }
-      .contact .side p {
-        color: var(--ink-2);
-      }
-      .contact .pic {
-        border-radius: 22px;
-        overflow: hidden;
-        aspect-ratio: 16/10;
-        margin-top: 1.6rem;
-        box-shadow: var(--shadow);
-      }
-      .contact .pic img {
-        width: 100%;
-        height: 100% !important;
-        object-fit: cover;
-      }
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1.2rem;
-      }
-      .chips span {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.82rem;
-      }
-      @media (max-width: 900px) {
-        .cgrid {
+      @media (max-width: 860px) {
+        .contact .split {
           grid-template-columns: 1fr;
+        }
+        .contact .left .inner {
+          margin: 0;
+        }
+        .contact .right {
+          order: -1;
+          padding: 56px clamp(20px, 5vw, 48px);
         }
       }
 
       /* footer */
       footer.site {
-        padding: 48px 0 110px;
-        border-top: 1px solid var(--line);
+        padding: 56px 0 120px;
         font-size: 0.88rem;
         color: var(--mute);
+        position: relative;
       }
       footer.site .row {
         display: flex;
@@ -1198,8 +1568,18 @@
         color: var(--em);
         font-weight: 500;
       }
+      footer.site .leaf {
+        width: 64px;
+        height: 64px;
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+      footer.site .leaf path {
+        stroke-width: 2;
+        transition: stroke-dashoffset 1.6s var(--ease);
+      }
 
-      /* mobile sticky + demo badge */
+      /* mobile bar + demo */
       .mbar {
         position: fixed;
         left: 0;
@@ -1208,15 +1588,20 @@
         z-index: 60;
         display: none;
         padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-        background: rgba(255,255,255,0.94);
+        background: rgba(255, 255, 255, 0.94);
         backdrop-filter: blur(12px);
         border-top: 1px solid var(--line);
       }
-      .mbar .btn {
-        width: 100%;
+      .mbar .row {
+        display: flex;
+        gap: 0.6rem;
+      }
+      .mbar .row .btn {
+        flex: 1;
+        padding: 0.9rem 0.6rem;
         justify-content: center;
       }
-      @media (max-width: 860px) {
+      @media (max-width: 960px) {
         .mbar {
           display: block;
         }
@@ -1233,54 +1618,98 @@
         border-radius: 999px;
         opacity: 0.85;
       }
-      .demo:hover {
-        opacity: 1;
-      }
-      @media (max-width: 860px) {
+      @media (max-width: 960px) {
         .demo {
           bottom: 86px;
         }
       }
+
       @media (prefers-reduced-motion: reduce) {
-        * {
+        *,
+        *::before,
+        *::after {
           animation: none !important;
           transition: none !important;
         }
-        .rv {
+        .rv,
+        .who .row .l,
+        .who .row .r,
+        .hero h1 .w {
           opacity: 1;
           transform: none;
         }
+        .thread path {
+          stroke-dashoffset: 0;
+        }
+        .svc p {
+          opacity: 1;
+          transform: none;
+        }
+        .svc .ph {
+          clip-path: none;
+        }
+        .testi .stage {
+          display: block;
+        }
+        .testi .q {
+          opacity: 1;
+          transform: none;
+          margin-bottom: 2.5rem;
+          pointer-events: auto;
+        }
+        .how .pin .big span {
+          opacity: 1;
+          position: static;
+        }
       }
-    @media(max-width:520px){.values{grid-template-columns:1fr 1fr}}
-
-.ear{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;color:var(--ink);white-space:nowrap}
-.ear .ic{width:44px;height:44px;border-radius:50%;background:var(--em);color:#fff;display:grid;place-items:center;flex:none;box-shadow:0 8px 20px -8px rgba(15,122,62,.7);animation:pulse 2.6s ease-in-out infinite}
-.ear .ic svg{width:24px;height:24px}
-.ear small{display:block;font-size:.7rem;font-weight:500;color:var(--mute);line-height:1.1}
-.ear b{display:block;font-size:.95rem;line-height:1.15}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(15,122,62,.45)}60%{box-shadow:0 0 0 12px rgba(15,122,62,0)}}
-.nav .ear{margin-left:auto;margin-right:.6rem}
-@media(max-width:860px){.nav .ear b,.nav .ear small{display:none}.nav .ear .ic{width:40px;height:40px}}
-.mbar .row{display:flex;gap:.6rem}.mbar .row .btn{flex:1;padding:.9rem .6rem}
-.mbar .btn-s{background:#0a0a0a;color:#fff;border-color:#0a0a0a}
-.ear-hero{display:flex;align-items:center;gap:1rem;margin-top:1.6rem;padding:1rem 1.2rem;border:1.5px solid var(--line);border-radius:18px;background:#fff;max-width:420px}
-.ear-hero .ic{width:56px;height:56px}
-.ear-hero .ic svg{width:30px;height:30px}
-.ear-hero b{font-size:1.25rem;font-family:var(--serif);font-weight:500}
-.ear-big{display:flex;align-items:center;gap:1rem;margin:1.4rem 0 .4rem}
-.ear-big .ic{width:64px;height:64px}.ear-big .ic svg{width:34px;height:34px}
-.ear-big b{font-size:1.5rem;font-family:var(--serif);font-weight:500}
+    
+.nav ul,.nav .ear{background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-radius:999px;padding:.45rem 1.1rem}
+.nav .ear{padding:.3rem .9rem .3rem .3rem}
+header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:none}
+@media(max-width:960px){.nav .ear{padding:0;background:transparent}}
+.hero-copy .lead{max-width:34ch}
+.contact .right{justify-content:flex-start}
+.contact .right .thread{top:auto;bottom:-10%}
 </style>
   </head>
   <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <clipPath id="heroClip" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.22,0 C0.06,0.12 0.1,0.3 0.16,0.42 C0.24,0.56 0.02,0.66 0.08,0.82 C0.12,0.92 0.2,1 0.3,1 L1,1 L1,0 Z"
+          />
+        </clipPath>
+        <clipPath id="heroClipM" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0,0 L1,0 L1,0.86 C0.8,1 0.55,0.9 0.35,0.96 C0.2,1 0.08,0.98 0,0.88 Z"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="grain" aria-hidden="true">
+      <svg>
+        <filter id="g">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".9"
+            numOctaves="2"
+            stitchTiles="stitch"
+          />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#g)" />
+      </svg>
+    </div>
+
     <header id="hdr">
       <div class="wrap nav">
         <a class="logo" href="#top" aria-label="The Listening Room home"
           ><img
             src="/assets/tlr-mark.png"
             alt="TLR monogram"
-            width="92"
-            height="46"
+            width="88"
+            height="44"
           /><b>The Listening Room</b></a
         >
         <ul>
@@ -1290,35 +1719,71 @@
           <li><a href="#about">About</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-        <a class="ear" href="tel:+441164793584" aria-label="Call the office on 0116 479 3584"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"/><path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"/></svg></span><span><small>Call the office</small><b>0116 479 3584</b></span></a>
+        <a
+          class="ear"
+          href="tel:+441164793584"
+          aria-label="Call the office on 0116 479 3584"
+          ><span class="ic"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+              />
+              <path
+                d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+              /></svg></span
+          ><span><small>Call the office</small><b>0116 479 3584</b></span></a
+        >
         <a class="btn btn-p" href="#contact">Book a free call</a>
       </div>
     </header>
-      
 
     <main id="top">
       <!-- HERO -->
       <section class="hero">
-        <div class="orb o1"></div>
-        <div class="orb o2"></div>
-        <div class="wrap hero-grid">
-          <div>
+        <div class="hero-img">
+          <img
+            src="/assets/hero-listening.jpg"
+            alt="An advocate listening attentively to a client in a calm, light room"
+            width="1400"
+            height="788"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="wrap">
+          <div class="hero-copy">
             <span class="eyebrow rv"
               >Independent mental health advocacy · Leicester</span
             >
-            <h1 class="rv d1">
-              You deserve to be <span class="hl">heard.</span><br /><em
-                >Not managed.</em
-              >
+            <h1 id="h1">
+              You deserve to be
+              <span class="heard"
+                >heard.<svg
+                  class="thread"
+                  viewBox="0 0 400 40"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    pathLength="1"
+                    d="M2 22 L22 22 L30 6 L38 36 L46 10 L54 32 L62 16 L70 26 L80 4 L90 38 L100 12 L110 30 L120 18 L132 24 L146 8 L158 34 L170 14 L182 28 L196 20 L214 22 L232 16 L252 26 L274 20 L300 23 L330 21 L364 22 L398 22"
+                  /></svg></span
+              ><br /><span class="hl">Not managed.</span>
             </h1>
-            <p class="lead rv d2">
+            <p class="lead rv d1">
               The Listening Room is someone in your corner. A confidential,
               independent advocate who listens first, then helps you say what
               you need to say — to doctors, to services, to the people around
               you — and get the support you're entitled to.
             </p>
-            <div class="cta rv d3">
-              <a class="btn btn-p" href="#contact"
+            <div class="cta rv d2">
+              <a class="btn btn-g" href="#contact"
                 >Book a free 20-minute call
                 <svg
                   viewBox="0 0 24 24"
@@ -1330,41 +1795,67 @@
               ></a>
               <a class="btn btn-s" href="#services">See how we help</a>
             </div>
-            <a class="ear ear-hero rv d5" href="tel:+441164793584"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"/><path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"/></svg></span><span><small>Need to talk today? Call the office</small><b>0116 479 3584</b></span></a>
-        </div>
-          <div class="hero-media rv d2">
-            <div class="ph">
-              <img
-                src="/assets/hero-listening.jpg"
-                alt="An advocate listening attentively to a client in a calm, light room"
-                width="1400"
-                height="788"
-                fetchpriority="high"
-              />
-            </div>
-            <div class="card-float cf1">
-              <div class="ic">
-                <svg
+            <div class="micro rv d3">
+              <span
+                ><svg
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="2"
                 >
-                  <path
-                    d="M12 22a10 10 0 1 0-8.7-5l-1.3 5 5-1.3A10 10 0 0 0 12 22Z"
-                  />
-                </svg>
-              </div>
-              <div>
-                <b>Listen first</b><small>No forms. No judgement.</small>
-              </div>
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >Confidential</span
+              >
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >No referral needed</span
+              >
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >In person, phone or video</span
+              >
             </div>
-            <a class="card-float cf2" href="tel:+441164793584"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"/><path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"/></svg></div><div><b>We're listening</b><small>0116 479 3584</small></div></a>
+            <a class="ear ear-hero rv d4" href="tel:+441164793584"
+              ><span class="ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                  />
+                  <path
+                    d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+                  /></svg></span
+              ><span
+                ><small>Need to talk today? Call the office</small
+                ><b>0116 479 3584</b></span
+              ></a
+            >
+          </div>
         </div>
-      </div>
       </section>
 
       <div class="band" aria-hidden="true">
+        <svg class="thread" viewBox="0 0 1000 2" preserveAspectRatio="none">
+          <path pathLength="1" d="M0 1 L1000 1" />
+        </svg>
         <div class="track">
           <span>Listening sessions</span><i>✦</i
           ><span>Support at appointments</span><i>✦</i
@@ -1381,147 +1872,131 @@
         </div>
       </div>
 
-      <!-- TRUST -->
-      <section class="trust">
-        <div class="wrap trust-grid">
-          <div class="tcard rv">
-            <div class="big">1 in 4</div>
-            <p>
-              adults in England experience a mental health problem each year.
-            </p>
-            <small>Source: Mind</small>
+      <!-- STAT -->
+      <section class="stat">
+        <div class="wrap">
+          <div class="big rv">
+            1 <em>in</em> 4<svg
+              class="thread"
+              viewBox="0 0 400 30"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                pathLength="1"
+                d="M2 15 C50 2 80 28 130 15 S210 2 260 15 S340 28 398 15"
+              />
+            </svg>
           </div>
-          <div class="tcard rv d1">
-            <div class="big" data-count="37" data-suffix=" days">37 days</div>
-            <p>median wait for a second NHS Talking Therapies appointment.</p>
-            <small>Source: NHS England, quarter to May 2026</small>
-          </div>
-          <div class="tcard rv d2">
-            <div class="big">100%</div>
-            <p>
-              independent. We work for you — not for a hospital, council or
-              provider.
-            </p>
-            <small>Private, non-statutory service</small>
-          </div>
-          <div class="tcard rv d3">
-            <div class="big" data-count="20" data-suffix=" min">20 min</div>
-            <p>
-              free first call. Tell us what's going on, we tell you honestly if
-              we can help.
-            </p>
-            <small>No forms. No pressure.</small>
+          <p class="rv d1">
+            adults in England experience a mental health problem each year. Most
+            of them will sit in at least one room where nobody really listens.
+          </p>
+          <small class="rv d1">Source: Mind</small>
+          <div class="row rv d2">
+            <div>
+              <b data-count="37" data-suffix=" days">37 days</b>median wait for
+              a second NHS Talking Therapies appointment<small
+                >NHS England, quarter to May 2026</small
+              >
+            </div>
+            <div>
+              <b>100%</b>independent — we work for you, not for a hospital,
+              council or provider
+            </div>
+            <div>
+              <b data-count="20" data-suffix=" min">20 min</b>free first call.
+              No forms. No pressure.
+            </div>
           </div>
         </div>
       </section>
 
       <!-- WHO -->
       <section class="who" id="who">
-        <div class="num">01</div>
-        <div class="wrap split">
-          <div>
-            <span class="eyebrow rv">Who it's for</span>
-            <h2 class="rv d1">
-              For anyone who feels <span class="hl">unheard</span> by the
-              system.
-            </h2>
-            <p class="lead rv d2" style="margin-top: 1rem">
-              You don't need a diagnosis, a referral or the right words. You
-              just need someone on your side.
-            </p>
-            <ul>
-              <li class="rv d1">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
+        <div class="wrap">
+          <span class="eyebrow rv">Who it's for</span>
+          <h2 class="rv d1">
+            For anyone who feels <span class="hl">unheard</span> by the system.
+          </h2>
+          <p class="lead rv d2" style="margin-top: 1rem">
+            You don't need a diagnosis, a referral or the right words. You just
+            need someone on your side.
+          </p>
+          <div class="rows">
+            <div class="row">
+              <div class="txt l">
+                <span class="n">01</span
+                ><b
+                  >Living with anxiety, depression or long-term mental
+                  ill-health</b
                 >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                ><span
-                  ><b
-                    >Living with anxiety, depression or long-term mental
-                    ill-health</b
-                  >
-                  and tired of explaining yourself over and over.</span
+                <p>and tired of explaining yourself over and over.</p>
+              </div>
+              <div class="pic r">
+                <img
+                  src="/assets/window-hope.jpg"
+                  alt="A young woman holding a mug, looking out of a window with a calm expression"
+                  width="1400"
+                  height="788"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="txt r">
+                <span class="n">02</span
+                ><b
+                  >In hospital, recently discharged, or under a community
+                  team</b
                 >
-              </li>
-              <li class="rv d2">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                ><span
-                  ><b
-                    >In hospital, recently discharged, or under a community
-                    team</b
-                  >
-                  and unsure what your care plan actually says.</span
-                >
-              </li>
-              <li class="rv d3">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                ><span
-                  ><b>Waiting on the NHS</b> and needing someone to talk to in
-                  the meantime.</span
-                >
-              </li>
-              <li class="rv d4">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                ><span
-                  ><b>A parent, partner or carer</b> trying to hold everything
-                  together and get answers for someone you love.</span
-                >
-              </li>
-              <li class="rv d5">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                ><span
-                  ><b>Facing forms, letters or appeals</b> — PIP, Universal
-                  Credit, complaints — and don't know where to start.</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="stack rv d2">
-            <img
-              class="i1"
-              src="/assets/window-hope.jpg"
-              alt="A young woman holding a mug, looking out of a window with a calm expression"
-              width="1400"
-              height="788"
-              loading="lazy"
-            />
-            <img
-              class="i2"
-              src="/assets/hands-support.jpg"
-              alt="Two people's hands held together across a table in support"
-              width="933"
-              height="1400"
-              loading="lazy"
-            />
-            <div class="quote-tag">
-              "Someone finally asked what <em>I</em> wanted."
+                <p>and unsure what your care plan actually says.</p>
+              </div>
+              <div class="pic l">
+                <img
+                  src="/assets/man-sofa-talk.jpg"
+                  alt="A man talking openly on a sofa while an advocate takes notes"
+                  width="1400"
+                  height="788"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="txt l">
+                <span class="n">03</span><b>Waiting on the NHS</b>
+                <p>and needing someone to talk to in the meantime.</p>
+              </div>
+              <div class="txt r">
+                <span class="n">04</span><b>A parent, partner or carer</b>
+                <p>
+                  trying to hold everything together and get answers for someone
+                  you love.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="txt l">
+                <span class="n">05</span><b>Facing forms, letters or appeals</b>
+                <p>
+                  PIP, Universal Credit, complaints — and don't know where to
+                  start.
+                </p>
+              </div>
+              <div class="pic r tall">
+                <img
+                  src="/assets/hands-support.jpg"
+                  alt="Two people's hands held together across a table in support"
+                  width="933"
+                  height="1400"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row q">
+              <p class="quote rv">
+                "Someone finally asked what <em>I</em> wanted."
+              </p>
             </div>
           </div>
         </div>
@@ -1529,175 +2004,173 @@
 
       <!-- SERVICES -->
       <section class="services" id="services">
-        <div class="num">02</div>
+        <svg
+          class="thread thread-top"
+          viewBox="0 0 1000 60"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            pathLength="1"
+            d="M0 30 C80 10 120 50 200 30 S320 10 400 30 S520 50 600 30 S720 10 800 30 S920 50 1000 30"
+          />
+        </svg>
         <div class="wrap">
-          <span class="eyebrow rv">How we help</span>
-          <h2 class="rv d1">
-            Practical advocacy, <span class="hl">human</span> pace.
-          </h2>
-          <p class="lead rv d2" style="margin-top: 1rem">
-            Not therapy. Not a crisis line. The bit in between that nobody else
-            does: listening properly, then walking beside you through the
-            practical stuff.
-          </p>
-          <div class="sgrid">
-            <div class="sc rv">
-              <div class="ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path
-                    d="M12 22a10 10 0 1 0-8.7-5l-1.3 5 5-1.3A10 10 0 0 0 12 22Z"
-                  />
-                  <path d="M8 12h8M8 9h5" />
-                </svg>
-              </div>
-              <h3>Listening sessions</h3>
-              <p>
-                A regular, confidential hour with someone who isn't rushing you.
-                Say it out loud, untangle it, decide what matters.
-              </p>
-              <a href="#contact">Book a session →</a>
+          <div class="head">
+            <div>
+              <span class="eyebrow rv">How we help</span>
+              <h2 class="rv d1">
+                Practical advocacy, <span class="hl">human</span> pace.
+              </h2>
             </div>
-            <div class="sc rv d1">
-              <div class="ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path
-                    d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"
-                  />
-                </svg>
-              </div>
-              <h3>Beside you at appointments</h3>
-              <p>
-                GP, psychiatrist, care coordinator, ward round, care plan
-                review. We prepare together, come with you, and make sure your
-                points land.
-              </p>
-              <a href="#contact">Ask about this →</a>
-            </div>
-            <div class="sc rv d2">
-              <div class="ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path
-                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"
-                  />
-                  <path d="M14 2v6h6M8 13h8M8 17h8" />
-                </svg>
-              </div>
-              <h3>Letters, forms &amp; appeals</h3>
-              <p>
-                PIP, Universal Credit, housing, complaints. We help you put your
-                situation into words that get taken seriously.
-              </p>
-              <a href="#contact">Get help with a form →</a>
-            </div>
-            <div class="sc rv d3">
-              <div class="ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 8v4l3 3" />
-                </svg>
-              </div>
-              <h3>Care plan &amp; rights check</h3>
-              <p>
-                Plain-English walk-through of your care plan, medication review
-                or discharge plan, and what you're entitled to ask for.
-              </p>
-              <a href="#contact">Book a review →</a>
-            </div>
-            <div class="sc rv d4">
-              <div class="ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path d="M3 11l19-9-9 19-2-8-8-2Z" />
-                </svg>
-              </div>
-              <h3>Signposting, done properly</h3>
-              <p>
-                Free statutory advocacy (IMHA), crisis teams, community groups,
-                talking therapies. The right door, not just "a" door.
-              </p>
-              <a href="#contact">Find the right help →</a>
-            </div>
-            <div class="sc rv d5">
-              <div class="ic">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                >
-                  <path
-                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"
-                  />
-                </svg>
-              </div>
-              <h3>Family &amp; carer support</h3>
-              <p>
-                Carers need a listening room too. Understand what's happening,
-                what you can ask for, and how to look after yourself in it.
-              </p>
-              <a href="#contact">Talk to us →</a>
-            </div>
+            <p class="lead rv d2">
+              Not therapy. Not a crisis line. The bit in between that nobody
+              else does: listening properly, then walking beside you through the
+              practical stuff.
+            </p>
           </div>
+          <ul class="svc">
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">01</span>
+                <h3>Listening sessions</h3>
+                <p>
+                  A regular, confidential hour with someone who isn't rushing
+                  you. Say it out loud, untangle it, decide what matters.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/hero-listening.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">02</span>
+                <h3>Beside you at appointments</h3>
+                <p>
+                  GP, psychiatrist, care coordinator, ward round, care plan
+                  review. We prepare together, come with you, and make sure your
+                  points land.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/man-sofa-talk.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">03</span>
+                <h3>Letters, forms &amp; appeals</h3>
+                <p>
+                  PIP, Universal Credit, housing, complaints. We help you put
+                  your situation into words that get taken seriously.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/hands-support.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">04</span>
+                <h3>Care plan &amp; rights check</h3>
+                <p>
+                  Plain-English walk-through of your care plan, medication list
+                  or discharge plan, and what you're entitled to ask for.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/window-hope.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">05</span>
+                <h3>Signposting, done properly</h3>
+                <p>
+                  Free statutory advocacy (IMHA), crisis teams, community
+                  groups, talking therapies. The right door, not just "a" door.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/friends-park.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">06</span>
+                <h3>Family &amp; carer support</h3>
+                <p>
+                  Carers need a listening room too. Understand what's happening,
+                  what you can ask for, and how to look after yourself in it.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/mug-window.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+          </ul>
         </div>
       </section>
 
       <!-- HOW -->
       <section class="how" id="how">
-        <div class="num">03</div>
         <div class="wrap">
           <span class="eyebrow rv">How it works</span>
           <h2 class="rv d1">
             Three steps. <span class="hl">No pressure</span> at any of them.
           </h2>
-          <div class="steps">
-            <div class="step rv d1">
-              <div class="line"></div>
-              <h3>Book a free 20-minute call</h3>
-              <p>
-                Phone or video, whenever suits you. You talk, we listen. We'll
-                tell you honestly whether we're the right help — and if we're
-                not, who is.
-              </p>
+          <div class="grid">
+            <div class="pin">
+              <div class="big" aria-hidden="true">
+                <span class="on">01</span><span>02</span><span>03</span>
+              </div>
+              <div class="track"><i id="trk"></i></div>
             </div>
-            <div class="step rv d2">
-              <div class="line"></div>
-              <h3>Make a simple plan together</h3>
-              <p>
-                One page. What you want to change, who needs to hear it, and
-                what we'll do first. You stay in charge of every decision.
-              </p>
-            </div>
-            <div class="step rv d3">
-              <div class="line"></div>
-              <h3>We walk alongside you</h3>
-              <p>
-                Sessions, appointments, letters, follow-ups. As much or as
-                little as you need, for as long as it's useful.
-              </p>
+            <div class="steps">
+              <div class="step" data-k="0">
+                <span class="k">Step one</span>
+                <h3>Book a free 20-minute call</h3>
+                <p>
+                  Phone or video, whenever suits you. You talk, we listen. We'll
+                  tell you honestly whether we're the right help — and if we're
+                  not, who is.
+                </p>
+              </div>
+              <div class="step" data-k="1">
+                <span class="k">Step two</span>
+                <h3>Make a simple plan together</h3>
+                <p>
+                  One page. What you want to change, who needs to hear it, and
+                  what we'll do first. You stay in charge of every decision.
+                </p>
+              </div>
+              <div class="step" data-k="2">
+                <span class="k">Step three</span>
+                <h3>We walk alongside you</h3>
+                <p>
+                  Sessions, appointments, letters, follow-ups. As much or as
+                  little as you need, for as long as it's useful.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -1705,17 +2178,16 @@
 
       <!-- ABOUT -->
       <section class="about" id="about">
-        <div class="num">04</div>
-        <div class="wrap split">
+        <div class="wrap grid">
           <div class="pic rv">
             <img
-              src="/assets/man-sofa-talk.jpg"
-              alt="A man talking openly on a sofa while an advocate takes notes"
-              width="1400"
-              height="788"
+              src="/assets/mug-window.jpg"
+              alt="A person holding a mug, looking out at autumn trees through a window"
+              width="933"
+              height="1400"
               loading="lazy"
-              style="object-position: 70% 50%"
             />
+            <div class="cap">Independent. Confidential. On your side.</div>
           </div>
           <div>
             <span class="eyebrow rv">About The Listening Room</span>
@@ -1723,11 +2195,13 @@
               Started by someone who knows what it's like to
               <span class="hl">not be heard.</span>
             </h2>
-            <p class="drop rv d2" style="margin-top: 1.4rem">
+            <p class="pull rv d2">
+              "Too many people in Leicester sit in appointments, wards and
+              waiting rooms feeling like a case number."
+            </p>
+            <p class="rv d2">
               The Listening Room began with a simple frustration: too many
-              people in Leicester sit in appointments, wards and waiting rooms
-              feeling like a case number. They leave with a leaflet and no idea
-              what happens next.
+              people leave with a leaflet and no idea what happens next.
             </p>
             <p class="rv d3">
               I set this up to be the person I wished had been in the room.
@@ -1740,7 +2214,19 @@
               This is not therapy, and it isn't a crisis service. It's advocacy:
               your voice, made louder.
             </p>
-            <div class="sig rv d4">— Stephen Forde, Founder</div>
+            <div class="sig rv d3">
+              — Stephen Forde, Founder<svg
+                class="thread"
+                viewBox="0 0 300 14"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  pathLength="1"
+                  d="M2 8 C40 2 70 12 110 7 S180 3 220 8 S270 12 298 6"
+                />
+              </svg>
+            </div>
             <div class="values rv d4">
               <div><b>Independent</b>We work for you only.</div>
               <div><b>Confidential</b>Your story stays yours.</div>
@@ -1752,48 +2238,50 @@
 
       <!-- TESTIMONIALS -->
       <section class="testi">
-        <div class="num">05</div>
         <div class="wrap">
           <span class="eyebrow rv">In their words</span>
           <h2 class="rv d1">
             What being heard <span class="hl">feels like.</span>
           </h2>
-          <div class="tcar">
-            <div class="tq rv d1">
-              <span class="tag">Example</span>
+          <div class="stage" id="stage">
+            <div class="q on">
               <p>
                 He came to my care plan review and for the first time the
                 psychiatrist actually wrote down what I said. I didn't have to
                 fight for it.
               </p>
-              <footer><b>Client, Leicester</b> · Care plan review</footer>
+              <footer>
+                <span class="tag">Example</span><b>Client, Leicester</b> · Care
+                plan review
+              </footer>
             </div>
-            <div class="tq rv d2">
-              <span class="tag">Example</span>
+            <div class="q">
               <p>
                 I'd been putting off the PIP form for months. We did it together
                 in two sittings and it was accepted first time.
               </p>
-              <footer><b>Client, Wigston</b> · Benefits support</footer>
+              <footer>
+                <span class="tag">Example</span><b>Client, Wigston</b> ·
+                Benefits support
+              </footer>
             </div>
-            <div class="tq rv d3">
-              <span class="tag">Example</span>
+            <div class="q">
               <p>
                 As Mum's carer I was drowning. One call and I finally understood
                 who was responsible for what — and that I was allowed to ask.
               </p>
-              <footer><b>Carer, Oadby</b> · Family support</footer>
+              <footer>
+                <span class="tag">Example</span><b>Carer, Oadby</b> · Family
+                support
+              </footer>
             </div>
           </div>
-          <p
-            style="
-              text-align: center;
-              color: var(--mute);
-              font-size: 0.8rem;
-              margin-top: 1.4rem;
-            "
-            class="rv"
-          >
+          <div class="dots" id="dots" role="tablist" aria-label="Testimonials">
+            <button class="on" aria-label="Quote 1"></button
+            ><button aria-label="Quote 2"></button
+            ><button aria-label="Quote 3"></button>
+          </div>
+          <p class="note">
             Example quotes for layout only — replaced with real client words
             (with consent) before launch.
           </p>
@@ -1802,7 +2290,15 @@
 
       <!-- CRISIS -->
       <section class="crisis" aria-label="Urgent help">
-        <div class="wrap row">
+        <svg
+          class="thread"
+          viewBox="0 0 1000 2"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path pathLength="1" d="M0 1 L1000 1" />
+        </svg>
+        <div class="wrap grid">
           <div>
             <h2>In crisis right now?</h2>
             <p>
@@ -1812,18 +2308,28 @@
             </p>
           </div>
           <ul>
-            <li><b>999</b><span>Emergency — immediate danger to life</span></li>
             <li>
-              <b>NHS 111, option 2</b
-              ><span>Urgent mental health support, 24/7</span>
+              <a href="tel:999"
+                ><b>999</b><span>Emergency — immediate danger to life</span></a
+              >
             </li>
             <li>
-              <b>Samaritans · 116 123</b
-              ><span>Free to call, any time, any reason</span>
+              <a href="tel:111"
+                ><b>NHS 111, option 2</b
+                ><span>Urgent mental health support, 24/7</span></a
+              >
             </li>
             <li>
-              <b>Shout · text 85258</b
-              ><span>Free, confidential crisis text line</span>
+              <a href="tel:116123"
+                ><b>Samaritans · 116 123</b
+                ><span>Free to call, any time, any reason</span></a
+              >
+            </li>
+            <li>
+              <a href="sms:85258"
+                ><b>Shout · text 85258</b
+                ><span>Free, confidential crisis text line</span></a
+              >
             </li>
           </ul>
         </div>
@@ -1831,8 +2337,7 @@
 
       <!-- FAQ -->
       <section class="faq" id="faq">
-        <div class="num">06</div>
-        <div class="wrap faq-grid">
+        <div class="wrap grid">
           <div>
             <span class="eyebrow rv">Questions</span>
             <h2 class="rv d1">
@@ -1909,92 +2414,126 @@
 
       <!-- CONTACT -->
       <section class="contact" id="contact">
-        <div class="wrap cgrid">
-          <div class="side">
-            <span class="eyebrow rv">Start here</span>
-            <h2 class="rv d1">
-              Book your free <span class="hl">20-minute</span> listening call.
-            </h2>
-            <p class="rv d2">
-              Tell us a little about what's going on. We'll reply within one
-              working day to arrange a time that suits you — phone or video,
-              your choice.
-            </p>
-            <a class="ear ear-big rv d3" href="tel:+441164793584"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"/><path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"/></svg></span><span><small>Prefer to talk? Office line</small><b>0116 479 3584</b></span></a>
-      <div class="chips rv d3">
-      
-              <span>Reply within 1 working day</span><span>No obligation</span
-              ><span>Confidential</span>
-            </div>
-            <div class="pic rv d3">
-              <img
-                src="/assets/friends-park.jpg"
-                alt="Friends walking together in a park, laughing"
-                width="1400"
-                height="788"
-                loading="lazy"
-              />
+        <div class="split">
+          <div class="left">
+            <div class="inner">
+              <span class="eyebrow rv">Start here</span>
+              <h2 class="rv d1" style="margin-top: 0.8rem">
+                Book your free <span class="hl">20-minute</span> listening call.
+              </h2>
+              <p class="rv d2" style="color: var(--ink-2); margin-top: 1rem">
+                Tell us a little about what's going on. We'll reply within one
+                working day to arrange a time that suits you — phone or video,
+                your choice.
+              </p>
+              <form class="form rv d2" id="lead" novalidate>
+                <div class="fields">
+                  <label for="name">Your name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="First name is fine"
+                  />
+                  <label for="contact-method">Best way to reach you</label>
+                  <input
+                    id="contact-method"
+                    name="contact"
+                    required
+                    placeholder="Mobile number or email"
+                  />
+                  <label for="for">Who is this for?</label>
+                  <select id="for" name="for">
+                    <option>Myself</option>
+                    <option>Someone I care for</option>
+                    <option>A client / patient (I'm a professional)</option>
+                  </select>
+                  <label for="msg"
+                    >What's going on? (as much or as little as you like)</label
+                  >
+                  <textarea
+                    id="msg"
+                    name="message"
+                    placeholder="e.g. I've got a care plan review next month and I never feel listened to."
+                  ></textarea>
+                  <button class="btn btn-g" type="submit">
+                    Request my free call
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </button>
+                  <small
+                    >Not for emergencies. If you're in danger now, call 999 or
+                    NHS 111 (option 2). Your details are used only to arrange
+                    your call and are never shared — full privacy notice at
+                    launch.</small
+                  >
+                </div>
+                <div class="ok">
+                  <h3 class="serif">Thank you — we've got it.</h3>
+                  <p style="color: var(--ink-2)">
+                    Demo only — nothing was sent. On the live site you'll hear
+                    back within one working day.
+                  </p>
+                </div>
+              </form>
             </div>
           </div>
-          <form class="form rv d2" id="lead" novalidate>
-            <div class="fields">
-              <label for="name">Your name</label>
-              <input
-                id="name"
-                name="name"
-                required
-                autocomplete="name"
-                placeholder="First name is fine"
+          <div class="right">
+            <svg
+              class="thread"
+              viewBox="0 0 400 600"
+              preserveAspectRatio="xMidYMid slice"
+              aria-hidden="true"
+            >
+              <path
+                pathLength="1"
+                d="M-20 560 C60 540 90 470 120 420 C150 370 170 330 160 280 C150 230 120 200 130 150 C140 100 190 60 250 60 C320 60 370 110 370 180 C370 250 330 290 290 320 C260 340 240 370 250 400 C260 430 300 440 310 470 C320 500 300 540 260 560 C220 580 200 570 190 600"
               />
-              <label for="contact-method">Best way to reach you</label>
-              <input id="contact-method"
-                name="contact"
-                required
-                placeholder="Mobile number or email"
-              />
-              <label for="for">Who is this for?</label>
-              <select id="for" name="for">
-                <option>Myself</option>
-                <option>Someone I care for</option>
-                <option>A client / patient (I'm a professional)</option>
-              </select>
-              <label for="msg"
-                >What's going on? (as much or as little as you like)</label
+            </svg>
+            <div class="earbig" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
-              <textarea
-                id="msg"
-                name="message"
-                placeholder="e.g. I've got a care plan review next month and I never feel listened to."
-              ></textarea>
-              <button class="btn btn-p" type="submit">
-                Request my free call
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M5 12h14M13 6l6 6-6 6" />
-                </svg>
-              </button>
-              <small
-                >Not for emergencies. If you're in danger now, call 999 or NHS
-                111 (option 2). Your details are used only to arrange your call and are never shared — full privacy notice at launch.</small
-              >
+                <path
+                  d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                />
+                <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6" />
+              </svg>
             </div>
-            <div class="ok">
-              <h3 class="serif">Thank you — we've got it.</h3>
-              <p style="color: var(--ink-2)">
-                Demo only — nothing was sent. On the live site you'll hear back within one working day.
-              </p>
+            <small>Prefer to talk? Office line</small>
+            <a class="num" href="tel:+441164793584">0116 479 3584</a>
+            <p>
+              Working hours. If it goes to voicemail, leave your first name and
+              a number — we call back the same day where we can.
+            </p>
+            <div class="promise">
+              Twenty minutes. No forms. No pressure. Just someone listening.
             </div>
-          </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site">
       <div class="wrap">
+        <svg class="thread leaf" viewBox="0 0 64 64" aria-hidden="true">
+          <path
+            pathLength="1"
+            d="M8 56 C10 30 30 10 56 8 C54 34 34 54 8 56 Z M8 56 C24 40 40 24 56 8"
+          />
+        </svg>
         <div class="row">
           <img
             src="/assets/tlr-mark.png"
@@ -2002,7 +2541,11 @@
             width="80"
             height="40"
           />
-          <div>© <span id="yr"></span> The Listening Room · Leicester, UK · Independent mental health advocacy · <a href="tel:+441164793584">0116 479 3584</a></div>
+          <div>
+            © <span id="yr"></span> The Listening Room · Leicester, UK ·
+            Independent mental health advocacy ·
+            <a href="tel:+441164793584">0116 479 3584</a>
+          </div>
         </div>
         <p class="disc">
           The Listening Room is a private, non-statutory advocacy and listening
@@ -2016,74 +2559,219 @@
       </div>
     </footer>
 
-    <div class="mbar"><div class="row"><a class="btn btn-s" href="tel:+441164793584"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"/><path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"/></svg> Call</a><a class="btn btn-p" href="#contact">Book a free call</a></div></div>
+    <div class="mbar">
+      <div class="row">
+        <a class="btn btn-p" href="tel:+441164793584"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.9"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+            />
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6" />
+          </svg>
+          Call</a
+        ><a class="btn btn-g" href="#contact">Book a free call</a>
+      </div>
+    </div>
     <a class="demo" href="https://skynetjoe.com" target="_blank" rel="noopener"
       >Built by SkynetLabs ↗</a
     >
 
     <script>
-      document.getElementById("yr").textContent = new Date().getFullYear();
-      const hdr = document.getElementById("hdr");
-      addEventListener(
-        "scroll",
-        () => hdr.classList.toggle("on", scrollY > 40),
-        { passive: true },
-      );
-      const io = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (e.isIntersecting) {
-              e.target.classList.add("in");
-              io.unobserve(e.target);
+      (function () {
+        document.getElementById("yr").textContent = new Date().getFullYear();
+        var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var hdr = document.getElementById("hdr");
+        addEventListener(
+          "scroll",
+          function () {
+            hdr.classList.toggle("on", scrollY > 40);
+          },
+          { passive: true },
+        );
+
+        /* word-by-word headline */
+        var h1 = document.getElementById("h1");
+        if (!reduce) {
+          var nodes = [].slice.call(h1.childNodes),
+            i = 0;
+          nodes.forEach(function (n) {
+            if (n.nodeType === 3) {
+              var frag = document.createDocumentFragment();
+              n.textContent.split(/(\s+)/).forEach(function (t) {
+                if (!t) return;
+                if (/^\s+$/.test(t)) {
+                  frag.appendChild(document.createTextNode(t));
+                  return;
+                }
+                var s = document.createElement("span");
+                s.className = "w";
+                s.textContent = t;
+                s.style.transitionDelay = i++ * 70 + "ms";
+                frag.appendChild(s);
+              });
+              h1.replaceChild(frag, n);
+            } else if (n.nodeType === 1 && n.tagName !== "BR") {
+              n.classList.add("w");
+              n.style.transitionDelay = i++ * 70 + "ms";
             }
-          }),
-        { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
-      );
-      document.querySelectorAll(".rv").forEach((el) => io.observe(el));
-      // counters
-      const co = new IntersectionObserver(
-        (es) =>
-          es.forEach((e) => {
-            if (!e.isIntersecting) return;
-            const el = e.target,
-              end = +el.dataset.count,
-              pre = el.dataset.prefix || "",
-              suf = el.dataset.suffix || "";
-            let t0 = null;
-            const dur = 1200;
-            const step = (ts) => {
-              if (!t0) t0 = ts;
-              const p = Math.min(1, (ts - t0) / dur),
-                v = Math.round(end * (1 - Math.pow(1 - p, 3)));
-              el.textContent = pre + v + suf;
-              if (p < 1) requestAnimationFrame(step);
-            };
-            requestAnimationFrame(step);
-            co.unobserve(el);
-          }),
-        { threshold: 0.5 },
-      );
-      document.querySelectorAll("[data-count]").forEach((el) => co.observe(el));
-      // form (demo: wire FORM_ENDPOINT to Web3Forms / Formspree at launch)
-      const FORM_ENDPOINT = "";
-      document.getElementById("lead").addEventListener("submit", async (ev) => {
-        ev.preventDefault();
-        const f = ev.target;
-        if (!f.name.value.trim() || !f.contact.value.trim()) {
-          f.querySelector(":invalid,[required]").focus();
-          return;
-        }
-        if (FORM_ENDPOINT) {
-          try {
-            await fetch(FORM_ENDPOINT, {
-              method: "POST",
-              body: new FormData(f),
+          });
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              h1.classList.add("go");
+              setTimeout(function () {
+                h1.querySelector(".heard .thread").classList.add("drawn");
+              }, 300);
             });
-          } catch (e) {}
+          });
+        } else {
+          h1.classList.add("go");
         }
-        f.querySelector(".fields").style.display = "none";
-        f.querySelector(".ok").style.display = "block";
-      });
+
+        /* reveals + thread draws */
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                e.target.querySelectorAll(".thread").forEach(function (t) {
+                  t.classList.add("drawn");
+                });
+                if (e.target.classList.contains("thread"))
+                  e.target.classList.add("drawn");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: "0px 0px -6% 0px" },
+        );
+        document
+          .querySelectorAll(".rv,.who .row,.thread")
+          .forEach(function (el) {
+            io.observe(el);
+          });
+        document.querySelectorAll(".crisis .thread").forEach(function (t) {
+          t.classList.add("drawn");
+        });
+
+        /* counters */
+        var co = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var el = e.target,
+                end = +el.dataset.count,
+                suf = el.dataset.suffix || "",
+                t0 = null,
+                dur = 1200;
+              function step(ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min(1, (ts - t0) / dur),
+                  v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+                el.textContent = v + suf;
+                if (p < 1) requestAnimationFrame(step);
+              }
+              if (reduce) {
+                el.textContent = end + suf;
+              } else requestAnimationFrame(step);
+              co.unobserve(el);
+            });
+          },
+          { threshold: 0.6 },
+        );
+        document.querySelectorAll("[data-count]").forEach(function (el) {
+          co.observe(el);
+        });
+
+        /* pinned steps */
+        var nums = document.querySelectorAll(".how .pin .big span"),
+          trk = document.getElementById("trk");
+        var so = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                var k = +e.target.dataset.k;
+                nums.forEach(function (n, j) {
+                  n.classList.toggle("on", j === k);
+                });
+                trk.style.height = ((k + 1) / 3) * 100 + "%";
+              }
+            });
+          },
+          { rootMargin: "-45% 0px -45% 0px" },
+        );
+        document.querySelectorAll(".how .step").forEach(function (s) {
+          so.observe(s);
+        });
+
+        /* testimonials */
+        var qs = document.querySelectorAll("#stage .q"),
+          dots = document.querySelectorAll("#dots button"),
+          cur = 0,
+          timer;
+        function show(k) {
+          cur = k;
+          qs.forEach(function (q, j) {
+            q.classList.toggle("on", j === k);
+          });
+          dots.forEach(function (d, j) {
+            d.classList.toggle("on", j === k);
+            d.setAttribute("aria-selected", j === k);
+          });
+        }
+        function auto() {
+          if (reduce) return;
+          clearInterval(timer);
+          timer = setInterval(function () {
+            show((cur + 1) % qs.length);
+          }, 7000);
+        }
+        dots.forEach(function (d, j) {
+          d.addEventListener("click", function () {
+            show(j);
+            auto();
+          });
+        });
+        var st = document.getElementById("stage");
+        st.addEventListener("mouseenter", function () {
+          clearInterval(timer);
+        });
+        st.addEventListener("mouseleave", auto);
+        auto();
+
+        /* services: touch = all open */
+        if (matchMedia("(hover: none)").matches) {
+          document.querySelectorAll(".svc li").forEach(function (li) {
+            li.classList.add("open");
+          });
+        }
+
+        /* form (demo: wire FORM_ENDPOINT to Web3Forms / Formspree at launch) */
+        var FORM_ENDPOINT = "";
+        document
+          .getElementById("lead")
+          .addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var f = ev.target;
+            if (!f.name.value.trim() || !f.contact.value.trim()) {
+              (f.name.value.trim() ? f.contact : f.name).focus();
+              return;
+            }
+            if (FORM_ENDPOINT) {
+              try {
+                fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(f) });
+              } catch (e) {}
+            }
+            f.querySelector(".fields").style.display = "none";
+            f.querySelector(".ok").style.display = "block";
+          });
+      })();
     </script>
   </body>
 </html>
