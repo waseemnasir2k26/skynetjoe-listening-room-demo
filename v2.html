@@ -1255,6 +1255,7 @@ header.on-light .ear.white .ic{background:var(--em);color:#fff}
 @media(max-width:1023px){.roomctr{display:none}}
 header .logo,header .ear{min-height:44px;display:inline-flex;align-items:center}
 header .hdr-crisis{color:#fff}header.on-light .hdr-crisis{color:var(--ink)}
+@media(max-width:1023px){.hdr-crisis{display:none!important}}
 </style>
   </head>
   <body>
@@ -2283,6 +2284,25 @@ header .hdr-crisis{color:#fff}header.on-light .hdr-crisis{color:var(--ink)}
           var a=ev.target.closest('a[href^="#room-"]'); if(!a) return;
           var id=a.getAttribute("href").slice(1);
           if(gotoRoom(id)){ev.preventDefault(); history.replaceState(null,"","#"+id);}
+        });
+
+        /* CLASS fix: anything that scrolls the sticky track (keyboard focus, find-in-page,
+           programmatic scrollIntoView) is mapped back to the vertical walk position */
+        function roomOf(el){var r=el&&el.closest?el.closest(".room"):null;return r?r.id:null;}
+        walkTrack.addEventListener("scroll",function(){
+          if(mode!=="walk"||!walkTrack.scrollLeft) return;
+          walkTrack.scrollLeft=0;
+          var id=roomOf(document.activeElement); if(!id) return;   // focus-driven: go to that room
+          var y=roomScrollY(id);
+          if(y!==null&&Math.abs(scrollY-y)>innerHeight*0.25){var de=document.documentElement;de.style.scrollBehavior="auto";scrollTo(0,y);setTimeout(function(){de.style.scrollBehavior="";},80);}
+        },{passive:true});
+        document.addEventListener("focusin",function(ev){
+          if(mode!=="walk") return;
+          var id=roomOf(ev.target); if(!id) return;
+          var y=roomScrollY(id); if(y===null) return;
+          var de=document.documentElement; de.style.scrollBehavior="auto";
+          walkTrack.scrollLeft=0; if(Math.abs(scrollY-y)>innerHeight*0.25) scrollTo(0,y);
+          setTimeout(function(){walkTrack.scrollLeft=0; if(Math.abs(scrollY-y)>innerHeight*0.25) scrollTo(0,y); de.style.scrollBehavior="";},80);
         });
         addEventListener("hashchange",function(){var id=location.hash.slice(1); if(id.indexOf("room-")===0) gotoRoom(id);});
         if(location.hash.indexOf("#room-")===0){setTimeout(function(){gotoRoom(location.hash.slice(1))},50);}
