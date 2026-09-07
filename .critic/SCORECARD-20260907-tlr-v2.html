@@ -1,0 +1,45 @@
+<!doctype html><html lang="en-GB"><meta charset="utf-8"><title>TLR V2 — Combined Judge r4</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{--bg:#f7f7f4;--ink:#141414;--mut:#5b5b57;--g:#1e7a43;--ln:#e2e2dc}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,Segoe UI,Inter,sans-serif;padding:36px 20px}
+.w{max-width:820px;margin:0 auto}h1{font-size:1.6rem;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 22px}
+.big{display:flex;gap:18px;align-items:baseline;border:1px solid var(--ln);background:#fff;border-radius:14px;padding:18px 22px;margin-bottom:22px}
+.big b{font-size:2.6rem;color:var(--g);line-height:1}.pill{background:var(--g);color:#fff;border-radius:999px;padding:5px 14px;font-weight:700;font-size:.8rem;letter-spacing:.06em}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--ln);border-radius:12px;overflow:hidden;margin-bottom:24px}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--ln);font-size:.92rem}th{background:#efefea;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}
+tr:last-child td{border-bottom:0}td.n{text-align:right;font-variant-numeric:tabular-nums}
+h2{font-size:1rem;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:26px 0 8px}
+li{margin-bottom:7px}code{background:#efefea;padding:1px 5px;border-radius:4px;font-size:.85em}
+.ok{color:var(--g);font-weight:700}.maj{color:#a8590f;font-weight:700}
+</style><div class="w">
+<h1>The Listening Room — V2 ship-gate</h1>
+<p class="sub">Combined judge (correctness + craft) · Round 4 · commit <code>f23c106</code> · 2026-09-07</p>
+<div class="big"><b>87.5</b><div>bar 85 · zero blockers<br><span class="pill">PASS</span></div></div>
+<table><tr><th>Criterion</th><th>Wt</th><th class="n">Score</th><th class="n">Pts</th></tr>
+<tr><td>Correctness / robustness</td><td>25</td><td class="n">9</td><td class="n">22.5</td></tr>
+<tr><td>Accessibility + motion safety</td><td>20</td><td class="n">7</td><td class="n">14.0</td></tr>
+<tr><td>Safety / compliance copy</td><td>15</td><td class="n">10</td><td class="n">15.0</td></tr>
+<tr><td>Distinctiveness</td><td>25</td><td class="n">9</td><td class="n">22.5</td></tr>
+<tr><td>Craft</td><td>15</td><td class="n">9</td><td class="n">13.5</td></tr>
+<tr><td><b>Total</b></td><td></td><td></td><td class="n"><b>87.5</b></td></tr></table>
+<h2>Blockers</h2><p class="ok">None. r3 blocker B3 (keyboard focus corrupts the sticky track) is fixed and verified.</p>
+<h2>Evidence — r3 blocker closed</h2><ul>
+<li>26 × Tab @1440×900: <code>walkTrack.scrollLeft === 0</code> at every step; whenever focus sat inside a <code>.room</code> the counter equalled that room's DOM index+1. 0 mismatches.</li>
+<li>10 × Shift+Tab back: same assertions, 0 mismatches (e.g. #room-crisis → scrollY 5460 / "Room 07 / 08"; #room-contact → 6360 / "Room 08 / 08").</li>
+<li>Wheel −1200 from scrollY 1860 → 660, counter Room 03 → Room 02, scrollLeft 0. No stuck state.</li>
+<li><code>.hdr-crisis</code> click → 5460 / Room 07 · <code>.hdr-cta</code> click → 6360 / Room 08 · direct <code>#room-crisis</code> load → 5460 / Room 07 · <code>scrollIntoView</code> on a crisis link → scrollLeft 0.</li>
+<li>0 console errors and 0 page errors across every test.</li></ul>
+<h2>Majors (fix before client-live)</h2><ul>
+<li><span class="maj">A11Y-1</span> Form success: <code>.ok</code> carries no <code>role="status"</code>/<code>aria-live</code>, and hiding <code>.fields</code> drops focus to <code>&lt;body&gt;</code> (measured <code>document.activeElement === document.body</code> after submit). Screen-reader users get no confirmation and lose their place — WCAG 2.2 AA 4.1.3. V3 already shipped this fix (commit 4528827); V2 did not inherit it.</li></ul>
+<h2>Minors</h2><ul>
+<li>No brand <code>:focus-visible</code> token — the UA default ring carries focus. It is legible over the dark rooms, but the ring is Chrome's, not the design's.</li>
+<li><code>scrollIntoView</code> with no focus change lands at Room 08 rather than the target room (scrollLeft stays 0, counter matches the viewport — cosmetic).</li>
+<li>Crisis room (07) leaves large dead vertical space at 1440×900.</li></ul>
+<h2>Other checks</h2><ul>
+<li>served == source, md5 <code>13b8b4e286e2c4621cba8210e00df3a6</code> (81,590 B).</li>
+<li><code>scrollWidth === innerWidth</code> at 375 / 390 / 768 / 1024 / 1440. "Urgent help" <code>display:none</code> below 1024, <code>flex</code> at 1024+ — no wrap at 390.</li>
+<li>Reduced motion → <code>.stack</code>, 0 running animations, walk height cleared.</li>
+<li>Crisis: 4 static routes — <code>tel:999</code>, <code>tel:111</code>, <code>tel:116123</code>, <code>sms:85258</code>. H1 count 1. JSON-LD parses. <code>noindex, nofollow</code>. <code>lang="en-GB"</code>. All 4 form controls labelled. 0 images missing alt.</li>
+<li>Copy safety: every clinical term is a negation ("Not therapy", "not a crisis service", "not an emergency service", "not a clinical or therapeutic one"). Testimonials marked "Example". Form success says "Demo only — nothing was sent".</li></ul>
+</div></html>

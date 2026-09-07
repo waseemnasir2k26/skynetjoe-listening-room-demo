@@ -1944,7 +1944,7 @@ header .hdr-crisis{color:#fff}header.on-light .hdr-crisis{color:var(--ink)}
                             full privacy notice at launch.</small
                           >
                         </div>
-                        <div class="ok">
+                        <div class="ok" role="status" tabindex="-1">
                           <h3 class="serif">Thank you — we've got it.</h3>
                           <p style="color: var(--ink-2)">
                             Demo only — nothing was sent. On the live site
@@ -2345,7 +2345,7 @@ header .hdr-crisis{color:#fff}header.on-light .hdr-crisis{color:var(--ink)}
               } catch (e) {}
             }
             f.querySelector(".fields").style.display = "none";
-            f.querySelector(".ok").style.display = "block";
+            var ok = f.querySelector(".ok"); ok.style.display = "block"; ok.focus();
           });
       })();
     </script>
