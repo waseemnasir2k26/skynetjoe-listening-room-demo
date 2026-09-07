@@ -1,0 +1,19 @@
+{
+  "target": "https://skynetjoe-listening-room-demo.vercel.app",
+  "score": 85,
+  "bar": 85,
+  "judges": ["A-correctness r2 90.5", "B-craft r3 84.75+0.25"],
+  "round": 3,
+  "findings_resolved": [
+    "A-MAJ-1 draft-label curly apostrophe (Stephen\u2019s, no backslash)",
+    "A-MAJ-2 form success panel role=status tabindex=-1 + receives focus on submit, 0 non-GET requests",
+    "B-MIN-1 mobile hero CTA above the fold at 390x844 (top 658.8px, sticky bar starts 765.0px)",
+    "B-MIN-2 testimonial crossfade: only 1 quote above 0.5 opacity at 400ms"
+  ],
+  "scorecard_sha": "3b18f3d32f818b3780932ff04b853949deaffc55955ea8b876f82e3a2ce9f7a4",
+  "artifact_shas": {
+    "index.html": "584e0bbdc6c4d57cc120eed821a0368dcb4863d04e39ee78eb95fd2317172b1a"
+  },
+  "commit": "b02346d",
+  "verified_at": "2026-09-07T18:55:00+08:00"
+}

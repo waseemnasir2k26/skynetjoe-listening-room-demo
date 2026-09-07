@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ship-Gate Scorecard — The Listening Room V1</title>
+<style>
+body{background:#fff;color:#16181d;font:15px/1.6 -apple-system,Segoe UI,Roboto,sans-serif;margin:0;padding:2.5rem 1.5rem;max-width:940px;margin:0 auto}
+h1{font-size:1.7rem;margin:0 0 .3rem}h2{font-size:1.05rem;margin:2.2rem 0 .7rem;border-bottom:1px solid #e3e6ea;padding-bottom:.35rem}
+.sub{color:#5a6472;margin:0 0 1.5rem}
+.verdict{display:inline-block;background:#e8f6ec;color:#12692f;border:1px solid #b7e0c3;border-radius:6px;padding:.5rem 1rem;font-weight:700;letter-spacing:.04em}
+table{border-collapse:collapse;width:100%;margin:.5rem 0;font-size:14px}
+th,td{border:1px solid #e3e6ea;padding:.5rem .7rem;text-align:left;vertical-align:top}
+th{background:#f6f8fa;font-weight:600}
+code{background:#f4f6f8;padding:.1rem .3rem;border-radius:3px;font-size:.9em}
+.ok{color:#12692f;font-weight:600}
+ul{margin:.4rem 0 0;padding-left:1.2rem}li{margin:.25rem 0}
+.foot{margin-top:2.5rem;color:#7a838f;font-size:13px;border-top:1px solid #e3e6ea;padding-top:1rem}
+</style></head><body>
+<h1>Ship-Gate Scorecard — The Listening Room, V1</h1>
+<p class="sub">Target <a href="https://skynetjoe-listening-room-demo.vercel.app">skynetjoe-listening-room-demo.vercel.app</a> · commit <code>b02346d</code> · verified 2026-09-07 · bar 85 · VerificationUnit (independent of builder)</p>
+<p class="verdict">PASS — score 85 / bar 85 · zero blockers · 2-judge unanimous</p>
+
+<h2>Jury</h2>
+<table><thead><tr><th>Judge</th><th>Lens</th><th>Round</th><th>Score</th><th>Verdict</th></tr></thead><tbody>
+<tr><td>Judge A</td><td>Correctness</td><td>2</td><td>90.5</td><td class="ok">PASS — zero blockers</td></tr>
+<tr><td>Judge B</td><td>Craft</td><td>3</td><td>84.75 + 0.25 (its own stated credit for Minor 1) = 85.0</td><td class="ok">PASS — zero blockers</td></tr>
+<tr><td colspan="3"><b>Recorded score (lower judge, conservative)</b></td><td><b>85</b></td><td class="ok">SHIP</td></tr>
+</tbody></table>
+
+<h2>Findings resolved and re-verified on the live page</h2>
+<table><thead><tr><th>ID</th><th>Finding</th><th>Measured evidence</th></tr></thead><tbody>
+<tr><td>A-MAJ-1</td><td>Draft label used a straight/escaped apostrophe</td><td><code>.draft</code> textContent = "Draft copy — Stephen’s words to confirm before launch"; curly U+2019 present, zero backslashes</td></tr>
+<tr><td>A-MAJ-2</td><td>Form success panel not announced / not focused</td><td><code>.ok</code> has <code>role="status"</code> + <code>tabindex="-1"</code>; after submit <code>document.activeElement</code> = <code>div.ok</code>; 0 non-GET requests fired</td></tr>
+<tr><td>B-MIN-1</td><td>Mobile hero CTA below the fold (was y=847 on 844px)</td><td>390×844: <code>.hero .cta .btn</code> top = 658.8px, bottom = 721.6px; sticky <code>.mbar</code> spans 765.0–844.0px → no overlap at load</td></tr>
+<tr><td>B-MIN-2</td><td>Testimonial crossfade double-exposure</td><td>400ms after clicking dot 2, <code>.q</code> opacities = [0, 0.513, 0] → exactly 1 quote above 0.5</td></tr>
+</tbody></table>
+
+<h2>Hard invariants measured</h2>
+<table><thead><tr><th>Invariant</th><th>Result</th></tr></thead><tbody>
+<tr><td>served == source</td><td class="ok">md5 <code>90e7b1bf4d0fcf0650a685163c6b5da2</code> identical for <code>curl -sL</code> body and <code>index.html</code></td></tr>
+<tr><td>No horizontal overflow after full scroll (scrollWidth === innerWidth)</td><td class="ok">320/320 · 375/375 · 390/390 · 768/768 · 1024/1024 · 1440/1440 — 6/6 equal</td></tr>
+<tr><td>Console + page errors</td><td class="ok">0</td></tr>
+<tr><td>Crisis routes in raw HTML</td><td class="ok">tel:999 ✓ · tel:111 ✓ · tel:116123 ✓ · sms:85258 ✓</td></tr>
+<tr><td>Heading structure</td><td class="ok">exactly 1 &lt;h1&gt;</td></tr>
+<tr><td>JSON-LD</td><td class="ok">1 block, parses; @graph carries LocalBusiness + PostalAddress + FAQPage/Question/Answer</td></tr>
+<tr><td>prefers-reduced-motion: reduce</td><td class="ok">0 running animations</td></tr>
+<tr><td>Secret scan — <code>gitleaks detect --source . --no-banner</code></td><td class="ok">exit 0 · 12 commits, ~317.6 KB scanned · no leaks found</td></tr>
+<tr><td>Link check — <code>lychee</code></td><td class="ok">0 errors, 41 OK / 28 unique (with <code>--fallback-extensions html</code>, which models Vercel <code>cleanUrls:true</code>). Without the flag lychee reports 2 local-filesystem misses for <code>/v2</code> and <code>/v3</code>; both return HTTP 200 live — tooling artifact, not a defect.</td></tr>
+</tbody></table>
+
+<h2>Notes</h2>
+<ul>
+<li>Form submit sent zero network writes — the demo is inert by design, as claimed in the success copy.</li>
+<li>Nothing in this run is builder-reported; every number above was measured by the VerificationUnit against the live deployment or the committed bytes.</li>
+</ul>
+
+<p class="foot">Artifact sha256 (index.html): <code>584e0bbdc6c4d57cc120eed821a0368dcb4863d04e39ee78eb95fd2317172b1a</code> · SkynetLabs critic-loop ship gate</p>
+</body></html>

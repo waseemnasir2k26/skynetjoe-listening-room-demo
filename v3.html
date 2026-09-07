@@ -1508,7 +1508,18 @@
         position: static !important;
         margin-bottom: 2rem;
       }
-    </style>
+    
+.logo b{white-space:nowrap}
+.nav ul li,.nav ul a{white-space:nowrap}
+.nav ul a,.nav .ear,.logo{display:inline-flex;align-items:center;min-height:44px}
+.nav{max-width:none;gap:1.1rem}
+@media(max-width:1240px){.nav ul{display:none}}
+@media(max-width:600px){.logo b{display:none}}
+a[href^="tel:"],a[href^="sms:"]{display:inline-flex;align-items:center;min-height:44px}
+footer a{display:inline-flex;align-items:center;min-height:44px}
+.ear-hero{margin-bottom:56px}
+@media(min-width:1024px){.ear-hero{margin-right:260px}}
+</style>
   </head>
   <body>
     <!-- variant switcher (demo only — delete after client picks) -->
