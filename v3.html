@@ -1,0 +1,2430 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      The Listening Room — Independent Mental Health Advocacy, Leicester (V3)
+    </title>
+    <meta
+      name="description"
+      content="The Listening Room is an independent, confidential mental health advocacy service in Leicester. Someone in your corner: listening sessions, support at appointments, help with letters, forms and next steps. Book a free 20-minute call."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="canonical"
+      href="https://skynetjoe-listening-room-demo.vercel.app/v3.html"
+    />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="The Listening Room — Someone in your corner"
+    />
+    <meta
+      property="og:description"
+      content="Independent, confidential mental health advocacy in Leicester. Book a free 20-minute listening call."
+    />
+    <meta
+      property="og:image"
+      content="https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/hero-listening.jpg"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "name": "The Listening Room",
+            "alternateName": "TLR",
+            "description": "Independent, confidential mental health advocacy and listening support in Leicester and Leicestershire.",
+            "url": "https://skynetjoe-listening-room-demo.vercel.app/",
+            "image": "https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg",
+            "telephone": "+44 116 479 3584",
+            "areaServed": ["Leicester", "Leicestershire"],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Leicester",
+              "addressRegion": "Leicestershire",
+              "addressCountry": "GB"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is this therapy or counselling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The Listening Room is an advocacy and listening service, not a clinical or therapeutic one. We help you be heard, understand your options and take practical next steps. If therapy is what you need, we will help you find it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it confidential?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. What you tell us stays between us, with the usual safeguarding exception: if we believe you or someone else is at serious risk we may need to involve emergency or safeguarding services, and we will always tell you first where we can."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a referral?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. You can contact us directly, or a family member, carer or professional can get in touch on your behalf with your permission."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this the same as an IMHA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. If you are detained or liable to be detained under the Mental Health Act you have a legal right to a free Independent Mental Health Advocate (IMHA) commissioned by the local authority. The Listening Room is a private, non-statutory service and we will always signpost you to statutory advocacy where you are entitled to it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens on the free call?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Twenty minutes, no forms, no pressure. You tell us what is going on, we tell you honestly whether we can help and what that would look like."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I bring someone with me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Always. A friend, partner, parent or carer is welcome at any session or appointment we attend together."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        --white: #ffffff;
+        --ink: #0a0a0a;
+        --paper: #121212;
+        --panel: #161616;
+        --line-d: #2a2a2a;
+        --grey: #b5b5b5;
+        --grey-2: #8c8c8c;
+        --em: #0f7a3e;
+        --em-deep: #0b5a2e;
+        --leaf: #5fbf47;
+        --mint-txt: #bfe3cb;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --max: 1240px;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--white);
+        background: var(--ink);
+        line-height: 1.7;
+        font-size: 1.0625rem;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: clip;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: var(--serif);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        color: var(--white);
+      }
+      h1 {
+        font-size: clamp(2.6rem, 8vw, 6rem);
+        font-variation-settings: "opsz" 96;
+        line-height: 0.98;
+      }
+      h2 {
+        font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+        font-variation-settings: "opsz" 48;
+        line-height: 1.04;
+      }
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 clamp(20px, 4vw, 48px);
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--mint-txt);
+      }
+      .eyebrow::before {
+        content: "";
+        width: 26px;
+        height: 2px;
+        background: var(--leaf);
+      }
+      .lead {
+        font-size: 1.2rem;
+        line-height: 1.65;
+        color: var(--grey);
+        max-width: 62ch;
+      }
+      .hl {
+        color: var(--leaf);
+        font-style: italic;
+        font-weight: 300;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1.05rem 1.7rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        min-height: 52px;
+        transition:
+          transform 0.3s var(--ease),
+          background 0.3s,
+          color 0.3s;
+        cursor: pointer;
+        border: 1.5px solid transparent;
+        font-family: var(--sans);
+      }
+      .btn-p {
+        background: #fff;
+        color: var(--ink);
+      }
+      .btn-p:hover {
+        background: var(--leaf);
+        color: var(--ink);
+        transform: translateY(-2px);
+      }
+      .btn-g {
+        background: var(--em);
+        color: #fff;
+      }
+      .btn-g:hover {
+        background: var(--em-deep);
+        transform: translateY(-2px);
+      }
+      .btn-s {
+        background: transparent;
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.4);
+      }
+      .btn-s:hover {
+        background: #fff;
+        color: var(--ink);
+        border-color: #fff;
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      section {
+        position: relative;
+        padding: clamp(80px, 10vw, 140px) 0;
+      }
+
+      /* reveal (via JS clip-path) */
+      .reveal {
+        clip-path: inset(0 0 100% 0);
+        transition: clip-path 0.7s var(--ease);
+      }
+      .reveal.in {
+        clip-path: inset(0 0 0% 0);
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .rv.d1 {
+        transition-delay: 0.1s;
+      }
+      .rv.d2 {
+        transition-delay: 0.2s;
+      }
+      .rv.d3 {
+        transition-delay: 0.3s;
+      }
+      .rv.d4 {
+        transition-delay: 0.4s;
+      }
+
+      /* grain */
+      .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1000;
+        opacity: 0.05;
+        mix-blend-mode: overlay;
+      }
+      .grain svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding: 16px 0;
+        transition:
+          background 0.35s,
+          box-shadow 0.35s,
+          padding 0.35s;
+      }
+      header.on {
+        background: rgba(10, 10, 10, 0.85);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 1px 0 var(--line-d);
+        padding: 10px 0;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+        max-width: calc(var(--max) - 200px);
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-right: auto;
+      }
+      .logo .plate {
+        height: 42px;
+        width: 42px;
+        border-radius: 50%;
+        background: #fff;
+        display: grid;
+        place-items: center;
+        flex: none;
+        box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.5);
+      }
+      .logo .plate img {
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+      }
+      .logo b {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.02rem;
+        color: #fff;
+      }
+      .nav ul {
+        display: flex;
+        gap: 1.4rem;
+        list-style: none;
+        font-size: 0.92rem;
+        font-weight: 500;
+        margin-right: 0.6rem;
+      }
+      .nav ul a {
+        opacity: 0.72;
+        color: #fff;
+      }
+      .nav ul a:hover {
+        opacity: 1;
+        color: var(--leaf);
+      }
+      .nav .btn {
+        padding: 0.7rem 1.2rem;
+        min-height: 44px;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 1060px) {
+        .nav ul {
+          display: none;
+        }
+        .nav {
+          max-width: none;
+        }
+      }
+
+      /* ear */
+      .ear {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-weight: 600;
+        color: #fff;
+        white-space: nowrap;
+      }
+      .ear .ic {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--em);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .ear .ic svg {
+        width: 22px;
+        height: 22px;
+      }
+      .ear .ic::before,
+      .ear .ic::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1.5px solid var(--leaf);
+        opacity: 0;
+        animation: ripple 3.2s var(--ease) infinite;
+      }
+      .ear .ic::after {
+        animation-delay: 1.6s;
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.9);
+          opacity: 0;
+        }
+      }
+      .ear small {
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 500;
+        color: var(--grey);
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+      }
+      .ear b {
+        display: block;
+        font-size: 0.96rem;
+        line-height: 1.15;
+        color: #fff;
+      }
+      @media (max-width: 1060px) {
+        .nav .ear b,
+        .nav .ear small {
+          display: none;
+        }
+        .nav .ear .ic {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      /* HERO */
+      .hero {
+        min-height: 100svh;
+        padding: 0;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .hero-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 55% 40%;
+        filter: brightness(0.35) grayscale(0.4) contrast(1.1);
+        transform: scale(1.08);
+        animation: kb 30s ease-in-out infinite alternate;
+      }
+      .hero-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--em-deep);
+        mix-blend-mode: color;
+        opacity: 0.55;
+      }
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(10, 10, 10, 0.35) 0%,
+          rgba(10, 10, 10, 0.55) 55%,
+          #0a0a0a 100%
+        );
+        z-index: 2;
+      }
+      @keyframes kb {
+        from {
+          transform: scale(1.08);
+        }
+        to {
+          transform: scale(1.18);
+        }
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 3;
+        padding-top: 140px;
+        padding-bottom: 110px;
+        width: 100%;
+      }
+      .hero-copy {
+        max-width: 680px;
+      }
+      .hero h1 {
+        margin: 1.4rem 0 1.6rem;
+        min-height: 2.2em;
+      }
+      .hero h1 .line1 {
+        display: block;
+      }
+      .hero h1 .caret {
+        display: inline-block;
+        width: 0.06em;
+        height: 0.85em;
+        background: #fff;
+        margin-left: 0.06em;
+        vertical-align: -0.08em;
+        animation: blink 0.9s steps(1) infinite;
+      }
+      .hero h1 .caret.done {
+        display: none;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .hero h1 .line2 {
+        display: block;
+        font-style: italic;
+        font-weight: 300;
+        color: var(--leaf);
+        opacity: 0;
+        transform: translateY(10px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .hero h1 .line2.show {
+        opacity: 1;
+        transform: none;
+      }
+      .hero .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 2.2rem;
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+      }
+      .hero .cta.show {
+        opacity: 1;
+        transform: none;
+      }
+      .hero .micro {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        font-size: 0.86rem;
+        color: var(--grey);
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.8s var(--ease) 0.1s,
+          transform 0.8s var(--ease) 0.1s;
+      }
+      .hero .micro.show {
+        opacity: 1;
+        transform: none;
+      }
+      .hero .micro span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .hero .micro svg {
+        width: 16px;
+        height: 16px;
+        color: var(--leaf);
+      }
+      .ear-hero {
+        margin-top: 1.8rem;
+        display: inline-flex;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 0.9rem 1.3rem 0.9rem 0.9rem;
+        border-radius: 999px;
+        gap: 0.9rem;
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.8s var(--ease) 0.2s,
+          transform 0.8s var(--ease) 0.2s;
+      }
+      .ear-hero.show {
+        opacity: 1;
+        transform: none;
+      }
+      .ear-hero .ic {
+        width: 50px;
+        height: 50px;
+      }
+      .ear-hero .ic svg {
+        width: 26px;
+        height: 26px;
+      }
+      .ear-hero b {
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+      @media (max-width: 760px) {
+        .hero .wrap {
+          padding-top: 120px;
+          padding-bottom: 60px;
+        }
+      }
+
+      /* band */
+      .band {
+        background: var(--panel);
+        border-top: 1px solid var(--line-d);
+        border-bottom: 1px solid var(--line-d);
+        color: #fff;
+        padding: 20px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.1rem;
+      }
+      .band .track {
+        display: inline-block;
+        animation: mq 60s linear infinite;
+      }
+      .band:hover .track {
+        animation-play-state: paused;
+      }
+      .band span {
+        margin: 0 1.6rem;
+        color: var(--grey);
+      }
+      .band i {
+        color: var(--leaf);
+        font-style: normal;
+      }
+      @keyframes mq {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* CONVERSATION STAGE */
+      .convo {
+        background: var(--ink);
+      }
+      .convo .intro {
+        margin-bottom: clamp(2.5rem, 6vw, 4.5rem);
+      }
+      .convo .stage-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(2rem, 5vw, 5rem);
+      }
+      .convo .col-left {
+        position: sticky;
+        top: 22vh;
+        align-self: start;
+        height: 56vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .convo .eq {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        height: 26px;
+        margin-bottom: 1.6rem;
+      }
+      .convo .eq i {
+        display: block;
+        width: 4px;
+        height: 100%;
+        background: var(--leaf);
+        border-radius: 2px;
+        transform: scaleY(0.15);
+        transform-origin: bottom;
+        transition: transform 0.18s ease;
+        opacity: 0.85;
+      }
+      .convo .eq.settle i {
+        transform: scaleY(0.1) !important;
+        transition: transform 0.6s var(--ease);
+      }
+      .convo .said {
+        position: relative;
+        min-height: 8em;
+      }
+      .convo .said blockquote {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition:
+          opacity 0.6s var(--ease),
+          transform 0.6s var(--ease);
+        transform: translateY(10px);
+        pointer-events: none;
+      }
+      .convo .said blockquote.on {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+        position: relative;
+      }
+      .convo .said blockquote p {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 300;
+        font-size: clamp(1.5rem, 3vw, 2.4rem);
+        line-height: 1.25;
+        color: #fff;
+      }
+      .convo .said blockquote p::before {
+        content: "\201C";
+        color: var(--leaf);
+        margin-right: 0.06em;
+      }
+      .convo .said .who {
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: var(--grey);
+        letter-spacing: 0.02em;
+      }
+      .convo .col-right {
+        display: grid;
+        gap: clamp(3rem, 8vh, 6rem);
+        padding-top: 4vh;
+      }
+      .convo .reply {
+        max-width: 52ch;
+        opacity: 0.35;
+        transform: translateY(14px);
+        transition:
+          opacity 0.6s var(--ease),
+          transform 0.6s var(--ease);
+      }
+      .convo .reply.on {
+        opacity: 1;
+        transform: none;
+      }
+      .convo .reply .n {
+        display: block;
+        font-family: var(--serif);
+        font-style: italic;
+        color: var(--leaf);
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+      }
+      .convo .reply h3 {
+        margin-bottom: 0.7rem;
+      }
+      .convo .reply p {
+        color: var(--grey);
+        font-size: 1.02rem;
+      }
+      @media (max-width: 860px) {
+        .convo .stage-grid {
+          grid-template-columns: 1fr;
+        }
+        .convo .col-left {
+          position: static;
+          height: auto;
+          margin-bottom: 1.4rem;
+        }
+        .convo .said {
+          min-height: auto;
+        }
+        .convo .said blockquote {
+          position: static;
+          opacity: 1;
+          transform: none;
+          pointer-events: auto;
+          display: none;
+        }
+        .convo .said blockquote.on {
+          display: block;
+        }
+        .convo .eq i {
+          transform: scaleY(0.4) !important;
+          transition: none;
+        }
+        .convo .col-right {
+          gap: 2.4rem;
+          padding-top: 0;
+        }
+        .convo .reply {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      /* HOW IT WORKS */
+      .how {
+        background: var(--panel);
+        border-top: 1px solid var(--line-d);
+      }
+      .how .timeline {
+        position: relative;
+        margin-top: 3rem;
+        padding-left: clamp(2rem, 5vw, 3.5rem);
+      }
+      .how .rail {
+        position: absolute;
+        left: 6px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .how .rail i {
+        display: block;
+        width: 2px;
+        height: 0%;
+        background: var(--leaf);
+        transition: height 1s var(--ease);
+      }
+      .how .step {
+        position: relative;
+        padding: 0 0 clamp(3rem, 7vw, 5rem);
+        max-width: 56ch;
+      }
+      .how .step:last-child {
+        padding-bottom: 0;
+      }
+      .how .step::before {
+        content: "";
+        position: absolute;
+        left: calc(-1 * clamp(2rem, 5vw, 3.5rem) + 0px);
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--ink);
+        border: 2px solid var(--leaf);
+      }
+      .how .step .k {
+        display: block;
+        color: var(--leaf);
+        font-family: var(--serif);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+      }
+      .how .step h3 {
+        font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+        margin-bottom: 0.8rem;
+      }
+      .how .step p {
+        color: var(--grey);
+        font-size: 1.05rem;
+      }
+
+      /* ABOUT */
+      .about {
+        background: var(--ink);
+      }
+      .about .grid {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: clamp(2rem, 6vw, 6rem);
+        align-items: start;
+      }
+      .about .pic {
+        position: relative;
+      }
+      .about .pic img {
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        width: 100%;
+        filter: grayscale(0.3) brightness(0.9);
+      }
+      .about .pic .cap {
+        position: absolute;
+        left: -1rem;
+        bottom: 2rem;
+        background: var(--em);
+        color: #fff;
+        padding: 0.9rem 1.2rem;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.02rem;
+        max-width: 260px;
+      }
+      .about .pull {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 300;
+        font-size: clamp(1.7rem, 3vw, 2.3rem);
+        line-height: 1.25;
+        margin: 1.8rem 0;
+        padding-left: 1.4rem;
+        border-left: 3px solid var(--leaf);
+        color: #fff;
+      }
+      .about p {
+        color: var(--grey);
+        max-width: 62ch;
+        margin-bottom: 1.1rem;
+      }
+      .about .sig {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.5rem;
+        margin-top: 1.6rem;
+        color: #fff;
+      }
+      .about .values {
+        display: flex;
+        gap: 2.4rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: var(--grey);
+      }
+      .about .values b {
+        display: block;
+        color: #fff;
+        font-family: var(--serif);
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+      @media (max-width: 860px) {
+        .about .grid {
+          grid-template-columns: 1fr;
+        }
+        .about .pic {
+          max-width: 420px;
+          margin-left: 1rem;
+        }
+      }
+
+      /* TESTIMONIALS */
+      .testi {
+        background: var(--panel);
+        border-top: 1px solid var(--line-d);
+        border-bottom: 1px solid var(--line-d);
+      }
+      .testi .stage {
+        position: relative;
+        margin-top: 2.5rem;
+        display: grid;
+        min-height: 12em;
+      }
+      .testi .q {
+        grid-area: 1/1;
+        opacity: 0;
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+        transform: translateY(10px);
+        pointer-events: none;
+      }
+      .testi .q.on {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+      .testi .q p {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 300;
+        font-size: clamp(1.6rem, 3.4vw, 2.9rem);
+        line-height: 1.25;
+        max-width: 26ch;
+        color: #fff;
+      }
+      .testi .q footer {
+        margin-top: 1.4rem;
+        font-size: 0.9rem;
+        color: var(--grey);
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .testi .q footer b {
+        color: #fff;
+      }
+      .testi .tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--em);
+        color: #fff;
+        padding: 0.3rem 0.55rem;
+        border-radius: 3px;
+      }
+      .testi .dots {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+      .testi .dots button {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+      }
+      .testi .dots button::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        top: 19px;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--line-d);
+        transition: background 0.3s;
+      }
+      .testi .dots button.on::after {
+        background: var(--leaf);
+      }
+      .testi .note {
+        color: var(--grey-2);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .testi .stage {
+          display: block;
+        }
+        .testi .q {
+          opacity: 1;
+          transform: none;
+          margin-bottom: 2.5rem;
+          pointer-events: auto;
+        }
+      }
+
+      /* CRISIS - inverted, always visible, no animation */
+      .crisis {
+        background: #fff;
+        color: var(--ink);
+        padding: 64px 0;
+      }
+      .crisis .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 2fr;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      .crisis h2 {
+        font-size: 2rem;
+        color: var(--ink);
+      }
+      .crisis p {
+        color: #3c3c3c;
+        font-size: 0.95rem;
+        margin-top: 0.6rem;
+      }
+      .crisis ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+      }
+      .crisis li a {
+        display: block;
+        min-height: 64px;
+        border: 1px solid #d8d8d8;
+        padding: 0.9rem 1rem;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .crisis li a:hover {
+        border-color: var(--em);
+        background: #f3f7f4;
+      }
+      .crisis li b {
+        display: block;
+        font-size: 1.25rem;
+        font-family: var(--serif);
+        color: var(--em-deep);
+      }
+      .crisis li span {
+        font-size: 0.85rem;
+        color: #4a4a4a;
+      }
+      @media (max-width: 860px) {
+        .crisis .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .crisis ul {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* FAQ */
+      .faq {
+        background: var(--ink);
+      }
+      .faq .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: clamp(2rem, 5vw, 6rem);
+      }
+      .faq details {
+        border-bottom: 1px solid var(--line-d);
+      }
+      .faq details:first-of-type {
+        border-top: 1px solid rgba(255, 255, 255, 0.4);
+      }
+      .faq summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 1.3rem 0;
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        flex: none;
+        background:
+          linear-gradient(var(--leaf), var(--leaf)) center/14px 2px no-repeat,
+          linear-gradient(var(--leaf), var(--leaf)) center/2px 14px no-repeat;
+        transition: transform 0.3s var(--ease);
+      }
+      .faq details[open] summary::after {
+        transform: rotate(90deg);
+        background: linear-gradient(var(--leaf), var(--leaf)) center/14px 2px
+          no-repeat;
+      }
+      .faq details p {
+        padding: 0 0 1.4rem;
+        color: var(--grey);
+        max-width: 60ch;
+      }
+      @media (max-width: 860px) {
+        .faq .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* CONTACT */
+      .contact {
+        background: var(--panel);
+        border-top: 1px solid var(--line-d);
+      }
+      .contact .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: clamp(2.5rem, 6vw, 5rem);
+        align-items: start;
+      }
+      .form label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 1.5rem 0 0.2rem;
+        color: var(--grey);
+      }
+      .form input,
+      .form select,
+      .form textarea {
+        width: 100%;
+        padding: 0.8rem 0;
+        border: 0;
+        border-bottom: 1.5px solid rgba(255, 255, 255, 0.35);
+        border-radius: 0;
+        font: inherit;
+        font-size: 1.05rem;
+        background: transparent;
+        color: #fff;
+        min-height: 48px;
+        transition: border-color 0.2s;
+      }
+      .form select option {
+        background: var(--ink);
+        color: #fff;
+      }
+      .form input::placeholder,
+      .form textarea::placeholder {
+        color: var(--grey-2);
+      }
+      .form input:focus,
+      .form select:focus,
+      .form textarea:focus {
+        outline: 2px solid var(--leaf);
+        outline-offset: 4px;
+        border-color: var(--leaf);
+      }
+      .form textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+      .form .btn {
+        margin-top: 2rem;
+        width: 100%;
+        justify-content: center;
+      }
+      .form small {
+        display: block;
+        color: var(--grey-2);
+        font-size: 0.78rem;
+        margin-top: 0.9rem;
+        line-height: 1.5;
+      }
+      .form .ok {
+        display: none;
+        padding: 2rem 0;
+      }
+      .form .ok h3 {
+        margin-bottom: 0.5rem;
+      }
+      .form .ok p {
+        color: var(--grey);
+      }
+      .contact .side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: clamp(1rem, 3vw, 2rem);
+        border: 1px solid var(--line-d);
+        border-radius: 4px;
+      }
+      .contact .earbig {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--em-deep);
+        display: grid;
+        place-items: center;
+        margin-bottom: 1.6rem;
+        position: relative;
+      }
+      .contact .earbig svg {
+        width: 60px;
+        height: 60px;
+      }
+      .contact .earbig::before,
+      .contact .earbig::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1.5px solid #fff;
+        opacity: 0;
+        animation: ripple 3.6s var(--ease) infinite;
+      }
+      .contact .earbig::after {
+        animation-delay: 1.8s;
+      }
+      .contact .side small {
+        display: block;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--mint-txt);
+        margin-bottom: 0.4rem;
+      }
+      .contact .side .num {
+        font-family: var(--serif);
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 1;
+        display: block;
+        color: #fff;
+      }
+      .contact .side .num:hover {
+        color: var(--leaf);
+      }
+      .contact .side p {
+        color: var(--grey);
+        margin-top: 1.2rem;
+        max-width: 36ch;
+      }
+      .contact .side .promise {
+        margin-top: 2rem;
+        border-top: 1px solid var(--line-d);
+        padding-top: 1.2rem;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+      @media (max-width: 860px) {
+        .contact .grid {
+          grid-template-columns: 1fr;
+        }
+        .contact .side {
+          order: -1;
+        }
+      }
+
+      /* footer */
+      footer.site {
+        padding: 56px 0 120px;
+        font-size: 0.88rem;
+        color: var(--grey-2);
+        position: relative;
+        background: var(--ink);
+        border-top: 1px solid var(--line-d);
+      }
+      footer.site .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.2rem;
+        align-items: center;
+      }
+      footer.site .row .plate {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: #fff;
+        display: grid;
+        place-items: center;
+      }
+      footer.site .row .plate img {
+        height: 28px;
+        width: 28px;
+        object-fit: contain;
+      }
+      footer.site .disc {
+        margin-top: 1.4rem;
+        max-width: 80ch;
+        font-size: 0.8rem;
+      }
+      footer.site a {
+        color: var(--leaf);
+        font-weight: 500;
+      }
+
+      /* mobile bar + demo badge */
+      .mbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 60;
+        display: none;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid var(--line-d);
+      }
+      .mbar .row {
+        display: flex;
+        gap: 0.6rem;
+      }
+      .mbar .row .btn {
+        flex: 1;
+        padding: 0.9rem 0.6rem;
+        justify-content: center;
+      }
+      @media (max-width: 960px) {
+        .mbar {
+          display: block;
+        }
+      }
+      .demo {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 55;
+        background: #fff;
+        color: var(--ink);
+        font-size: 0.74rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        opacity: 0.92;
+      }
+      @media (max-width: 960px) {
+        .demo {
+          bottom: 86px;
+        }
+      }
+
+      #switcher-slot {
+        position: relative;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv,
+        .reveal,
+        .hero .cta,
+        .hero .micro,
+        .ear-hero,
+        .hero h1 .line2 {
+          opacity: 1 !important;
+          transform: none !important;
+          clip-path: none !important;
+        }
+        .hero h1 .caret {
+          display: none !important;
+        }
+        .convo .said blockquote,
+        .convo .reply {
+          opacity: 1 !important;
+          transform: none !important;
+          position: static !important;
+          pointer-events: auto !important;
+          margin-bottom: 2rem;
+        }
+        .convo .col-left {
+          position: static;
+          height: auto;
+        }
+        .convo .eq i {
+          transform: scaleY(0.4) !important;
+        }
+        .how .rail i {
+          height: 100% !important;
+        }
+      }
+
+      /* no-JS failure-sim: everything visible without script */
+      html:not(.js) .reveal,
+      html:not(.js) .rv {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+      }
+      html:not(.js) .hero h1 .caret {
+        display: none;
+      }
+      html:not(.js) .hero h1 .line2,
+      html:not(.js) .hero .cta,
+      html:not(.js) .hero .micro,
+      html:not(.js) .ear-hero {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      html:not(.js) .convo .said blockquote,
+      html:not(.js) .convo .reply {
+        opacity: 1 !important;
+        transform: none !important;
+        position: static !important;
+        pointer-events: auto !important;
+        margin-bottom: 2rem;
+      }
+      html:not(.js) .testi .q {
+        opacity: 1 !important;
+        transform: none !important;
+        position: static !important;
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="switcher-slot"></div>
+    <div class="grain" aria-hidden="true">
+      <svg>
+        <filter id="g">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".9"
+            numOctaves="2"
+            stitchTiles="stitch"
+          />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#g)" />
+      </svg>
+    </div>
+
+    <header id="hdr">
+      <div class="wrap nav">
+        <a class="logo" href="#top" aria-label="The Listening Room home"
+          ><span class="plate"
+            ><img
+              src="/assets/tlr-mark.png"
+              alt="TLR monogram"
+              width="30"
+              height="30" /></span
+          ><b>The Listening Room</b></a
+        >
+        <ul>
+          <li><a href="#who">Who it's for</a></li>
+          <li><a href="#services">How we help</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a
+          class="ear"
+          href="tel:+441164793584"
+          aria-label="Call the office on 0116 479 3584"
+          ><span class="ic"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+              />
+              <path
+                d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+              /></svg></span
+          ><span><small>Call the office</small><b>0116 479 3584</b></span></a
+        >
+        <a class="btn btn-p" href="#contact">Book a free call</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg">
+          <img
+            src="/assets/hero-listening.jpg"
+            alt="An advocate listening attentively to a client in a calm, dim room"
+            width="1400"
+            height="788"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="wrap">
+          <div class="hero-copy">
+            <span class="eyebrow rv"
+              >Independent mental health advocacy · Leicester</span
+            >
+            <h1 id="h1">
+              <span class="line1" id="typeTarget">You deserve to be heard.</span
+              ><span class="caret" id="caret"></span
+              ><span class="line2" id="line2">Not managed.</span>
+            </h1>
+            <p class="lead rv d1">
+              The Listening Room is someone in your corner. A confidential,
+              independent advocate who listens first, then helps you say what
+              you need to say — to doctors, to services, to the people around
+              you — and get the support you're entitled to.
+            </p>
+            <div class="cta" id="heroCta">
+              <a class="btn btn-g" href="#contact"
+                >Book a free 20-minute call
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg
+              ></a>
+              <a class="btn btn-s" href="#services">See how we help</a>
+            </div>
+            <div class="micro" id="heroMicro">
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >Confidential</span
+              >
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >No referral needed</span
+              >
+              <span
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 6 9 17l-5-5" /></svg
+                >In person, phone or video</span
+              >
+            </div>
+            <a class="ear ear-hero" id="heroEar" href="tel:+441164793584"
+              ><span class="ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                  />
+                  <path
+                    d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+                  /></svg></span
+              ><span
+                ><small>Need to talk today? Call the office</small
+                ><b>0116 479 3584</b></span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="band" aria-hidden="true">
+        <div class="track">
+          <span>Listening sessions</span><i>✦</i
+          ><span>Support at appointments</span><i>✦</i
+          ><span>Help with letters &amp; forms</span><i>✦</i
+          ><span>Care plan reviews</span><i>✦</i
+          ><span>Family &amp; carer support</span><i>✦</i
+          ><span>Signposting to the right help</span><i>✦</i>
+          <span>Listening sessions</span><i>✦</i
+          ><span>Support at appointments</span><i>✦</i
+          ><span>Help with letters &amp; forms</span><i>✦</i
+          ><span>Care plan reviews</span><i>✦</i
+          ><span>Family &amp; carer support</span><i>✦</i
+          ><span>Signposting to the right help</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- CONVERSATION STAGE -->
+      <section class="convo" id="who">
+        <div class="wrap">
+          <div class="intro">
+            <span class="eyebrow reveal">What people say / what we hear</span>
+            <h2 class="reveal" style="margin-top: 0.8rem">
+              For anyone who feels <span class="hl">unheard</span> by the
+              system.
+            </h2>
+            <p class="lead reveal" style="margin-top: 1rem">
+              You don't need a diagnosis, a referral or the right words. You
+              just need someone on your side.
+            </p>
+          </div>
+          <div class="stage-grid" id="convoStage">
+            <div class="col-left">
+              <div class="eq" id="eq" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div class="said" id="said">
+                <blockquote class="on" data-k="0">
+                  <p>
+                    Living with anxiety, depression or long-term mental
+                    ill-health — and tired of explaining myself over and over.
+                  </p>
+                  <div class="who">What people say · 01</div>
+                </blockquote>
+                <blockquote data-k="1">
+                  <p>
+                    In hospital, recently discharged, or under a community team
+                    — and unsure what my care plan actually says.
+                  </p>
+                  <div class="who">What people say · 02</div>
+                </blockquote>
+                <blockquote data-k="2">
+                  <p>
+                    Waiting on the NHS — and needing someone to talk to in the
+                    meantime.
+                  </p>
+                  <div class="who">What people say · 03</div>
+                </blockquote>
+                <blockquote data-k="3">
+                  <p>
+                    A parent, partner or carer — trying to hold everything
+                    together and get answers for someone I love.
+                  </p>
+                  <div class="who">What people say · 04</div>
+                </blockquote>
+                <blockquote data-k="4">
+                  <p>
+                    Facing forms, letters or appeals — PIP, Universal Credit,
+                    complaints — and I don't know where to start.
+                  </p>
+                  <div class="who">What people say · 05</div>
+                </blockquote>
+              </div>
+            </div>
+            <div class="col-right" id="convoReplies">
+              <div class="reply on" data-k="0">
+                <span class="n">01</span>
+                <h3>Listening sessions</h3>
+                <p>
+                  A regular, confidential hour with someone who isn't rushing
+                  you. Say it out loud, untangle it, decide what matters.
+                </p>
+              </div>
+              <div class="reply" data-k="1">
+                <span class="n">02</span>
+                <h3>Beside you at appointments</h3>
+                <p>
+                  GP, psychiatrist, care coordinator, ward round, care plan
+                  review. We prepare together, come with you, and make sure your
+                  points land.
+                </p>
+              </div>
+              <div class="reply" data-k="2">
+                <span class="n">03</span>
+                <h3>Letters, forms &amp; appeals</h3>
+                <p>
+                  PIP, Universal Credit, housing, complaints. We help you put
+                  your situation into words that get taken seriously.
+                </p>
+              </div>
+              <div class="reply" data-k="3">
+                <span class="n">04</span>
+                <h3>Care plan &amp; rights check</h3>
+                <p>
+                  Plain-English walk-through of your care plan, medication list
+                  or discharge plan, and what you're entitled to ask for.
+                </p>
+              </div>
+              <div class="reply" data-k="4">
+                <span class="n">05</span>
+                <h3>Signposting, done properly</h3>
+                <p>
+                  Free statutory advocacy (IMHA), crisis teams, community
+                  groups, talking therapies. The right door, not just "a" door.
+                </p>
+              </div>
+            </div>
+          </div>
+          <p
+            class="quote reveal"
+            style="
+              margin-top: 3rem;
+              font-family: var(--serif);
+              font-style: italic;
+              font-weight: 300;
+              font-size: clamp(1.5rem, 3vw, 2.2rem);
+              text-align: center;
+            "
+          >
+            "Someone finally asked what <span class="hl">I</span> wanted."
+          </p>
+        </div>
+      </section>
+
+      <!-- SERVICES marker for header link (also lists all 6, mirrors convo replies, kept for nav anchor + completeness) -->
+      <section
+        id="services"
+        style="padding-top: 0; padding-bottom: 0"
+      ></section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how" id="how">
+        <div class="wrap">
+          <span class="eyebrow reveal">How it works</span>
+          <h2 class="reveal" style="margin-top: 0.8rem">
+            Three steps. <span class="hl">No pressure</span> at any of them.
+          </h2>
+          <div class="timeline">
+            <div class="rail"><i id="rail-i"></i></div>
+            <div class="step reveal" data-k="0">
+              <span class="k">Step one</span>
+              <h3>Book a free 20-minute call</h3>
+              <p>
+                Phone or video, whenever suits you. You talk, we listen. We'll
+                tell you honestly whether we're the right help — and if we're
+                not, who is.
+              </p>
+            </div>
+            <div class="step reveal" data-k="1">
+              <span class="k">Step two</span>
+              <h3>Make a simple plan together</h3>
+              <p>
+                One page. What you want to change, who needs to hear it, and
+                what we'll do first. You stay in charge of every decision.
+              </p>
+            </div>
+            <div class="step reveal" data-k="2">
+              <span class="k">Step three</span>
+              <h3>We walk alongside you</h3>
+              <p>
+                Sessions, appointments, letters, follow-ups. As much or as
+                little as you need, for as long as it's useful.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="wrap grid">
+          <div class="pic reveal">
+            <img
+              src="/assets/mug-window.jpg"
+              alt="A person holding a mug, looking out at autumn trees through a window"
+              width="933"
+              height="1400"
+              loading="lazy"
+            />
+            <div class="cap">Independent. Confidential. On your side.</div>
+          </div>
+          <div>
+            <span class="eyebrow reveal">About The Listening Room</span>
+            <h2 class="reveal" style="margin-top: 0.8rem">
+              Started by someone who knows what it's like to
+              <span class="hl">not be heard.</span>
+            </h2>
+            <p class="pull reveal">
+              "Too many people in Leicester sit in appointments, wards and
+              waiting rooms feeling like a case number."
+            </p>
+            <p class="reveal">
+              The Listening Room began with a simple frustration: too many
+              people leave with a leaflet and no idea what happens next.
+            </p>
+            <p class="reveal">
+              I set this up to be the person I wished had been in the room.
+              Independent — so I answer to you, not a service. Practical — so
+              listening turns into letters written, meetings attended and
+              questions answered. And patient — because being heard properly
+              takes longer than ten minutes.
+            </p>
+            <p class="reveal">
+              This is not therapy, and it isn't a crisis service. It's advocacy:
+              your voice, made louder.
+            </p>
+            <div class="sig reveal">— Stephen Forde, Founder</div>
+            <div class="values reveal">
+              <div><b>Independent</b>We work for you only.</div>
+              <div><b>Confidential</b>Your story stays yours.</div>
+              <div><b>Non-judgemental</b>Whatever you bring.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testi">
+        <div class="wrap">
+          <span class="eyebrow reveal">In their words</span>
+          <h2 class="reveal" style="margin-top: 0.8rem">
+            What being heard <span class="hl">feels like.</span>
+          </h2>
+          <div class="stage" id="stage">
+            <div class="q on">
+              <p>
+                He came to my care plan review and for the first time the
+                psychiatrist actually wrote down what I said. I didn't have to
+                fight for it.
+              </p>
+              <footer>
+                <span class="tag">Example</span><b>Client, Leicester</b> · Care
+                plan review
+              </footer>
+            </div>
+            <div class="q">
+              <p>
+                I'd been putting off the PIP form for months. We did it together
+                in two sittings and it was accepted first time.
+              </p>
+              <footer>
+                <span class="tag">Example</span><b>Client, Wigston</b> ·
+                Benefits support
+              </footer>
+            </div>
+            <div class="q">
+              <p>
+                As Mum's carer I was drowning. One call and I finally understood
+                who was responsible for what — and that I was allowed to ask.
+              </p>
+              <footer>
+                <span class="tag">Example</span><b>Carer, Oadby</b> · Family
+                support
+              </footer>
+            </div>
+          </div>
+          <div class="dots" id="dots" role="tablist" aria-label="Testimonials">
+            <button class="on" aria-label="Quote 1"></button
+            ><button aria-label="Quote 2"></button
+            ><button aria-label="Quote 3"></button>
+          </div>
+          <p class="note">
+            Example quotes for layout only — replaced with real client words
+            (with consent) before launch.
+          </p>
+        </div>
+      </section>
+
+      <!-- CRISIS -->
+      <section class="crisis" aria-label="Urgent help">
+        <div class="wrap grid">
+          <div>
+            <h2>In crisis right now?</h2>
+            <p>
+              The Listening Room is not an emergency service. If you or someone
+              else is in immediate danger, please use one of these — they're
+              free and open 24/7.
+            </p>
+          </div>
+          <ul>
+            <li>
+              <a href="tel:999"
+                ><b>999</b><span>Emergency — immediate danger to life</span></a
+              >
+            </li>
+            <li>
+              <a href="tel:111"
+                ><b>NHS 111, option 2</b
+                ><span>Urgent mental health support, 24/7</span></a
+              >
+            </li>
+            <li>
+              <a href="tel:116123"
+                ><b>Samaritans · 116 123</b
+                ><span>Free to call, any time, any reason</span></a
+              >
+            </li>
+            <li>
+              <a href="sms:85258"
+                ><b>Shout · text 85258</b
+                ><span>Free, confidential crisis text line</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="wrap grid">
+          <div>
+            <span class="eyebrow reveal">Questions</span>
+            <h2 class="reveal" style="margin-top: 0.8rem">
+              Things people ask <span class="hl">before</span> they call.
+            </h2>
+            <p class="lead reveal" style="margin-top: 1rem">
+              Anything else? Just ask on the free call. There's no such thing as
+              a silly question here.
+            </p>
+          </div>
+          <div class="reveal">
+            <details open>
+              <summary>Is this therapy or counselling?</summary>
+              <p>
+                No. The Listening Room is an advocacy and listening service, not
+                a clinical or therapeutic one. We help you be heard, understand
+                your options and take practical next steps. If therapy is what
+                you need, we'll help you find it.
+              </p>
+            </details>
+            <details>
+              <summary>Is it confidential?</summary>
+              <p>
+                Yes. What you tell us stays between us, with the usual
+                safeguarding exception: if we believe you or someone else is at
+                serious risk we may need to involve emergency or safeguarding
+                services, and we'll always tell you first where we can.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need a referral?</summary>
+              <p>
+                No. Contact us directly, or a family member, carer or
+                professional can get in touch on your behalf with your
+                permission.
+              </p>
+            </details>
+            <details>
+              <summary>Is this the same as an IMHA?</summary>
+              <p>
+                No. If you're detained or liable to be detained under the Mental
+                Health Act you have a legal right to a free Independent Mental
+                Health Advocate (IMHA) commissioned by the local authority. The
+                Listening Room is a private, non-statutory service and we'll
+                always point you to statutory advocacy where you're entitled to
+                it.
+              </p>
+            </details>
+            <details>
+              <summary>What happens on the free call?</summary>
+              <p>
+                Twenty minutes, no forms, no pressure. You tell us what's going
+                on, we tell you honestly whether we can help and what that would
+                look like.
+              </p>
+            </details>
+            <details>
+              <summary>Can I bring someone with me?</summary>
+              <p>
+                Always. A friend, partner, parent or carer is welcome at any
+                session or appointment we attend together.
+              </p>
+            </details>
+            <details>
+              <summary>Where do you work?</summary>
+              <p>
+                Leicester and Leicestershire in person, and anywhere in the UK
+                by phone or video.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="wrap grid">
+          <div>
+            <span class="eyebrow reveal">Start here</span>
+            <h2 class="reveal" style="margin-top: 0.8rem">
+              Book your free <span class="hl">20-minute</span> listening call.
+            </h2>
+            <p class="reveal" style="color: var(--grey); margin-top: 1rem">
+              Tell us a little about what's going on. We'll reply within one
+              working day to arrange a time that suits you — phone or video,
+              your choice.
+            </p>
+            <form class="form reveal" id="lead" novalidate>
+              <div class="fields">
+                <label for="name">Your name</label>
+                <input
+                  id="name"
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="First name is fine"
+                />
+                <label for="contact-method">Best way to reach you</label>
+                <input
+                  id="contact-method"
+                  name="contact"
+                  required
+                  placeholder="Mobile number or email"
+                />
+                <label for="for">Who is this for?</label>
+                <select id="for" name="for">
+                  <option>Myself</option>
+                  <option>Someone I care for</option>
+                  <option>A client / patient (I'm a professional)</option>
+                </select>
+                <label for="msg"
+                  >What's going on? (as much or as little as you like)</label
+                >
+                <textarea
+                  id="msg"
+                  name="message"
+                  placeholder="e.g. I've got a care plan review next month and I never feel listened to."
+                ></textarea>
+                <button class="btn btn-g" type="submit">
+                  Request my free call
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </button>
+                <small
+                  >Not for emergencies. If you're in danger now, call 999 or NHS
+                  111 (option 2). Your details are used only to arrange your
+                  call and are never shared — full privacy notice at
+                  launch.</small
+                >
+              </div>
+              <div class="ok">
+                <h3 class="serif">Thank you — we've got it.</h3>
+                <p>
+                  Demo only — nothing was sent. On the live site you'll hear
+                  back within one working day.
+                </p>
+              </div>
+            </form>
+          </div>
+          <div class="side reveal">
+            <div class="earbig" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                />
+                <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6" />
+              </svg>
+            </div>
+            <small>Prefer to talk? Office line</small>
+            <a class="num" href="tel:+441164793584">0116 479 3584</a>
+            <p>
+              Working hours. If it goes to voicemail, leave your first name and
+              a number — we call back the same day where we can.
+            </p>
+            <div class="promise">
+              Twenty minutes. No forms. No pressure. Just someone listening.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div class="row">
+          <span class="plate"
+            ><img
+              src="/assets/tlr-mark.png"
+              alt="The Listening Room"
+              width="28"
+              height="28"
+          /></span>
+          <div>
+            © <span id="yr"></span> The Listening Room · Leicester, UK ·
+            Independent mental health advocacy ·
+            <a href="tel:+441164793584">0116 479 3584</a>
+          </div>
+        </div>
+        <p class="disc">
+          The Listening Room is a private, non-statutory advocacy and listening
+          service. It is not a clinical, therapeutic or emergency service and
+          does not replace your right to free statutory advocacy (IMHA / IMCA /
+          Care Act) where you are entitled to it. Demo site by
+          <a href="https://skynetjoe.com" rel="noopener"
+            >SkynetLabs · skynetjoe.com</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <div class="mbar">
+      <div class="row">
+        <a class="btn btn-p" href="tel:+441164793584"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.9"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+            />
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6" />
+          </svg>
+          Call</a
+        ><a class="btn btn-g" href="#contact">Book a free call</a>
+      </div>
+    </div>
+    <a class="demo" href="https://skynetjoe.com" target="_blank" rel="noopener"
+      >Built by SkynetLabs ↗</a
+    >
+
+    <script>
+      (function () {
+        document.documentElement.classList.add("js");
+        document.getElementById("yr").textContent = new Date().getFullYear();
+        var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var hdr = document.getElementById("hdr");
+        addEventListener(
+          "scroll",
+          function () {
+            hdr.classList.toggle("on", scrollY > 40);
+          },
+          { passive: true },
+        );
+
+        /* typewriter headline */
+        var full = "You deserve to be heard.";
+        var target = document.getElementById("typeTarget");
+        var caret = document.getElementById("caret");
+        var line2 = document.getElementById("line2");
+        var heroCta = document.getElementById("heroCta");
+        var heroMicro = document.getElementById("heroMicro");
+        var heroEar = document.getElementById("heroEar");
+
+        function showRest() {
+          line2.classList.add("show");
+          heroCta.classList.add("show");
+          heroMicro.classList.add("show");
+          heroEar.classList.add("show");
+        }
+
+        if (!reduce) {
+          var i = 0;
+          (function typeStep() {
+            if (i <= full.length) {
+              target.textContent = full.slice(0, i);
+              i++;
+              setTimeout(typeStep, 45);
+            } else {
+              caret.classList.add("done");
+              setTimeout(showRest, 200);
+            }
+          })();
+        } else {
+          target.textContent = full;
+          caret.classList.add("done");
+          showRest();
+        }
+
+        /* generic reveal via clip-path/opacity (JS-driven only) */
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
+        );
+        document.querySelectorAll(".reveal,.rv").forEach(function (el) {
+          io.observe(el);
+        });
+
+        /* CONVERSATION STAGE: scroll-linked cycling of said/reply pairs */
+        var quotes = document.querySelectorAll("#said blockquote");
+        var replies = document.querySelectorAll("#convoReplies .reply");
+        var eq = document.getElementById("eq");
+        var eqBars = eq.querySelectorAll("i");
+        var convoTimer = null;
+        var convoIdx = 0;
+
+        function setConvo(k) {
+          convoIdx = k;
+          quotes.forEach(function (q, j) {
+            q.classList.toggle("on", j === k);
+          });
+          replies.forEach(function (r, j) {
+            r.classList.toggle("on", j === k);
+          });
+        }
+
+        function pulseEq(cb) {
+          if (reduce) {
+            cb && cb();
+            return;
+          }
+          eq.classList.remove("settle");
+          var t = 0;
+          var pulseTimer = setInterval(function () {
+            eqBars.forEach(function (bar) {
+              bar.style.transform =
+                "scaleY(" + (0.15 + Math.random() * 0.85) + ")";
+            });
+            t += 120;
+            if (t > 650) {
+              clearInterval(pulseTimer);
+              eq.classList.add("settle");
+              eqBars.forEach(function (bar) {
+                bar.style.transform = "";
+              });
+              cb && cb();
+            }
+          }, 120);
+        }
+
+        var convoStage = document.getElementById("convoStage");
+        var convoObs = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                startConvoCycle();
+              } else {
+                stopConvoCycle();
+              }
+            });
+          },
+          { threshold: 0.2 },
+        );
+        convoObs.observe(convoStage);
+
+        function stepConvo() {
+          var next = (convoIdx + 1) % quotes.length;
+          setConvo(next);
+          pulseEq();
+        }
+
+        function startConvoCycle() {
+          if (convoTimer || reduce) return;
+          pulseEq();
+          convoTimer = setInterval(stepConvo, 4200);
+        }
+        function stopConvoCycle() {
+          clearInterval(convoTimer);
+          convoTimer = null;
+        }
+
+        /* timeline rail fill on scroll */
+        var railI = document.getElementById("rail-i");
+        var steps = document.querySelectorAll(".how .step");
+        var railObs = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                var k = +e.target.dataset.k;
+                railI.style.height = ((k + 1) / steps.length) * 100 + "%";
+              }
+            });
+          },
+          { rootMargin: "-30% 0px -30% 0px" },
+        );
+        steps.forEach(function (s) {
+          railObs.observe(s);
+        });
+
+        /* testimonials */
+        var qs = document.querySelectorAll("#stage .q"),
+          dots = document.querySelectorAll("#dots button"),
+          cur = 0,
+          timer;
+        function show(k) {
+          cur = k;
+          qs.forEach(function (q, j) {
+            q.classList.toggle("on", j === k);
+          });
+          dots.forEach(function (d, j) {
+            d.classList.toggle("on", j === k);
+            d.setAttribute("aria-selected", j === k);
+          });
+        }
+        function auto() {
+          if (reduce) return;
+          clearInterval(timer);
+          timer = setInterval(function () {
+            show((cur + 1) % qs.length);
+          }, 7000);
+        }
+        dots.forEach(function (d, j) {
+          d.addEventListener("click", function () {
+            show(j);
+            auto();
+          });
+        });
+        var st = document.getElementById("stage");
+        st.addEventListener("mouseenter", function () {
+          clearInterval(timer);
+        });
+        st.addEventListener("mouseleave", auto);
+        auto();
+
+        /* form (demo: wire FORM_ENDPOINT to Web3Forms / Formspree at launch) */
+        var FORM_ENDPOINT = "";
+        document
+          .getElementById("lead")
+          .addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var f = ev.target;
+            if (!f.name.value.trim() || !f.contact.value.trim()) {
+              (f.name.value.trim() ? f.contact : f.name).focus();
+              return;
+            }
+            if (FORM_ENDPOINT) {
+              try {
+                fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(f) });
+              } catch (e) {}
+            }
+            f.querySelector(".fields").style.display = "none";
+            f.querySelector(".ok").style.display = "block";
+          });
+      })();
+    </script>
+  </body>
+</html>

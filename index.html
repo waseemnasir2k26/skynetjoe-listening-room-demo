@@ -30,10 +30,7 @@
       content="https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link
-      rel="preload"
-      as="image"
-      href="/assets/hero-listening.jpg"
+    <link rel="preload" as="image" href="/assets/hands-support.jpg"
       fetchpriority="high"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -383,11 +380,7 @@
         min-height: 44px;
         font-size: 0.92rem;
       }
-      @media (max-width: 960px) {
-        .nav ul {
-          display: none;
-        }
-      }
+      @media (max-width: 1120px) { .nav ul { display: none; } }
 
       /* ear */
       .ear {
@@ -481,7 +474,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 62% 40%;
+        object-position: 50% 45%;
         filter: grayscale(0.3) contrast(1.05);
         transform: scale(1.04);
         animation: kb 26s ease-in-out infinite alternate;
@@ -578,7 +571,7 @@
         position: absolute;
         z-index: 4;
         right: clamp(20px, 4vw, 48px);
-        bottom: clamp(40px, 8vh, 90px);
+        bottom: clamp(90px, 12vh, 130px);
         background: #fff;
         padding: 1rem 1.3rem 1rem 1rem;
         border-radius: 999px;
@@ -1035,8 +1028,8 @@
       }
       .how .steps {
         display: grid;
-        gap: clamp(4rem, 10vh, 9rem);
-        padding: 10vh 0;
+        gap: clamp(3rem, 8vh, 6rem);
+        padding: 4vh 0 0;
       }
       .how .step {
         max-width: 52ch;
@@ -1079,7 +1072,7 @@
       /* about */
       .about .grid {
         display: grid;
-        grid-template-columns: 0.85fr 1.15fr;
+        grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
         gap: clamp(2rem, 6vw, 6rem);
         align-items: start;
       }
@@ -1618,11 +1611,7 @@
         border-radius: 999px;
         opacity: 0.85;
       }
-      @media (max-width: 960px) {
-        .demo {
-          bottom: 86px;
-        }
-      }
+      @media (max-width: 960px) { .demo { display: none; } }
 
       @media (prefers-reduced-motion: reduce) {
         *,
@@ -1670,8 +1659,26 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
 .hero-copy .lead{max-width:34ch}
 .contact .right{justify-content:flex-start}
 .contact .right .thread{top:auto;bottom:-10%}
+
+.logo b{white-space:nowrap}.nav ul li{white-space:nowrap}
+.crisis .thread.flat{position:relative;display:block;width:100%;height:12px;margin:.8rem 0 .2rem;overflow:visible}
+.crisis .thread.flat path{stroke:var(--em);stroke-width:2.5;stroke-dashoffset:0}
+footer.site .leaf{overflow:visible;margin-left:0}
+@media(max-width:960px){
+  header{background:#fff;box-shadow:0 1px 0 var(--line);padding:10px 0}
+  .hero-img{margin-top:66px;height:64vw}
+  .hero .wrap{padding-top:28px}
+  .logo img{height:38px}
+}
+@media(max-width:1200px){.hero-img{width:48vw}.hero-copy{max-width:520px}}
+
+.draft{display:block;margin:.6rem 0 .2rem;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:.3rem .55rem;border-radius:3px;display:inline-block;max-width:100%;white-space:normal}
+@media(max-width:960px){.nav .ear .ic{width:44px;height:44px}.nav .ear{min-height:44px}}
+@media(max-width:600px){.logo b{display:none}}
+@media(max-width:860px){.about .grid{grid-template-columns:minmax(0,1fr)}}
 </style>
-  </head>
+  <noscript><style>.rv,.who .row .l,.who .row .r,.hero h1 .w{opacity:1!important;transform:none!important}.thread path{stroke-dashoffset:0!important}.testi .stage{display:block}.testi .q{opacity:1;margin-bottom:2rem}</style></noscript>
+</head>
   <body>
     <svg width="0" height="0" style="position: absolute" aria-hidden="true">
       <defs>
@@ -1747,12 +1754,7 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
     <main id="top">
       <!-- HERO -->
       <section class="hero">
-        <div class="hero-img">
-          <img
-            src="/assets/hero-listening.jpg"
-            alt="An advocate listening attentively to a client in a calm, light room"
-            width="1400"
-            height="788"
+        <div class="hero-img"><img src="/assets/hands-support.jpg" alt="Two people's hands held together across a table — someone in your corner" width="933" height="1400"
             fetchpriority="high"
           />
         </div>
@@ -1895,8 +1897,7 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
           <small class="rv d1">Source: Mind</small>
           <div class="row rv d2">
             <div>
-              <b data-count="37" data-suffix=" days">37 days</b>median wait for
-              a second NHS Talking Therapies appointment<small
+              <b data-count="37" data-suffix=" days">37 days</b>median wait from referral to a second NHS Talking Therapies appointment<small
                 >NHS England, quarter to May 2026</small
               >
             </div>
@@ -2191,6 +2192,7 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
           </div>
           <div>
             <span class="eyebrow rv">About The Listening Room</span>
+      <span class="draft">Draft copy — Stephen\'s words to confirm before launch</span>
             <h2 class="rv d1">
               Started by someone who knows what it's like to
               <span class="hl">not be heard.</span>
@@ -2277,9 +2279,7 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
             </div>
           </div>
           <div class="dots" id="dots" role="tablist" aria-label="Testimonials">
-            <button class="on" aria-label="Quote 1"></button
-            ><button aria-label="Quote 2"></button
-            ><button aria-label="Quote 3"></button>
+            <button class="on" role="tab" aria-selected="true" aria-label="Quote 1"></button><button role="tab" aria-selected="false" aria-label="Quote 2"></button><button role="tab" aria-selected="false" aria-label="Quote 3"></button>
           </div>
           <p class="note">
             Example quotes for layout only — replaced with real client words
@@ -2290,17 +2290,10 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
 
       <!-- CRISIS -->
       <section class="crisis" aria-label="Urgent help">
-        <svg
-          class="thread"
-          viewBox="0 0 1000 2"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path pathLength="1" d="M0 1 L1000 1" />
-        </svg>
         <div class="wrap grid">
           <div>
             <h2>In crisis right now?</h2>
+      <svg class="thread flat" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 6 L60 6 L68 2 L74 10 L80 6 L400 6"/></svg>
             <p>
               The Listening Room is not an emergency service. If you or someone
               else is in immediate danger, please use one of these — they're
@@ -2447,7 +2440,7 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
                   <select id="for" name="for">
                     <option>Myself</option>
                     <option>Someone I care for</option>
-                    <option>A client / patient (I'm a professional)</option>
+                    <option>A client (I'm a professional)</option>
                   </select>
                   <label for="msg"
                     >What's going on? (as much or as little as you like)</label
@@ -2531,7 +2524,7 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
         <svg class="thread leaf" viewBox="0 0 64 64" aria-hidden="true">
           <path
             pathLength="1"
-            d="M8 56 C10 30 30 10 56 8 C54 34 34 54 8 56 Z M8 56 C24 40 40 24 56 8"
+            d="M-200 56 L8 56 C10 30 30 10 56 8 C54 34 34 54 8 56 M8 56 C24 40 40 24 56 8"
           />
         </svg>
         <div class="row">
@@ -2692,23 +2685,9 @@ header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:non
         /* pinned steps */
         var nums = document.querySelectorAll(".how .pin .big span"),
           trk = document.getElementById("trk");
-        var so = new IntersectionObserver(
-          function (es) {
-            es.forEach(function (e) {
-              if (e.isIntersecting) {
-                var k = +e.target.dataset.k;
-                nums.forEach(function (n, j) {
-                  n.classList.toggle("on", j === k);
-                });
-                trk.style.height = ((k + 1) / 3) * 100 + "%";
-              }
-            });
-          },
-          { rootMargin: "-45% 0px -45% 0px" },
-        );
-        document.querySelectorAll(".how .step").forEach(function (s) {
-          so.observe(s);
-        });
+        var steps=[].slice.call(document.querySelectorAll('.how .step')),curK=-1;
+      function pickStep(){var mid=innerHeight*0.5,best=0,bd=1e9;steps.forEach(function(s,j){var r=s.getBoundingClientRect(),c=r.top+r.height/2,d=Math.abs(c-mid);if(d<bd){bd=d;best=j}});if(best!==curK){curK=best;nums.forEach(function(n,j){n.classList.toggle('on',j===best)});trk.style.height=((best+1)/3*100)+'%'}}
+      addEventListener('scroll',function(){requestAnimationFrame(pickStep)},{passive:true});pickStep();
 
         /* testimonials */
         var qs = document.querySelectorAll("#stage .q"),
