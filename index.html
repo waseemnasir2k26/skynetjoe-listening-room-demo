@@ -168,7 +168,7 @@
         line-height: 1;
       }
       h1 {
-        font-size: clamp(3rem, 6.2vw, 5rem);
+        font-size: clamp(3.3rem, 6.8vw, 5.6rem);
         font-variation-settings: "opsz" 96;
         line-height: 0.96;
       }
@@ -1676,6 +1676,15 @@ footer.site .leaf{overflow:visible;margin-left:0}
 @media(max-width:960px){.nav .ear .ic{width:44px;height:44px}.nav .ear{min-height:44px}}
 @media(max-width:600px){.logo b{display:none}}
 @media(max-width:860px){.about .grid{grid-template-columns:minmax(0,1fr)}}
+
+.hero-copy .lead{max-width:30ch;font-size:1.3rem;line-height:1.5}
+.hero .cta{align-items:center;gap:1.4rem;margin-top:2rem}
+.tlink{font-weight:600;color:var(--ink);border-bottom:2px solid var(--em);padding-bottom:2px;transition:color .2s}
+.tlink:hover{color:var(--em)}
+.tlink span{display:inline-block;transition:transform .3s var(--ease)}
+.tlink:hover span{transform:translateX(4px)}
+.ear-hero{bottom:clamp(70px,10vh,110px)}
+@media(max-width:960px){.hero-img{width:100%}header .nav .ear{padding:0;background:transparent;backdrop-filter:none}}
 </style>
   <noscript><style>.rv,.who .row .l,.who .row .r,.hero h1 .w{opacity:1!important;transform:none!important}.thread path{stroke-dashoffset:0!important}.testi .stage{display:block}.testi .q{opacity:1;margin-bottom:2rem}</style></noscript>
 </head>
@@ -1778,12 +1787,7 @@ footer.site .leaf{overflow:visible;margin-left:0}
                   /></svg></span
               ><br /><span class="hl">Not managed.</span>
             </h1>
-            <p class="lead rv d1">
-              The Listening Room is someone in your corner. A confidential,
-              independent advocate who listens first, then helps you say what
-              you need to say — to doctors, to services, to the people around
-              you — and get the support you're entitled to.
-            </p>
+            <p class="lead rv d1">An independent advocate in your corner. We listen first — then make sure doctors, services and the people around you hear you too.</p>
             <div class="cta rv d2">
               <a class="btn btn-g" href="#contact"
                 >Book a free 20-minute call
@@ -1795,39 +1799,7 @@ footer.site .leaf{overflow:visible;margin-left:0}
                 >
                   <path d="M5 12h14M13 6l6 6-6 6" /></svg
               ></a>
-              <a class="btn btn-s" href="#services">See how we help</a>
-            </div>
-            <div class="micro rv d3">
-              <span
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                >Confidential</span
-              >
-              <span
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                >No referral needed</span
-              >
-              <span
-                ><svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 6 9 17l-5-5" /></svg
-                >In person, phone or video</span
-              >
+              <a class="tlink" href="#services">See how we help <span aria-hidden="true">→</span></a>
             </div>
             <a class="ear ear-hero rv d4" href="tel:+441164793584"
               ><span class="ic"
