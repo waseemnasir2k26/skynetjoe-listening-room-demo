@@ -32,15 +32,29 @@ Domain: TLR.co.uk is already owned by someone else, I checked the UK registry. O
 4. thelisteningroomuk.co.uk
 Which one? I'll register it in your name like fordesafe.co.uk, then set up the inbox and put the site live.
 
-## Round 3 — three designs (Fiverr-safe)
+## Round 3 — FINAL (approved by Waseem 2026-09-07, Fiverr-safe, three links)
 
-Stephen — I went further and built you THREE different designs so you can pick by feel, not by description. Same words, same green/black/white, same ear + office number on each. Open on your phone AND a laptop — they behave differently on each:
+Hi Stephen — three designs are ready for The Listening Room. Same words on all three, green, black and white as you asked, and the ear icon linked to your office number on every one. I built three so you can pick by feel instead of guessing from a description. Please look on your mobile AND on a laptop — they behave differently on each.
 
+V1 "The Thread" — light, clean, editorial
 skynetjoe-listening-room-demo.vercel.app
-(the little "Design V1 V2 V3" switch bottom-left flips between them)
+One green line runs the whole page: it starts as a shaky pulse under the word "heard", calms down section by section, turns into the ear beside your office number, and ends as a leaf. The safest, most professional one.
 
-V1 — "The Thread": light, editorial. One green line runs the whole page — it starts as a shaky pulse under the word "heard", calms down section by section, becomes the ear next to your office number, and ends as a leaf.
-V2 — "The Rooms": on a laptop you scroll DOWN and the page walks you SIDEWAYS through eight rooms, one idea per room, ending at the crisis numbers and the booking form. On phones it stacks normally.
-V3 — "The Conversation": black, cinematic. The headline types itself out, then a two-column section shows what people say on the left and how you answer on the right.
+V2 "The Rooms" — the memorable one
+skynetjoe-listening-room-demo.vercel.app/v2
+On a laptop you scroll down and the page walks you sideways through eight rooms, one idea per room, finishing at the urgent-help numbers and the booking form. On a mobile it stacks normally.
 
-Tell me which one feels like you (or "V1 with V3's hero", mixing is fine). Then I lock it, remove the switch, and we go live on the domain you pick.
+V3 "The Conversation" — black, cinematic
+skynetjoe-listening-room-demo.vercel.app/v3
+The headline types itself out, then a section shows what people say on the left and how you respond on the right. Warm, not cold — the strongest mood.
+
+(There's also a small V1 · V2 · V3 switch bottom-right of every page if you'd rather flip between them.)
+
+All three have the crisis numbers (999, NHS 111 option 2, Samaritans, Shout), the free 20-minute listening session as the main button, and the quotes are marked "Example" until we have your real ones.
+
+What I need from you:
+1. Which one? Mixing is fine — "V1 with V3's top" works.
+2. Anything that doesn't sound like you — the About section is written in your voice and is marked "draft" until you confirm it.
+3. The web address: TLR.co.uk is already owned by someone else. Free right now: tlradvocacy.co.uk, tlr-advocacy.co.uk, tlrleicester.co.uk, thelisteningroomuk.co.uk
+
+Once you pick, I remove the switch, register the address in your name like we did for FordeSafe, set up your business inbox on it, and put it live.
