@@ -1,12 +1,62 @@
 {
   "cleanUrls": true,
   "headers": [
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-      { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
-    ]},
-    { "source": "/assets/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" } ] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/v2",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/v3",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/v2.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/v3.html",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/archive/(.*)",
+      "destination": "/",
+      "permanent": false
+    }
   ]
 }

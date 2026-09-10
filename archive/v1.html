@@ -1,0 +1,2751 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      The Listening Room — Independent Mental Health Advocacy, Leicester
+    </title>
+    <meta
+      name="description"
+      content="The Listening Room is an independent, confidential mental health advocacy service in Leicester. Someone in your corner: listening sessions, support at appointments, help with letters, forms and next steps. Book a free 20-minute call."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="canonical"
+      href="https://skynetjoe-listening-room-demo.vercel.app/"
+    />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="The Listening Room — Someone in your corner"
+    />
+    <meta
+      property="og:description"
+      content="Independent, confidential mental health advocacy in Leicester. Book a free 20-minute listening call."
+    />
+    <meta
+      property="og:image"
+      content="https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preload" as="image" href="/assets/hands-support.jpg"
+      fetchpriority="high"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "LocalBusiness",
+            "name": "The Listening Room",
+            "alternateName": "TLR",
+            "description": "Independent, confidential mental health advocacy and listening support in Leicester and Leicestershire.",
+            "url": "https://skynetjoe-listening-room-demo.vercel.app/",
+            "image": "https://skynetjoe-listening-room-demo.vercel.app/assets/og.jpg",
+            "telephone": "+44 116 479 3584",
+            "areaServed": ["Leicester", "Leicestershire"],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Leicester",
+              "addressRegion": "Leicestershire",
+              "addressCountry": "GB"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is this therapy or counselling?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The Listening Room is an advocacy and listening service, not a clinical or therapeutic one. We help you be heard, understand your options and take practical next steps. If therapy is what you need, we will help you find it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it confidential?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. What you tell us stays between us, with the usual safeguarding exception: if we believe you or someone else is at serious risk we may need to involve emergency or safeguarding services, and we will always tell you first where we can."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need a referral?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. You can contact us directly, or a family member, carer or professional can get in touch on your behalf with your permission."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this the same as an IMHA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. If you are detained or liable to be detained under the Mental Health Act you have a legal right to a free Independent Mental Health Advocate (IMHA) commissioned by the local authority. The Listening Room is a private, non-statutory service and we will always signpost you to statutory advocacy where you are entitled to it."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens on the free call?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Twenty minutes, no forms, no pressure. You tell us what is going on, we tell you honestly whether we can help and what that would look like."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I bring someone with me?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Always. A friend, partner, parent or carer is welcome at any session or appointment we attend together."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        --white: #ffffff;
+        --ink: #0a0a0a;
+        --ink-2: #2b2b2b;
+        --mute: #5c5c5c;
+        --em: #0f7a3e;
+        --em-deep: #0b5a2e;
+        --leaf: #5fbf47;
+        --mint: #e3f3e8;
+        --mint-2: #f3f7f4;
+        --line: #e6e6e6;
+        --serif: "Fraunces", Georgia, serif;
+        --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+        --max: 1240px;
+        --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--ink);
+        background: var(--white);
+        line-height: 1.7;
+        font-size: 1.0625rem;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: clip;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3,
+      .serif {
+        font-family: var(--serif);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+      h1 {
+        font-size: clamp(3.3rem, 6.8vw, 5.6rem);
+        font-variation-settings: "opsz" 96;
+        line-height: 0.96;
+      }
+      h2 {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        font-variation-settings: "opsz" 48;
+        line-height: 1.02;
+      }
+      h3 {
+        font-size: 1.45rem;
+        line-height: 1.15;
+      }
+      .wrap {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 clamp(20px, 4vw, 48px);
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--em);
+      }
+      .eyebrow::before {
+        content: "";
+        width: 26px;
+        height: 2px;
+        background: var(--em);
+      }
+      .lead {
+        font-size: 1.25rem;
+        line-height: 1.65;
+        color: var(--ink-2);
+        max-width: 62ch;
+      }
+      .hl {
+        color: var(--em);
+        font-style: italic;
+        font-weight: 300;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 1.05rem 1.7rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        min-height: 52px;
+        transition:
+          transform 0.3s var(--ease),
+          background 0.3s,
+          color 0.3s;
+        cursor: pointer;
+        border: 1.5px solid transparent;
+        font-family: var(--sans);
+      }
+      .btn-p {
+        background: var(--ink);
+        color: #fff;
+      }
+      .btn-p:hover {
+        background: var(--em);
+        transform: translateY(-2px);
+      }
+      .btn-g {
+        background: var(--em);
+        color: #fff;
+      }
+      .btn-g:hover {
+        background: var(--em-deep);
+        transform: translateY(-2px);
+      }
+      .btn-s {
+        background: transparent;
+        color: var(--ink);
+        border-color: var(--ink);
+      }
+      .btn-s:hover {
+        background: var(--ink);
+        color: #fff;
+      }
+      .btn svg {
+        width: 18px;
+        height: 18px;
+      }
+      section {
+        position: relative;
+        padding: clamp(80px, 10vw, 140px) 0;
+      }
+
+      /* reveal */
+      .rv {
+        opacity: 0;
+        transform: translateY(26px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .rv.d1 {
+        transition-delay: 0.1s;
+      }
+      .rv.d2 {
+        transition-delay: 0.2s;
+      }
+      .rv.d3 {
+        transition-delay: 0.3s;
+      }
+      .rv.d4 {
+        transition-delay: 0.4s;
+      }
+
+      /* grain */
+      .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1000;
+        opacity: 0.045;
+        mix-blend-mode: multiply;
+      }
+      .grain svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* thread */
+      .thread {
+        position: absolute;
+        pointer-events: none;
+        overflow: visible;
+      }
+      .thread path {
+        fill: none;
+        stroke: var(--em);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+      }
+      .thread.drawn path {
+        stroke-dashoffset: 0;
+      }
+
+      /* header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding: 18px 0;
+        transition:
+          background 0.35s,
+          box-shadow 0.35s,
+          padding 0.35s;
+      }
+      header.on {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(14px);
+        box-shadow: 0 1px 0 var(--line);
+        padding: 10px 0;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-right: auto;
+      }
+      .logo img {
+        height: 44px;
+        width: auto;
+      }
+      .logo b {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.05rem;
+      }
+      .nav ul {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-right: 1rem;
+      }
+      .nav ul a {
+        opacity: 0.75;
+      }
+      .nav ul a:hover {
+        opacity: 1;
+        color: var(--em);
+      }
+      .nav .btn {
+        padding: 0.7rem 1.2rem;
+        min-height: 44px;
+        font-size: 0.92rem;
+      }
+      @media (max-width: 1120px) { .nav ul { display: none; } }
+
+      /* ear */
+      .ear {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-weight: 600;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+      .ear .ic {
+        position: relative;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: var(--em);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        flex: none;
+      }
+      .ear .ic svg {
+        width: 24px;
+        height: 24px;
+      }
+      .ear .ic::before,
+      .ear .ic::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1.5px solid var(--em);
+        opacity: 0;
+        animation: ripple 3.2s var(--ease) infinite;
+      }
+      .ear .ic::after {
+        animation-delay: 1.6s;
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1.9);
+          opacity: 0;
+        }
+      }
+      .ear small {
+        display: block;
+        font-size: 0.7rem;
+        font-weight: 500;
+        color: var(--mute);
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+      }
+      .ear b {
+        display: block;
+        font-size: 0.98rem;
+        line-height: 1.15;
+      }
+      @media (max-width: 960px) {
+        .nav .ear b,
+        .nav .ear small {
+          display: none;
+        }
+        .nav .ear .ic {
+          width: 42px;
+          height: 42px;
+        }
+      }
+
+      /* hero */
+      .hero {
+        min-height: 100svh;
+        padding: 0;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+      }
+      .hero-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 56vw;
+        clip-path: url(#heroClip);
+        isolation: isolate;
+      }
+      .hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 45%;
+        filter: grayscale(0.3) contrast(1.05);
+        transform: scale(1.04);
+        animation: kb 26s ease-in-out infinite alternate;
+      }
+      .hero-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--em-deep);
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+      }
+      .hero-img::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, #fff 0, rgba(255, 255, 255, 0) 22%);
+        z-index: 2;
+      }
+      @keyframes kb {
+        from {
+          transform: scale(1.04);
+        }
+        to {
+          transform: scale(1.12);
+        }
+      }
+      .hero .wrap {
+        position: relative;
+        z-index: 3;
+        padding-top: 140px;
+        padding-bottom: 110px;
+        width: 100%;
+      }
+      .hero-copy {
+        max-width: 600px;
+      }
+      .hero h1 {
+        margin: 1.2rem 0 1.6rem;
+        position: relative;
+      }
+      .hero h1 .w {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.6s var(--ease),
+          transform 0.6s var(--ease);
+      }
+      .hero h1.go .w {
+        opacity: 1;
+        transform: none;
+      }
+      .hero h1 .heard {
+        position: relative;
+        display: inline-block;
+      }
+      .hero h1 .heard .thread {
+        left: -4%;
+        right: -4%;
+        bottom: -0.28em;
+        height: 0.5em;
+        width: 108%;
+      }
+      .hero h1 .heard .thread path {
+        stroke-width: 5;
+        transition: stroke-dashoffset 1.1s var(--ease) 0.9s;
+      }
+      .hero .cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 2.2rem;
+      }
+      .hero .micro {
+        margin-top: 1.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+        font-size: 0.86rem;
+        color: var(--mute);
+      }
+      .hero .micro span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .hero .micro svg {
+        width: 16px;
+        height: 16px;
+        color: var(--em);
+      }
+      .ear-hero {
+        position: absolute;
+        z-index: 4;
+        right: clamp(20px, 4vw, 48px);
+        bottom: clamp(90px, 12vh, 130px);
+        background: #fff;
+        padding: 1rem 1.3rem 1rem 1rem;
+        border-radius: 999px;
+        box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.35);
+        gap: 0.9rem;
+      }
+      .ear-hero .ic {
+        width: 54px;
+        height: 54px;
+      }
+      .ear-hero .ic svg {
+        width: 28px;
+        height: 28px;
+      }
+      .ear-hero b {
+        font-family: var(--serif);
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+      @media (max-width: 960px) {
+        .hero {
+          min-height: auto;
+        }
+        .hero-img {
+          position: relative;
+          width: 100%;
+          height: 58vw;
+          min-height: 300px;
+          clip-path: url(#heroClipM);
+        }
+        .hero-img::before {
+          display: none;
+        }
+        .hero .wrap {
+          padding-top: 120px;
+          padding-bottom: 40px;
+        }
+        .ear-hero {
+          position: static;
+          margin-top: 1.6rem;
+          display: inline-flex;
+          box-shadow: 0 12px 30px -12px rgba(0, 0, 0, 0.3);
+          border: 1px solid var(--line);
+        }
+      }
+
+      /* marquee */
+      .band {
+        background: var(--ink);
+        color: #fff;
+        padding: 20px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.15rem;
+        position: relative;
+      }
+      .band .track {
+        display: inline-block;
+        animation: mq 60s linear infinite;
+      }
+      .band:hover .track {
+        animation-play-state: paused;
+      }
+      .band span {
+        margin: 0 1.6rem;
+      }
+      .band i {
+        color: var(--leaf);
+        font-style: normal;
+      }
+      .band .thread {
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 2px;
+        width: 100%;
+        transform: translateY(-1px);
+      }
+      .band .thread path {
+        stroke: var(--em);
+        stroke-width: 2;
+        opacity: 0.9;
+        transition: stroke-dashoffset 2.4s linear;
+      }
+      @keyframes mq {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* stat */
+      .stat {
+        text-align: center;
+        padding: clamp(70px, 9vw, 120px) 0 clamp(50px, 6vw, 80px);
+      }
+      .stat .big {
+        font-family: var(--serif);
+        font-size: clamp(5rem, 16vw, 12rem);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        color: var(--ink);
+        position: relative;
+        display: inline-block;
+      }
+      .stat .big .thread {
+        left: 0;
+        right: 0;
+        bottom: -0.08em;
+        height: 0.18em;
+        width: 100%;
+      }
+      .stat .big .thread path {
+        stroke-width: 4;
+        transition: stroke-dashoffset 1.4s var(--ease);
+      }
+      .stat .big em {
+        font-style: italic;
+        font-weight: 300;
+        color: var(--em);
+      }
+      .stat p {
+        max-width: 44ch;
+        margin: 1.6rem auto 0;
+        color: var(--ink-2);
+        font-size: 1.15rem;
+      }
+      .stat small {
+        display: block;
+        color: var(--mute);
+        font-size: 0.78rem;
+        margin-top: 0.6rem;
+      }
+      .stat .row {
+        display: flex;
+        justify-content: center;
+        gap: clamp(1.5rem, 5vw, 4rem);
+        flex-wrap: wrap;
+        margin-top: 2.8rem;
+        font-size: 0.95rem;
+        color: var(--ink-2);
+      }
+      .stat .row b {
+        font-family: var(--serif);
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--ink);
+        display: block;
+        line-height: 1;
+      }
+      .stat .row div {
+        text-align: center;
+        max-width: 260px;
+      }
+
+      /* who */
+      .who .rows {
+        margin-top: 3rem;
+        display: grid;
+        gap: 0.4rem;
+      }
+      .who .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(1.5rem, 4vw, 4rem);
+        align-items: center;
+        padding: 1.8rem 0;
+        border-top: 1px solid var(--line);
+      }
+      .who .row:last-child {
+        border-bottom: 1px solid var(--line);
+      }
+      .who .row:nth-child(even) .txt {
+        order: 2;
+      }
+      .who .row .n {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--em);
+        display: block;
+        margin-bottom: 0.4rem;
+      }
+      .who .row .txt b {
+        font-family: var(--serif);
+        font-weight: 500;
+        font-size: 1.5rem;
+        display: block;
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+      }
+      .who .row .txt p {
+        color: var(--ink-2);
+      }
+      .who .row .l {
+        opacity: 0;
+        transform: translateX(-24px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .who .row .r {
+        opacity: 0;
+        transform: translateX(24px);
+        transition:
+          opacity 0.9s var(--ease),
+          transform 0.9s var(--ease);
+      }
+      .who .row.in .l,
+      .who .row.in .r {
+        opacity: 1;
+        transform: none;
+      }
+      .who .pic {
+        aspect-ratio: 16/9;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+      .who .pic img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        filter: grayscale(0.15);
+      }
+      .who .pic.tall {
+        aspect-ratio: 4/3;
+      }
+      .who .row.q {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .who .row.q .quote {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+        font-weight: 300;
+        color: var(--ink);
+        max-width: 24ch;
+        margin: 0 auto;
+      }
+      .who .row.q .quote em {
+        color: var(--em);
+        font-style: italic;
+      }
+      @media (max-width: 760px) {
+        .who .row {
+          grid-template-columns: 1fr;
+        }
+        .who .row:nth-child(even) .txt {
+          order: 0;
+        }
+        .who .row .l,
+        .who .row .r {
+          transform: translateY(16px);
+        }
+      }
+
+      /* services */
+      .services {
+        background: var(--white);
+      }
+      .services .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: end;
+      }
+      .services .thread-top {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 60px;
+        width: 100%;
+      }
+      .services .thread-top path {
+        stroke-width: 2;
+        transition: stroke-dashoffset 1.8s var(--ease);
+      }
+      .svc {
+        list-style: none;
+        margin-top: 3.5rem;
+        border-top: 1px solid var(--ink);
+      }
+      .svc li {
+        border-bottom: 1px solid var(--line);
+        position: relative;
+        overflow: hidden;
+      }
+      .svc a {
+        display: grid;
+        grid-template-columns: 70px minmax(0, 1fr) minmax(0, 1fr) 200px;
+        gap: 2rem;
+        align-items: center;
+        padding: 1.7rem 0;
+        min-height: 96px;
+        transition:
+          padding 0.45s var(--ease),
+          background 0.45s var(--ease);
+      }
+      .svc .n {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.2rem;
+        color: var(--em);
+      }
+      .svc h3 {
+        transition: transform 0.45s var(--ease);
+      }
+      .svc p {
+        color: var(--ink-2);
+        font-size: 0.98rem;
+        opacity: 0.55;
+        transform: translateY(8px);
+        transition:
+          opacity 0.45s var(--ease) 0.05s,
+          transform 0.45s var(--ease) 0.05s;
+        max-width: 40ch;
+      }
+      .svc .ph {
+        height: 120px;
+        border-radius: 4px;
+        overflow: hidden;
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.55s var(--ease);
+      }
+      .svc .ph img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+        filter: grayscale(0.2);
+      }
+      .svc li:hover a,
+      .svc li:focus-within a,
+      .svc li.open a {
+        padding: 2.2rem 0 2.2rem 1.4rem;
+        background: var(--mint);
+      }
+      .svc li:hover p,
+      .svc li:focus-within p,
+      .svc li.open p {
+        opacity: 1;
+        transform: none;
+      }
+      .svc li:hover .ph,
+      .svc li:focus-within .ph,
+      .svc li.open .ph {
+        clip-path: inset(0 0 0 0);
+      }
+      .svc li:hover h3,
+      .svc li:focus-within h3 {
+        transform: translateX(6px);
+      }
+      @media (hover: none) {
+        .svc a {
+          grid-template-columns: 50px minmax(0, 1fr);
+          padding: 1.5rem 0;
+        }
+        .svc p {
+          opacity: 1;
+          transform: none;
+          grid-column: 2;
+        }
+        .svc .ph {
+          display: none;
+        }
+        .svc li:hover a,
+        .svc li.open a {
+          padding: 1.5rem 0;
+          background: transparent;
+        }
+      }
+      @media (max-width: 900px) {
+        .services .head {
+          grid-template-columns: 1fr;
+        }
+        .svc a {
+          grid-template-columns: 50px minmax(0, 1fr);
+          gap: 1rem;
+        }
+        .svc p {
+          grid-column: 2;
+        }
+        .svc .ph {
+          display: none;
+        }
+      }
+
+      /* how */
+      .how {
+        background: var(--ink);
+        color: #fff;
+      }
+      .how .eyebrow {
+        color: var(--leaf);
+      }
+      .how h2 {
+        color: #fff;
+      }
+      .how .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: clamp(2rem, 6vw, 7rem);
+        margin-top: 1rem;
+      }
+      .how .pin {
+        position: sticky;
+        top: 22vh;
+        align-self: start;
+      }
+      .how .pin .big {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: clamp(6rem, 16vw, 15rem);
+        line-height: 0.85;
+        color: var(--em);
+        letter-spacing: -0.04em;
+        position: relative;
+        height: 0.9em;
+        width: 2.2em;
+      }
+      .how .pin .big span {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition:
+          opacity 0.5s var(--ease),
+          transform 0.5s var(--ease);
+        transform: translateY(12px);
+      }
+      .how .pin .big span.on {
+        opacity: 1;
+        transform: none;
+      }
+      .how .pin .track {
+        width: 2px;
+        height: 120px;
+        background: rgba(255, 255, 255, 0.15);
+        margin-top: 2rem;
+        position: relative;
+      }
+      .how .pin .track i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        background: var(--leaf);
+        height: 0;
+        transition: height 0.5s var(--ease);
+      }
+      .how .steps {
+        display: grid;
+        gap: clamp(3rem, 8vh, 6rem);
+        padding: 4vh 0 0;
+      }
+      .how .step {
+        max-width: 52ch;
+      }
+      .how .step h3 {
+        font-size: clamp(1.8rem, 3vw, 2.6rem);
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+      .how .step p {
+        color: #c9c9c9;
+        font-size: 1.08rem;
+      }
+      .how .step .k {
+        display: block;
+        color: var(--leaf);
+        font-family: var(--serif);
+        font-style: italic;
+        margin-bottom: 0.6rem;
+      }
+      @media (max-width: 860px) {
+        .how .grid {
+          grid-template-columns: 1fr;
+        }
+        .how .pin {
+          position: static;
+        }
+        .how .pin .big {
+          display: none;
+        }
+        .how .pin .track {
+          display: none;
+        }
+        .how .steps {
+          padding: 2rem 0 0;
+          gap: 3rem;
+        }
+      }
+
+      /* about */
+      .about .grid {
+        display: grid;
+        grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
+        gap: clamp(2rem, 6vw, 6rem);
+        align-items: start;
+      }
+      .about .pic {
+        position: relative;
+      }
+      .about .pic img {
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        width: 100%;
+        filter: grayscale(0.2);
+      }
+      .about .pic .cap {
+        position: absolute;
+        left: -1rem;
+        bottom: 2rem;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.9rem 1.2rem;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.05rem;
+        max-width: 260px;
+      }
+      .about .pull {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 300;
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        line-height: 1.2;
+        margin: 1.8rem 0;
+        padding-left: 1.4rem;
+        border-left: 3px solid var(--em);
+      }
+      .about p {
+        color: var(--ink-2);
+        max-width: 62ch;
+        margin-bottom: 1.1rem;
+      }
+      .about .sig {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.5rem;
+        margin-top: 1.6rem;
+        position: relative;
+        display: inline-block;
+      }
+      .about .sig .thread {
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        height: 14px;
+        width: 100%;
+      }
+      .about .sig .thread path {
+        stroke-width: 2.5;
+        transition: stroke-dashoffset 1.2s var(--ease) 0.2s;
+      }
+      .about .values {
+        display: flex;
+        gap: 2.4rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        color: var(--mute);
+      }
+      .about .values b {
+        display: block;
+        color: var(--ink);
+        font-family: var(--serif);
+        font-size: 1.15rem;
+        font-weight: 500;
+      }
+      @media (max-width: 860px) {
+        .about .grid {
+          grid-template-columns: 1fr;
+        }
+        .about .pic {
+          max-width: 420px;
+          margin-left: 1rem;
+        }
+      }
+
+      /* testimonials */
+      .testi {
+        background: var(--mint-2);
+      }
+      .testi .stage {
+        position: relative;
+        margin-top: 2.5rem;
+        display: grid;
+      }
+      .testi .q {
+        grid-area: 1/1;
+        opacity: 0;
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+        transform: translateY(10px);
+        pointer-events: none;
+      }
+      .testi .q.on {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+      }
+      .testi .q p {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 300;
+        font-size: clamp(1.7rem, 3.4vw, 3rem);
+        line-height: 1.2;
+        max-width: 26ch;
+      }
+      .testi .q footer {
+        margin-top: 1.4rem;
+        font-size: 0.9rem;
+        color: var(--mute);
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .testi .q footer b {
+        color: var(--ink);
+      }
+      .testi .tag {
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--ink);
+        color: #fff;
+        padding: 0.3rem 0.55rem;
+        border-radius: 3px;
+      }
+      .testi .dots {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+      .testi .dots button {
+        width: 44px;
+        height: 44px;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        position: relative;
+      }
+      .testi .dots button::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        top: 19px;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--line);
+        transition: background 0.3s;
+      }
+      .testi .dots button.on::after {
+        background: var(--em);
+      }
+      .testi .note {
+        color: var(--mute);
+        font-size: 0.8rem;
+        margin-top: 1rem;
+      }
+
+      /* crisis */
+      .crisis {
+        background: var(--ink);
+        color: #fff;
+        padding: 64px 0;
+      }
+      .crisis .thread {
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        width: 100%;
+      }
+      .crisis .thread path {
+        stroke: var(--em);
+        stroke-width: 2;
+        stroke-dashoffset: 0;
+      }
+      .crisis .grid {
+        display: grid;
+        grid-template-columns: 1.1fr 2fr;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      .crisis h2 {
+        font-size: 2rem;
+        color: #fff;
+      }
+      .crisis p {
+        color: #bdbdbd;
+        font-size: 0.95rem;
+        margin-top: 0.6rem;
+      }
+      .crisis ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+      }
+      .crisis li a {
+        display: block;
+        min-height: 64px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 0.9rem 1rem;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .crisis li a:hover {
+        border-color: var(--leaf);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .crisis li b {
+        display: block;
+        font-size: 1.25rem;
+        font-family: var(--serif);
+        color: var(--leaf);
+      }
+      .crisis li span {
+        font-size: 0.85rem;
+        color: #cfcfcf;
+      }
+      @media (max-width: 860px) {
+        .crisis .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 520px) {
+        .crisis ul {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* faq */
+      .faq .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: clamp(2rem, 5vw, 6rem);
+      }
+      .faq details {
+        border-bottom: 1px solid var(--line);
+      }
+      .faq details:first-of-type {
+        border-top: 1px solid var(--ink);
+      }
+      .faq summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 1.3rem 0;
+        font-weight: 600;
+        font-size: 1.05rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        flex: none;
+        background:
+          linear-gradient(var(--em), var(--em)) center/14px 2px no-repeat,
+          linear-gradient(var(--em), var(--em)) center/2px 14px no-repeat;
+        transition: transform 0.3s var(--ease);
+      }
+      .faq details[open] summary::after {
+        transform: rotate(90deg);
+        background: linear-gradient(var(--em), var(--em)) center/14px 2px
+          no-repeat;
+      }
+      .faq details p {
+        padding: 0 0 1.4rem;
+        color: var(--ink-2);
+        max-width: 60ch;
+      }
+      @media (max-width: 860px) {
+        .faq .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* contact */
+      .contact {
+        padding: 0;
+      }
+      .contact .split {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        min-height: 80vh;
+      }
+      .contact .left {
+        padding: clamp(70px, 9vw, 130px) clamp(20px, 5vw, 80px)
+          clamp(70px, 9vw, 130px) clamp(20px, 4vw, 48px);
+      }
+      .contact .left .inner {
+        max-width: 560px;
+        margin-left: auto;
+      }
+      .contact .right {
+        background: var(--em-deep);
+        color: #fff;
+        padding: clamp(70px, 9vw, 130px) clamp(24px, 5vw, 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .contact .right .thread {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .contact .right .thread path {
+        stroke: #fff;
+        stroke-width: 1.5;
+        opacity: 0.9;
+        transition: stroke-dashoffset 2.2s var(--ease);
+      }
+      .contact .right > * {
+        position: relative;
+      }
+      .contact .right .earbig {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        background: #fff;
+        color: var(--em-deep);
+        display: grid;
+        place-items: center;
+        margin-bottom: 2rem;
+      }
+      .contact .right .earbig svg {
+        width: 68px;
+        height: 68px;
+      }
+      .contact .right .earbig::before,
+      .contact .right .earbig::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1.5px solid #fff;
+        opacity: 0;
+        animation: ripple 3.6s var(--ease) infinite;
+      }
+      .contact .right .earbig::after {
+        animation-delay: 1.8s;
+      }
+      .contact .right small {
+        display: block;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        font-size: 0.74rem;
+        font-weight: 600;
+        color: #bfe3cb;
+        margin-bottom: 0.4rem;
+      }
+      .contact .right .num {
+        font-family: var(--serif);
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 500;
+        line-height: 1;
+        display: block;
+        color: #fff;
+      }
+      .contact .right .num:hover {
+        color: #bfe3cb;
+      }
+      .contact .right p {
+        color: #d6ecdc;
+        margin-top: 1.2rem;
+        max-width: 36ch;
+      }
+      .contact .right .promise {
+        margin-top: 2.6rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 1.4rem;
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 1.25rem;
+        color: #fff;
+      }
+      .form label {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 1.5rem 0 0.2rem;
+        color: var(--mute);
+      }
+      .form input,
+      .form select,
+      .form textarea {
+        width: 100%;
+        padding: 0.8rem 0;
+        border: 0;
+        border-bottom: 1.5px solid var(--ink);
+        border-radius: 0;
+        font: inherit;
+        font-size: 1.05rem;
+        background: transparent;
+        min-height: 48px;
+        transition: border-color 0.2s;
+      }
+      .form input:focus,
+      .form select:focus,
+      .form textarea:focus {
+        outline: 2px solid var(--em);
+        outline-offset: 4px;
+        border-color: var(--em);
+      }
+      .form textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+      .form .btn {
+        margin-top: 2rem;
+        width: 100%;
+        justify-content: center;
+      }
+      .form small {
+        display: block;
+        color: var(--mute);
+        font-size: 0.78rem;
+        margin-top: 0.9rem;
+        line-height: 1.5;
+      }
+      .form .ok {
+        display: none;
+        padding: 2rem 0;
+      }
+      .form .ok h3 {
+        margin-bottom: 0.5rem;
+      }
+      @media (max-width: 860px) {
+        .contact .split {
+          grid-template-columns: 1fr;
+        }
+        .contact .left .inner {
+          margin: 0;
+        }
+        .contact .right {
+          order: 0;
+          padding: 56px clamp(20px, 5vw, 48px);
+        }
+      }
+
+      /* footer */
+      footer.site {
+        padding: 56px 0 120px;
+        font-size: 0.88rem;
+        color: var(--mute);
+        position: relative;
+      }
+      footer.site .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.2rem;
+        align-items: center;
+      }
+      footer.site .row img {
+        height: 40px;
+      }
+      footer.site .disc {
+        margin-top: 1.4rem;
+        max-width: 80ch;
+        font-size: 0.8rem;
+      }
+      footer.site a {
+        color: var(--em);
+        font-weight: 500;
+      }
+      footer.site .leaf {
+        width: 64px;
+        height: 64px;
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+      footer.site .leaf path {
+        stroke-width: 2;
+        transition: stroke-dashoffset 1.6s var(--ease);
+      }
+
+      /* mobile bar + demo */
+      .mbar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 60;
+        display: none;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(12px);
+        border-top: 1px solid var(--line);
+      }
+      .mbar .row {
+        display: flex;
+        gap: 0.6rem;
+      }
+      .mbar .row .btn {
+        flex: 1;
+        padding: 0.9rem 0.6rem;
+        justify-content: center;
+      }
+      @media (max-width: 960px) {
+        .mbar {
+          display: block;
+        }
+      }
+      .demo {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 55;
+        background: var(--ink);
+        color: #fff;
+        font-size: 0.74rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 999px;
+        opacity: 0.85;
+      }
+      @media (max-width: 960px) { .demo { display: none; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+        .rv,
+        .who .row .l,
+        .who .row .r,
+        .hero h1 .w {
+          opacity: 1;
+          transform: none;
+        }
+        .thread path {
+          stroke-dashoffset: 0;
+        }
+        .svc p {
+          opacity: 1;
+          transform: none;
+        }
+        .svc .ph {
+          clip-path: none;
+        }
+        .testi .stage {
+          display: block;
+        }
+        .testi .q {
+          opacity: 1;
+          transform: none;
+          margin-bottom: 2.5rem;
+          pointer-events: auto;
+        }
+        .how .pin .big span {
+          opacity: 1;
+          position: static;
+        }
+      }
+    
+.nav ul,.nav .ear{background:rgba(255,255,255,.86);backdrop-filter:blur(10px);border-radius:999px;padding:.45rem 1.1rem}
+.nav .ear{padding:.3rem .9rem .3rem .3rem}
+header.on .nav ul,header.on .nav .ear{background:transparent;backdrop-filter:none}
+@media(max-width:960px){.nav .ear{padding:0;background:transparent}}
+.hero-copy .lead{max-width:34ch}
+.contact .right{justify-content:flex-start}
+.contact .right .thread{top:auto;bottom:-10%}
+
+.logo b{white-space:nowrap}.nav ul li{white-space:nowrap}
+.crisis .thread.flat{position:relative;display:block;width:100%;height:12px;margin:.8rem 0 .2rem;overflow:visible}
+.crisis .thread.flat path{stroke:var(--em);stroke-width:2.5;stroke-dashoffset:0}
+footer.site .leaf{overflow:visible;margin-left:0}
+@media(max-width:960px){
+  header{background:#fff;box-shadow:0 1px 0 var(--line);padding:10px 0}
+  .hero-img{margin-top:66px;height:64vw}
+  .hero .wrap{padding-top:28px}
+  .logo img{height:38px}
+}
+@media(max-width:1200px){.hero-img{width:48vw}.hero-copy{max-width:520px}}
+
+.draft{display:block;margin:.6rem 0 .2rem;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;padding:.3rem .55rem;border-radius:3px;display:inline-block;max-width:100%;white-space:normal}
+@media(max-width:960px){.nav .ear .ic{width:44px;height:44px}.nav .ear{min-height:44px}}
+@media(max-width:600px){.logo b{display:none}}
+@media(max-width:860px){.about .grid{grid-template-columns:minmax(0,1fr)}}
+
+.hero-copy .lead{max-width:30ch;font-size:1.3rem;line-height:1.5}
+.hero .cta{align-items:center;gap:1.4rem;margin-top:2rem}
+.tlink{font-weight:600;color:var(--ink);border-bottom:2px solid var(--em);padding-bottom:2px;transition:color .2s}
+.tlink:hover{color:var(--em)}
+.tlink span{display:inline-block;transition:transform .3s var(--ease)}
+.tlink:hover span{transform:translateX(4px)}
+.ear-hero{bottom:clamp(70px,10vh,110px)}
+@media(max-width:960px){.hero-img{width:100%}header .nav .ear{padding:0;background:transparent;backdrop-filter:none}}
+
+@media(max-width:960px){.contact .right{order:0;padding:48px clamp(20px,5vw,48px) 56px;min-height:0}.contact .right .thread{display:none}.contact .right .earbig{width:96px;height:96px;margin-bottom:1.2rem}.contact .right .earbig svg{width:50px;height:50px}}
+.contact .left{display:flex;align-items:center}
+header .ear .ic::before,header .ear .ic::after{animation-name:ripple-sm}
+@keyframes ripple-sm{0%{transform:scale(.85);opacity:.6}100%{transform:scale(1.35);opacity:0}}
+
+@media(max-width:960px){.hero-img{height:50vw;min-height:220px}.hero .wrap{padding-top:20px;padding-bottom:28px}.hero h1{margin:.6rem 0 1rem}.hero-copy .lead{font-size:1.15rem}.hero .cta{margin-top:1.3rem}}
+.testi .q{transition:opacity .35s var(--ease),transform .6s var(--ease)}
+.testi .q.on{transition:opacity .7s var(--ease) .3s,transform .7s var(--ease) .3s}
+</style>
+  <noscript><style>.rv,.who .row .l,.who .row .r,.hero h1 .w{opacity:1!important;transform:none!important}.thread path{stroke-dashoffset:0!important}.testi .stage{display:block}.testi .q{opacity:1;margin-bottom:2rem}</style></noscript>
+</head>
+  <body>
+<!-- variant switcher (demo only — delete after client picks) -->
+<style>
+.vsw{position:fixed;bottom:16px;right:16px;z-index:99;display:flex;gap:4px;padding:4px;background:rgba(10,10,10,.85);backdrop-filter:blur(10px);border-radius:999px;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);font-family:Inter,system-ui,sans-serif}
+.vsw a{display:inline-flex;align-items:center;justify-content:center;min-width:44px;height:36px;padding:0 12px;border-radius:999px;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.04em;opacity:.7;transition:opacity .2s,background .2s}
+.vsw a:hover{opacity:1}
+.vsw a.on{background:#0f7a3e;opacity:1}
+.vsw .lbl{display:inline-flex;align-items:center;padding:0 10px 0 12px;color:#bfe3cb;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:1;min-width:0;height:36px;border-radius:999px}
+.vsw .lbl:hover{background:rgba(255,255,255,.12)}
+.demo{display:none!important}
+@media(max-width:960px){.vsw{bottom:86px;right:12px}.vsw .lbl{display:none}}
+</style>
+<nav class="vsw" aria-label="Design variants"><a class="lbl" href="https://skynetjoe.com" target="_blank" rel="noopener">SkynetLabs ↗ · Design</a><a href="/" data-v="v1">V1</a><a href="/v2" data-v="v2">V2</a><a href="/v3" data-v="v3">V3</a></nav>
+<script>(function(){var p=location.pathname.replace(/\/+$/,'')||'/';var k=p==='/'||p==='/index.html'||p==='/index'?'v1':p.replace('/','').replace('.html','');document.querySelectorAll('.vsw a').forEach(function(a){if(a.dataset.v===k)a.classList.add('on')})})();</script>
+
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <clipPath id="heroClip" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0.22,0 C0.06,0.12 0.1,0.3 0.16,0.42 C0.24,0.56 0.02,0.66 0.08,0.82 C0.12,0.92 0.2,1 0.3,1 L1,1 L1,0 Z"
+          />
+        </clipPath>
+        <clipPath id="heroClipM" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0,0 L1,0 L1,0.86 C0.8,1 0.55,0.9 0.35,0.96 C0.2,1 0.08,0.98 0,0.88 Z"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+    <div class="grain" aria-hidden="true">
+      <svg>
+        <filter id="g">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency=".9"
+            numOctaves="2"
+            stitchTiles="stitch"
+          />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .6 0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#g)" />
+      </svg>
+    </div>
+
+    <header id="hdr">
+      <div class="wrap nav">
+        <a class="logo" href="#top" aria-label="The Listening Room home"
+          ><img
+            src="/assets/tlr-mark.png"
+            alt="TLR monogram"
+            width="88"
+            height="44"
+          /><b>The Listening Room</b></a
+        >
+        <ul>
+          <li><a href="#who">Who it's for</a></li>
+          <li><a href="#services">How we help</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a
+          class="ear"
+          href="tel:+441164793584"
+          aria-label="Call the office on 0116 479 3584"
+          ><span class="ic"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+              />
+              <path
+                d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+              /></svg></span
+          ><span><small>Call the office</small><b>0116 479 3584</b></span></a
+        >
+        <a class="btn btn-p" href="#contact">Book a free call</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-img"><img src="/assets/hands-support.jpg" alt="Two people's hands held together across a table — someone in your corner" width="933" height="1400"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="wrap">
+          <div class="hero-copy">
+            <span class="eyebrow rv"
+              >Independent mental health advocacy · Leicester</span
+            >
+            <h1 id="h1">
+              You deserve to be
+              <span class="heard"
+                >heard.<svg
+                  class="thread"
+                  viewBox="0 0 400 40"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    pathLength="1"
+                    d="M2 22 L22 22 L30 6 L38 36 L46 10 L54 32 L62 16 L70 26 L80 4 L90 38 L100 12 L110 30 L120 18 L132 24 L146 8 L158 34 L170 14 L182 28 L196 20 L214 22 L232 16 L252 26 L274 20 L300 23 L330 21 L364 22 L398 22"
+                  /></svg></span
+              ><br /><span class="hl">Not managed.</span>
+            </h1>
+            <p class="lead rv d1">An independent advocate in your corner. We listen first — then make sure doctors, services and the people around you hear you too.</p>
+            <div class="cta rv d2">
+              <a class="btn btn-g" href="#contact"
+                >Book a free 20-minute call
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg
+              ></a>
+              <a class="tlink" href="#services">See how we help <span aria-hidden="true">→</span></a>
+            </div>
+            <a class="ear ear-hero rv d4" href="tel:+441164793584"
+              ><span class="ic"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                  />
+                  <path
+                    d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6"
+                  /></svg></span
+              ><span
+                ><small>Need to talk today? Call the office</small
+                ><b>0116 479 3584</b></span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="band" aria-hidden="true">
+        <svg class="thread" viewBox="0 0 1000 2" preserveAspectRatio="none">
+          <path pathLength="1" d="M0 1 L1000 1" />
+        </svg>
+        <div class="track">
+          <span>Listening sessions</span><i>✦</i
+          ><span>Support at appointments</span><i>✦</i
+          ><span>Help with letters &amp; forms</span><i>✦</i
+          ><span>Care plan reviews</span><i>✦</i
+          ><span>Family &amp; carer support</span><i>✦</i
+          ><span>Signposting to the right help</span><i>✦</i>
+          <span>Listening sessions</span><i>✦</i
+          ><span>Support at appointments</span><i>✦</i
+          ><span>Help with letters &amp; forms</span><i>✦</i
+          ><span>Care plan reviews</span><i>✦</i
+          ><span>Family &amp; carer support</span><i>✦</i
+          ><span>Signposting to the right help</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- STAT -->
+      <section class="stat">
+        <div class="wrap">
+          <div class="big rv">
+            1 <em>in</em> 4<svg
+              class="thread"
+              viewBox="0 0 400 30"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                pathLength="1"
+                d="M2 15 C50 2 80 28 130 15 S210 2 260 15 S340 28 398 15"
+              />
+            </svg>
+          </div>
+          <p class="rv d1">
+            adults in England experience a mental health problem each year. Most
+            of them will sit in at least one room where nobody really listens.
+          </p>
+          <small class="rv d1">Source: Mind</small>
+          <div class="row rv d2">
+            <div>
+              <b data-count="37" data-suffix=" days">37 days</b>median wait from referral to a second NHS Talking Therapies appointment<small
+                >NHS England, quarter to May 2026</small
+              >
+            </div>
+            <div>
+              <b>100%</b>independent — we work for you, not for a hospital,
+              council or provider
+            </div>
+            <div>
+              <b data-count="20" data-suffix=" min">20 min</b>free first call.
+              No forms. No pressure.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO -->
+      <section class="who" id="who">
+        <div class="wrap">
+          <span class="eyebrow rv">Who it's for</span>
+          <h2 class="rv d1">
+            For anyone who feels <span class="hl">unheard</span> by the system.
+          </h2>
+          <p class="lead rv d2" style="margin-top: 1rem">
+            You don't need a diagnosis, a referral or the right words. You just
+            need someone on your side.
+          </p>
+          <div class="rows">
+            <div class="row">
+              <div class="txt l">
+                <span class="n">01</span
+                ><b
+                  >Living with anxiety, depression or long-term mental
+                  ill-health</b
+                >
+                <p>and tired of explaining yourself over and over.</p>
+              </div>
+              <div class="pic r">
+                <img
+                  src="/assets/window-hope.jpg"
+                  alt="A young woman holding a mug, looking out of a window with a calm expression"
+                  width="1400"
+                  height="788"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="txt r">
+                <span class="n">02</span
+                ><b
+                  >In hospital, recently discharged, or under a community
+                  team</b
+                >
+                <p>and unsure what your care plan actually says.</p>
+              </div>
+              <div class="pic l">
+                <img
+                  src="/assets/man-sofa-talk.jpg"
+                  alt="A man talking openly on a sofa while an advocate takes notes"
+                  width="1400"
+                  height="788"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="txt l">
+                <span class="n">03</span><b>Waiting on the NHS</b>
+                <p>and needing someone to talk to in the meantime.</p>
+              </div>
+              <div class="txt r">
+                <span class="n">04</span><b>A parent, partner or carer</b>
+                <p>
+                  trying to hold everything together and get answers for someone
+                  you love.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="txt l">
+                <span class="n">05</span><b>Facing forms, letters or appeals</b>
+                <p>
+                  PIP, Universal Credit, complaints — and don't know where to
+                  start.
+                </p>
+              </div>
+              <div class="pic r tall">
+                <img
+                  src="/assets/hands-support.jpg"
+                  alt="Two people's hands held together across a table in support"
+                  width="933"
+                  height="1400"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="row q">
+              <p class="quote rv">
+                "Someone finally asked what <em>I</em> wanted."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="services" id="services">
+        <svg
+          class="thread thread-top"
+          viewBox="0 0 1000 60"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            pathLength="1"
+            d="M0 30 C80 10 120 50 200 30 S320 10 400 30 S520 50 600 30 S720 10 800 30 S920 50 1000 30"
+          />
+        </svg>
+        <div class="wrap">
+          <div class="head">
+            <div>
+              <span class="eyebrow rv">How we help</span>
+              <h2 class="rv d1">
+                Practical advocacy, <span class="hl">human</span> pace.
+              </h2>
+            </div>
+            <p class="lead rv d2">
+              Not therapy. Not a crisis line. The bit in between that nobody
+              else does: listening properly, then walking beside you through the
+              practical stuff.
+            </p>
+          </div>
+          <ul class="svc">
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">01</span>
+                <h3>Listening sessions</h3>
+                <p>
+                  A regular, confidential hour with someone who isn't rushing
+                  you. Say it out loud, untangle it, decide what matters.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/hero-listening.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">02</span>
+                <h3>Beside you at appointments</h3>
+                <p>
+                  GP, psychiatrist, care coordinator, ward round, care plan
+                  review. We prepare together, come with you, and make sure your
+                  points land.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/man-sofa-talk.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">03</span>
+                <h3>Letters, forms &amp; appeals</h3>
+                <p>
+                  PIP, Universal Credit, housing, complaints. We help you put
+                  your situation into words that get taken seriously.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/hands-support.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">04</span>
+                <h3>Care plan &amp; rights check</h3>
+                <p>
+                  Plain-English walk-through of your care plan, medication list
+                  or discharge plan, and what you're entitled to ask for.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/window-hope.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">05</span>
+                <h3>Signposting, done properly</h3>
+                <p>
+                  Free statutory advocacy (IMHA), crisis teams, community
+                  groups, talking therapies. The right door, not just "a" door.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/friends-park.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+            <li class="rv">
+              <a href="#contact"
+                ><span class="n">06</span>
+                <h3>Family &amp; carer support</h3>
+                <p>
+                  Carers need a listening room too. Understand what's happening,
+                  what you can ask for, and how to look after yourself in it.
+                </p>
+                <div class="ph">
+                  <img
+                    src="/assets/mug-window.jpg"
+                    alt=""
+                    loading="lazy"
+                  /></div
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- HOW -->
+      <section class="how" id="how">
+        <div class="wrap">
+          <span class="eyebrow rv">How it works</span>
+          <h2 class="rv d1">
+            Three steps. <span class="hl">No pressure</span> at any of them.
+          </h2>
+          <div class="grid">
+            <div class="pin">
+              <div class="big" aria-hidden="true">
+                <span class="on">01</span><span>02</span><span>03</span>
+              </div>
+              <div class="track"><i id="trk"></i></div>
+            </div>
+            <div class="steps">
+              <div class="step" data-k="0">
+                <span class="k">Step one</span>
+                <h3>Book a free 20-minute call</h3>
+                <p>
+                  Phone or video, whenever suits you. You talk, we listen. We'll
+                  tell you honestly whether we're the right help — and if we're
+                  not, who is.
+                </p>
+              </div>
+              <div class="step" data-k="1">
+                <span class="k">Step two</span>
+                <h3>Make a simple plan together</h3>
+                <p>
+                  One page. What you want to change, who needs to hear it, and
+                  what we'll do first. You stay in charge of every decision.
+                </p>
+              </div>
+              <div class="step" data-k="2">
+                <span class="k">Step three</span>
+                <h3>We walk alongside you</h3>
+                <p>
+                  Sessions, appointments, letters, follow-ups. As much or as
+                  little as you need, for as long as it's useful.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="wrap grid">
+          <div class="pic rv">
+            <img
+              src="/assets/mug-window.jpg"
+              alt="A person holding a mug, looking out at autumn trees through a window"
+              width="933"
+              height="1400"
+              loading="lazy"
+            />
+            <div class="cap">Independent. Confidential. On your side.</div>
+          </div>
+          <div>
+            <span class="eyebrow rv">About The Listening Room</span>
+      <span class="draft">Draft copy — Stephen’s words to confirm before launch</span>
+            <h2 class="rv d1">
+              Started by someone who knows what it's like to
+              <span class="hl">not be heard.</span>
+            </h2>
+            <p class="pull rv d2">
+              "Too many people in Leicester sit in appointments, wards and
+              waiting rooms feeling like a case number."
+            </p>
+            <p class="rv d2">
+              The Listening Room began with a simple frustration: too many
+              people leave with a leaflet and no idea what happens next.
+            </p>
+            <p class="rv d3">
+              I set this up to be the person I wished had been in the room.
+              Independent — so I answer to you, not a service. Practical — so
+              listening turns into letters written, meetings attended and
+              questions answered. And patient — because being heard properly
+              takes longer than ten minutes.
+            </p>
+            <p class="rv d3">
+              This is not therapy, and it isn't a crisis service. It's advocacy:
+              your voice, made louder.
+            </p>
+            <div class="sig rv d3">
+              — Stephen Forde, Founder<svg
+                class="thread"
+                viewBox="0 0 300 14"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  pathLength="1"
+                  d="M2 8 C40 2 70 12 110 7 S180 3 220 8 S270 12 298 6"
+                />
+              </svg>
+            </div>
+            <div class="values rv d4">
+              <div><b>Independent</b>We work for you only.</div>
+              <div><b>Confidential</b>Your story stays yours.</div>
+              <div><b>Non-judgemental</b>Whatever you bring.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testi">
+        <div class="wrap">
+          <span class="eyebrow rv">In their words</span>
+          <h2 class="rv d1">
+            What being heard <span class="hl">feels like.</span>
+          </h2>
+          <div class="stage" id="stage">
+            <div class="q on">
+              <p>
+                He came to my care plan review and for the first time the
+                psychiatrist actually wrote down what I said. I didn't have to
+                fight for it.
+              </p>
+              <footer>
+                <span class="tag">Example</span><b>Client, Leicester</b> · Care
+                plan review
+              </footer>
+            </div>
+            <div class="q">
+              <p>
+                I'd been putting off the PIP form for months. We did it together
+                in two sittings and it was accepted first time.
+              </p>
+              <footer>
+                <span class="tag">Example</span><b>Client, Wigston</b> ·
+                Benefits support
+              </footer>
+            </div>
+            <div class="q">
+              <p>
+                As Mum's carer I was drowning. One call and I finally understood
+                who was responsible for what — and that I was allowed to ask.
+              </p>
+              <footer>
+                <span class="tag">Example</span><b>Carer, Oadby</b> · Family
+                support
+              </footer>
+            </div>
+          </div>
+          <div class="dots" id="dots" role="tablist" aria-label="Testimonials">
+            <button class="on" role="tab" aria-selected="true" aria-label="Quote 1"></button><button role="tab" aria-selected="false" aria-label="Quote 2"></button><button role="tab" aria-selected="false" aria-label="Quote 3"></button>
+          </div>
+          <p class="note">
+            Example quotes for layout only — replaced with real client words
+            (with consent) before launch.
+          </p>
+        </div>
+      </section>
+
+      <!-- CRISIS -->
+      <section class="crisis" aria-label="Urgent help">
+        <div class="wrap grid">
+          <div>
+            <h2>In crisis right now?</h2>
+      <svg class="thread flat" viewBox="0 0 400 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 6 L60 6 L68 2 L74 10 L80 6 L400 6"/></svg>
+            <p>
+              The Listening Room is not an emergency service. If you or someone
+              else is in immediate danger, please use one of these — they're
+              free and open 24/7.
+            </p>
+          </div>
+          <ul>
+            <li>
+              <a href="tel:999"
+                ><b>999</b><span>Emergency — immediate danger to life</span></a
+              >
+            </li>
+            <li>
+              <a href="tel:111"
+                ><b>NHS 111, option 2</b
+                ><span>Urgent mental health support, 24/7</span></a
+              >
+            </li>
+            <li>
+              <a href="tel:116123"
+                ><b>Samaritans · 116 123</b
+                ><span>Free to call, any time, any reason</span></a
+              >
+            </li>
+            <li>
+              <a href="sms:85258"
+                ><b>Shout · text 85258</b
+                ><span>Free, confidential crisis text line</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="wrap grid">
+          <div>
+            <span class="eyebrow rv">Questions</span>
+            <h2 class="rv d1">
+              Things people ask <span class="hl">before</span> they call.
+            </h2>
+            <p class="lead rv d2" style="margin-top: 1rem">
+              Anything else? Just ask on the free call. There's no such thing as
+              a silly question here.
+            </p>
+          </div>
+          <div class="rv d2">
+            <details open>
+              <summary>Is this therapy or counselling?</summary>
+              <p>
+                No. The Listening Room is an advocacy and listening service, not
+                a clinical or therapeutic one. We help you be heard, understand
+                your options and take practical next steps. If therapy is what
+                you need, we'll help you find it.
+              </p>
+            </details>
+            <details>
+              <summary>Is it confidential?</summary>
+              <p>
+                Yes. What you tell us stays between us, with the usual
+                safeguarding exception: if we believe you or someone else is at
+                serious risk we may need to involve emergency or safeguarding
+                services, and we'll always tell you first where we can.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need a referral?</summary>
+              <p>
+                No. Contact us directly, or a family member, carer or
+                professional can get in touch on your behalf with your
+                permission.
+              </p>
+            </details>
+            <details>
+              <summary>Is this the same as an IMHA?</summary>
+              <p>
+                No. If you're detained or liable to be detained under the Mental
+                Health Act you have a legal right to a free Independent Mental
+                Health Advocate (IMHA) commissioned by the local authority. The
+                Listening Room is a private, non-statutory service and we'll
+                always point you to statutory advocacy where you're entitled to
+                it.
+              </p>
+            </details>
+            <details>
+              <summary>What happens on the free call?</summary>
+              <p>
+                Twenty minutes, no forms, no pressure. You tell us what's going
+                on, we tell you honestly whether we can help and what that would
+                look like.
+              </p>
+            </details>
+            <details>
+              <summary>Can I bring someone with me?</summary>
+              <p>
+                Always. A friend, partner, parent or carer is welcome at any
+                session or appointment we attend together.
+              </p>
+            </details>
+            <details>
+              <summary>Where do you work?</summary>
+              <p>
+                Leicester and Leicestershire in person, and anywhere in the UK
+                by phone or video.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="split">
+          <div class="left">
+            <div class="inner">
+              <span class="eyebrow rv">Start here</span>
+              <h2 class="rv d1" style="margin-top: 0.8rem">
+                Book your free <span class="hl">20-minute</span> listening call.
+              </h2>
+              <p class="rv d2" style="color: var(--ink-2); margin-top: 1rem">
+                Tell us a little about what's going on. We'll reply within one
+                working day to arrange a time that suits you — phone or video,
+                your choice.
+              </p>
+              <form class="form rv d2" id="lead" novalidate>
+                <div class="fields">
+                  <label for="name">Your name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="First name is fine"
+                  />
+                  <label for="contact-method">Best way to reach you</label>
+                  <input
+                    id="contact-method"
+                    name="contact"
+                    required
+                    placeholder="Mobile number or email"
+                  />
+                  <label for="for">Who is this for?</label>
+                  <select id="for" name="for">
+                    <option>Myself</option>
+                    <option>Someone I care for</option>
+                    <option>A client (I'm a professional)</option>
+                  </select>
+                  <label for="msg"
+                    >What's going on? (as much or as little as you like)</label
+                  >
+                  <textarea
+                    id="msg"
+                    name="message"
+                    placeholder="e.g. I've got a care plan review next month and I never feel listened to."
+                  ></textarea>
+                  <button class="btn btn-g" type="submit">
+                    Request my free call
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </button>
+                  <small
+                    >Not for emergencies. If you're in danger now, call 999 or
+                    NHS 111 (option 2). Your details are used only to arrange
+                    your call and are never shared — full privacy notice at
+                    launch.</small
+                  >
+                </div>
+                <div class="ok" role="status" tabindex="-1">
+                  <h3 class="serif">Thank you — we've got it.</h3>
+                  <p style="color: var(--ink-2)">
+                    Demo only — nothing was sent. On the live site you'll hear
+                    back within one working day.
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="right">
+            <svg
+              class="thread"
+              viewBox="0 0 400 600"
+              preserveAspectRatio="xMidYMid slice"
+              aria-hidden="true"
+            >
+              <path
+                pathLength="1"
+                d="M-20 560 C60 540 90 470 120 420 C150 370 170 330 160 280 C150 230 120 200 130 150 C140 100 190 60 250 60 C320 60 370 110 370 180 C370 250 330 290 290 320 C260 340 240 370 250 400 C260 430 300 440 310 470 C320 500 300 540 260 560 C220 580 200 570 190 600"
+              />
+            </svg>
+            <div class="earbig" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+                />
+                <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6" />
+              </svg>
+            </div>
+            <small>Prefer to talk? Office line</small>
+            <a class="num" href="tel:+441164793584">0116 479 3584</a>
+            <p>
+              Working hours. If it goes to voicemail, leave your first name and
+              a number — we call back the same day where we can.
+            </p>
+            <div class="promise">
+              Twenty minutes. No forms. No pressure. Just someone listening.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <svg class="thread leaf" viewBox="0 0 64 64" aria-hidden="true">
+          <path
+            pathLength="1"
+            d="M-200 56 L8 56 C10 30 30 10 56 8 C54 34 34 54 8 56 M8 56 C24 40 40 24 56 8"
+          />
+        </svg>
+        <div class="row">
+          <img
+            src="/assets/tlr-mark.png"
+            alt="The Listening Room"
+            width="80"
+            height="40"
+          />
+          <div>
+            © <span id="yr"></span> The Listening Room · Leicester, UK ·
+            Independent mental health advocacy ·
+            <a href="tel:+441164793584">0116 479 3584</a>
+          </div>
+        </div>
+        <p class="disc">
+          The Listening Room is a private, non-statutory advocacy and listening
+          service. It is not a clinical, therapeutic or emergency service and
+          does not replace your right to free statutory advocacy (IMHA / IMCA /
+          Care Act) where you are entitled to it. Demo site by
+          <a href="https://skynetjoe.com" rel="noopener"
+            >SkynetLabs · skynetjoe.com</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <div class="mbar">
+      <div class="row">
+        <a class="btn btn-p" href="tel:+441164793584"
+          ><svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.9"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M6 8.5a6 6 0 0 1 12 0c0 3.2-2.2 4.1-2.7 6.2-.4 1.7-1.3 3.3-3.3 3.3-1.6 0-2.6-1-2.7-2.4"
+            />
+            <path d="M9.5 8.5a2.5 2.5 0 0 1 5 0c0 1.6-1.6 2.1-1.6 3.6" />
+          </svg>
+          Call</a
+        ><a class="btn btn-g" href="#contact">Book a free call</a>
+      </div>
+    </div>
+    <a class="demo" href="https://skynetjoe.com" target="_blank" rel="noopener"
+      >Built by SkynetLabs ↗</a
+    >
+
+    <script>
+      (function () {
+        document.getElementById("yr").textContent = new Date().getFullYear();
+        var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var hdr = document.getElementById("hdr");
+        addEventListener(
+          "scroll",
+          function () {
+            hdr.classList.toggle("on", scrollY > 40);
+          },
+          { passive: true },
+        );
+
+        /* word-by-word headline */
+        var h1 = document.getElementById("h1");
+        if (!reduce) {
+          var nodes = [].slice.call(h1.childNodes),
+            i = 0;
+          nodes.forEach(function (n) {
+            if (n.nodeType === 3) {
+              var frag = document.createDocumentFragment();
+              n.textContent.split(/(\s+)/).forEach(function (t) {
+                if (!t) return;
+                if (/^\s+$/.test(t)) {
+                  frag.appendChild(document.createTextNode(t));
+                  return;
+                }
+                var s = document.createElement("span");
+                s.className = "w";
+                s.textContent = t;
+                s.style.transitionDelay = i++ * 70 + "ms";
+                frag.appendChild(s);
+              });
+              h1.replaceChild(frag, n);
+            } else if (n.nodeType === 1 && n.tagName !== "BR") {
+              n.classList.add("w");
+              n.style.transitionDelay = i++ * 70 + "ms";
+            }
+          });
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              h1.classList.add("go");
+              setTimeout(function () {
+                h1.querySelector(".heard .thread").classList.add("drawn");
+              }, 300);
+            });
+          });
+        } else {
+          h1.classList.add("go");
+        }
+
+        /* reveals + thread draws */
+        var io = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                e.target.querySelectorAll(".thread").forEach(function (t) {
+                  t.classList.add("drawn");
+                });
+                if (e.target.classList.contains("thread"))
+                  e.target.classList.add("drawn");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: "0px 0px -6% 0px" },
+        );
+        document
+          .querySelectorAll(".rv,.who .row,.thread")
+          .forEach(function (el) {
+            io.observe(el);
+          });
+        document.querySelectorAll(".crisis .thread").forEach(function (t) {
+          t.classList.add("drawn");
+        });
+
+        /* counters */
+        var co = new IntersectionObserver(
+          function (es) {
+            es.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              var el = e.target,
+                end = +el.dataset.count,
+                suf = el.dataset.suffix || "",
+                t0 = null,
+                dur = 1200;
+              function step(ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min(1, (ts - t0) / dur),
+                  v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+                el.textContent = v + suf;
+                if (p < 1) requestAnimationFrame(step);
+              }
+              if (reduce) {
+                el.textContent = end + suf;
+              } else requestAnimationFrame(step);
+              co.unobserve(el);
+            });
+          },
+          { threshold: 0.6 },
+        );
+        document.querySelectorAll("[data-count]").forEach(function (el) {
+          co.observe(el);
+        });
+
+        /* pinned steps */
+        var nums = document.querySelectorAll(".how .pin .big span"),
+          trk = document.getElementById("trk");
+        var steps=[].slice.call(document.querySelectorAll('.how .step')),curK=-1;
+      function pickStep(){var mid=innerHeight*0.5,best=0,bd=1e9;steps.forEach(function(s,j){var r=s.getBoundingClientRect(),c=r.top+r.height/2,d=Math.abs(c-mid);if(d<bd){bd=d;best=j}});if(best!==curK){curK=best;nums.forEach(function(n,j){n.classList.toggle('on',j===best)});trk.style.height=((best+1)/3*100)+'%'}}
+      addEventListener('scroll',function(){requestAnimationFrame(pickStep)},{passive:true});pickStep();
+
+        /* testimonials */
+        var qs = document.querySelectorAll("#stage .q"),
+          dots = document.querySelectorAll("#dots button"),
+          cur = 0,
+          timer;
+        function show(k) {
+          cur = k;
+          qs.forEach(function (q, j) {
+            q.classList.toggle("on", j === k);
+          });
+          dots.forEach(function (d, j) {
+            d.classList.toggle("on", j === k);
+            d.setAttribute("aria-selected", j === k);
+          });
+        }
+        function auto() {
+          if (reduce) return;
+          clearInterval(timer);
+          timer = setInterval(function () {
+            show((cur + 1) % qs.length);
+          }, 7000);
+        }
+        dots.forEach(function (d, j) {
+          d.addEventListener("click", function () {
+            show(j);
+            auto();
+          });
+        });
+        var st = document.getElementById("stage");
+        st.addEventListener("mouseenter", function () {
+          clearInterval(timer);
+        });
+        st.addEventListener("mouseleave", auto);
+        auto();
+
+        /* services: touch = all open */
+        if (matchMedia("(hover: none)").matches) {
+          document.querySelectorAll(".svc li").forEach(function (li) {
+            li.classList.add("open");
+          });
+        }
+
+        /* form (demo: wire FORM_ENDPOINT to Web3Forms / Formspree at launch) */
+        var FORM_ENDPOINT = "";
+        document
+          .getElementById("lead")
+          .addEventListener("submit", function (ev) {
+            ev.preventDefault();
+            var f = ev.target;
+            if (!f.name.value.trim() || !f.contact.value.trim()) {
+              (f.name.value.trim() ? f.contact : f.name).focus();
+              return;
+            }
+            if (FORM_ENDPOINT) {
+              try {
+                fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(f) });
+              } catch (e) {}
+            }
+            f.querySelector(".fields").style.display = "none";
+            var ok=f.querySelector(".ok");ok.style.display="block";ok.focus();
+          });
+      })();
+    </script>
+  </body>
+</html>
