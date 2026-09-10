@@ -116,3 +116,32 @@ To get it live I need five things from you:
 5. Real quotes from people you've supported, if you have consent — the ones on there now are marked "Example" and I'll swap or remove them.
 
 Send me the address you want and I'll have it live within a day of the order.
+
+### PASTE BLOCK — SHORT VERSION (use this one for a price-sensitive read)
+
+Great choice, Stephen — V2 is the one people remember.
+
+It's live as the main design now, switch removed: skynetjoe-listening-room-demo.vercel.app
+
+Price: $270, everything in.
+
+- Research and the safe wording that keeps you separate from the free services — $40
+- The eight rooms, the sideways walkthrough (the hard part) — $90
+- The mobile version, rebuilt properly — $35
+- Crisis numbers and disclaimers — $30
+- Booking form into your business inbox — $25
+- Ear tied to your office number, logo cleaned up, loads fast — $20
+- Your web address registered in your name, inbox set up, site live — $30
+
+Your web address and your business inbox are included for the first year. Nothing else to buy. After twelve months it's $96 for the year to keep it hosted, the inbox running, the address renewed, and small changes whenever you need them.
+
+FordeSafe was one page. This is eight sections, a booking form, the safety layer, and three designs built so you could pick by feel.
+
+Five things from me to get it live:
+1. The address — TLR.co.uk is taken. Free now: tlradvocacy.co.uk (my pick), tlr-advocacy.co.uk, tlrleicester.co.uk, thelisteningroomuk.co.uk
+2. Anything in the About section that doesn't sound like you
+3. Your services as you'd say them, and whether prices show
+4. Your photo plus any training, DBS or insurance to list
+5. Real quotes if you have consent — the current ones are marked "Example"
+
+Send the address you want and it's live within a day of the order.
