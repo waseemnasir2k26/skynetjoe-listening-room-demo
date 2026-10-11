@@ -1,0 +1,4 @@
+- skynetjoe-listening-room-demo is a public static spec-demo landing page for The Listening Room (mental health advocacy, Leicester UK); no build step, deployed on Vercel, intentionally noindex.
+- Reviewed October 2026: tree re-checked (index.html, assets, docs, .critic scorecards, archive); the README's one external link (skynetjoe.com) returned HTTP 200. Latest content commits are from 2026-09-10 (V2 promoted to root).
+- Known gaps: the README says MIT but no LICENSE file existed, so a standard MIT LICENSE was added in this release; the README does not state the deployed demo URL; no CI.
+- Release housekeeping only: Status line, changelog, LICENSE and Work with SkynetLabs section. No page or deploy-config changes.
