@@ -1,18 +1,23 @@
-# The Listening Room — demo landing page
+# The Listening Room, demo landing page
 
-Spec demo built by SkynetLabs (https://skynetjoe.com) for The Listening Room, an independent mental health advocacy service, Leicester UK.
-Static HTML/CSS/JS, no build step. Deploy: `vercel --prod`.
+Speculative landing page for The Listening Room, an independent mental health advocacy service in Leicester, UK. Static HTML, CSS and JS, no build step.
+
+## What is in the repo
+
+- `index.html`: the current page; `archive/` keeps earlier variants (v1, v3)
+- `docs/`: research, client pitch and message, ship-gate report and before/after screenshots
+- `.critic/`: grading scorecards from the build
+
+## Run it
+
+Open `index.html` in a browser, or deploy the folder to Vercel.
 
 ## Status
 
-Last reviewed: October 2026 · release v2026.10
+A pitch demo. Copy and imagery are for the pitch, not a shipped client site.
 
-MIT — fork to use.
+MIT.
 
-## Work with SkynetLabs
+---
 
-Built by [Waseem Nasir](https://www.skynetjoe.com/?utm_source=github&utm_medium=readme&utm_campaign=skynetjoe-listening-room-demo) at SkynetLabs — n8n + AI automation for small businesses.
-
-- Hire on Fiverr: https://www.fiverr.com/agencies/skynetjoellc
-- Hire on Upwork: https://www.upwork.com/freelancers/muhammadwaseemnasir
-- Book a free call: https://calendly.com/skynetlabs/schedule-a-free-consultation
+Demo built by SkynetLabs (https://skynetjoe.com).
